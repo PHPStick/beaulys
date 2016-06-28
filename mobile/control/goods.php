@@ -366,7 +366,7 @@ class goodsControl extends mobileHomeControl{
             if (!$goods_detail['goods_info']['is_virtual']) {
                 // 店铺优惠券
                 $condition = array();
-                $condition['voucher_t_gettype'] = 3;
+                // $condition['voucher_t_gettype'] = 3;
                 $condition['voucher_t_state'] = 1;
                 $condition['voucher_t_end_date'] = array('gt', time());
                 $condition['voucher_t_store_id'] = array('in', $store_info['store_id']);
