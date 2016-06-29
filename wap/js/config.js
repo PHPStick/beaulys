@@ -2,6 +2,7 @@
 parHost = 'dev.beaulys.com'
 mbHost = 'm.dev.beaulys.com'
 
+httpParHost="http://"+parHost
 var SiteUrl = "http://" + parHost + "/shop"; //"http://v3.haoid.cn/mobile";
 var ApiUrl = "http://" + parHost + "/mobile"; //"http://v3.haoid.cn/mobile";
 var pagesize = 10;
