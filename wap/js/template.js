@@ -51,8 +51,9 @@
 				},
 				t = function(n) {
 					//输出值
-					n=filterUrl(n)
-					console.log(n)
+					//console.log(n.length)
+					n=filterUrl(n);
+					
 					return e(n).replace(/&(?![\w#]+;)|[<>"']/g, function(e) {
 						
 						return r[e];
