@@ -2397,3 +2397,17 @@ function encryptShow($str,$start,$length) {
 function callback($state = true, $msg = '', $data = array()) {
     return array('state' => $state, 'msg' => $msg, 'data' => $data);
 }
+
+if ( ! function_exists('dd'))
+{
+	/**
+	 * Dump the passed variables and end the script.
+	 *
+	 * @param  mixed
+	 * @return void
+	 */
+	function dd()
+	{
+		array_map(function($x) { var_dump($x); }, func_get_args()); die;
+	}
+}

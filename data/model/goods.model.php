@@ -754,8 +754,8 @@ class goodsModel extends Model{
      * @param string $field
      * @return int
      */
-    public function getGoodsCommonCount($condition) {
-        return $this->table('goods_common')->where($condition)->count();
+    public function getGoodsCommonCount($condition, $order = '', $group = '') {
+        return $this->table('goods_common')->where($condition)->order($order)->group($group)->count();
     }
 
     /**
