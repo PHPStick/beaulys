@@ -35,7 +35,7 @@ class member_favoritesControl extends mobileMemberControl {
         $goods_list = $model_goods->getGoodsList(array(
             'goods_id' => array('in', $favorites_id),
             // 默认不显示预订商品
-            'is_book' => 0,
+            'is_appoint' => 0,
         ), $field);
         foreach ($goods_list as $key=>$value) {
             $goods_list[$key]['fav_id'] = $value['goods_id'];
