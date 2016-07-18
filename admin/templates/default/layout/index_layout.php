@@ -253,10 +253,10 @@ function addFavorite(url, title) {
             <div id="crumbs" class="crumbs"><span><?php echo $lang['nc_console'];?></span><span class="arrow">&nbsp;</span><span><?php echo $lang['nc_welcome_page'];?></span> </div>
           </div>
           <div class="toolbar">
-            <ul id="skin" class="skin"><span><?php echo $lang['nc_skin_peeler'];?></span>
+            <!--<ul id="skin" class="skin"><span><?php echo $lang['nc_skin_peeler'];?></span>
               <li id="skin_0" class="" title="<?php echo $lang['nc_default_style'];?>"></li>
               <li id="skin_1" class="" title="<?php echo $lang['nc_mac_style'];?>"></li>
-            </ul>
+            </ul>-->
             <div class="sitemap"><a id="siteMapBtn" href="#rhis" onclick="showBg('dialog','dialog_content');"><span><?php echo $lang['nc_sitemap'];?></span></a></div>
             <div class="toolmenu"><span class="bar-btn"></span>
               <ul class="bar-list">

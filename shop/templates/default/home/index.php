@@ -1,5 +1,6 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/index.css" rel="stylesheet" type="text/css">
+<link href="<?php echo SHOP_TEMPLATES_URL;?>/css/beaulys.css" rel="stylesheet" type="text/css">
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/waypoints.js"></script>
 <script type="text/javascript" src="<?php echo SHOP_RESOURCE_SITE_URL;?>/js/home_index.js" charset="utf-8"></script>
 <!--[if IE 6]>

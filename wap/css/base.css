@@ -115,6 +115,7 @@ sub { vertical-align: text-bottom }
 /*默认顶部*/
 header, 
 .header { background: #34b3a1; height: 1.95rem; position: absolute; z-index: 8; top: 0; left: 0; right: 0; bottom: auto; border-bottom: solid 0.05rem #EEE; }
+header.fixed{position: fixed;}
 
 .header-wrap { display: block; max-width: 320px; max-width: 640px; margin: 0 auto; text-align: center; }
 .header-l { display: block; width: 1.95rem; height: 1.95rem; position: absolute; top: 0; left: 0; }
@@ -414,6 +415,13 @@ to {  width: 100%;}
  -webkit-transform: rotate(180deg);
 }
 }
+.header-r#header-nav{    width: 2.5rem;
+    height: 1.95rem;
+    text-align: center;
+    padding: 0;
+    font-size: 0.7rem;
+    line-height: 1.95rem;
+    color: #fff;}
 /*异步读取*/
 .pre-loading { background:rgba(248,248,248,0.95); position: fixed; z-index: 999; top: 0; right: 0; bottom: 0; left: 0;}
 .pre-block { text-align: center; position: absolute; z-index: 1; width: 6rem; height: 1rem; font-size: 0.55rem; color: #666; top: 50%; left: 50%; margin: -0.5rem 0 0 -3rem;}

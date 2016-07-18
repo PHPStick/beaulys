@@ -88,9 +88,10 @@ $(function() {
                             okBtn: false,
                             cancelBtn: false
                         });
+                        $(".code-countdown").find("em").html('59');
                         var a = setInterval(function() {
                             var e = $(".code-countdown").find("em");
-                            var t = parseInt(e.html() - 1);
+                            var t = parseInt(e.html()*1 - 1);
                             if (t == 0) {
                                 $("#send").show();
                                 $(".code-countdown").hide();

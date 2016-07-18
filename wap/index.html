@@ -29,33 +29,28 @@
 						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
 							<li class="mui-table-view-cell">
 								<a class="mui-navigate-right" href="tmpl/member/member.html">
-									购物车
+									我的账户
 								</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right" href="tmpl/member/member.html">
-									我的商城
+								<a class="mui-navigate-right" href="tmpl/member/favorites.html">
+									我的收藏
 								</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									Item 3
+								<a class="mui-navigate-right" href="tmpl/member/order_list.html">
+									我的订单
 								</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									Item 4
+								<a class="mui-navigate-right" href="tmpl/member/address_list.html">
+									地址管理
 								</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									Item 5
+								<a class="mui-navigate-right" href="tmpl/member/favorites.html">
+									我的收藏
 								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-								Item 6
-							</a>
 							</li>
 
 						</ul>
@@ -67,7 +62,7 @@
 	<div class="mui-inner-wrap">
 		<div class="mui-off-canvas-backdrop"></div>
 		<header class="mui-bar mui-bar-nav">
-			<h1 class="mui-title left-logo">logo</h1>
+			<h1 class="mui-title left-logo">Beaulys</h1>
 			<a id='offCanvasShow' href="#"  class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
 			<a href="tmpl/cart_list.html" class="header-icon shop"></a>
 			<a href="tmpl/search.html" class="mui-icon mui-action-menu mui-icon-search mui-pull-right"></a>
@@ -76,13 +71,8 @@
 			<div class="mui-scroll">
 				<div class="headerNav_list">
 					<ul>
-						<li><a href="tmpl/product_first_categroy.html">分类</a></li>
-						<li><a>子列表</a></li>
-						<li><a>子列表</a></li>
-						<li><a>子列表</a></li>
-						<li><a>子列表</a></li>
-						<li><a>子列表</a></li>
-						<li><a>子列表</a></li>
+						<li><a href="tmpl/product_first_categroy.html">品牌</a></li>
+						<li><a href="tmpl/product_list.html">商品列表</a></li>
 					</ul>
 				</div>
 					<div class="mb-header-box">八折优惠码：TREAT + 满购即有礼</div>
@@ -120,7 +110,6 @@
 
 </div>
 <!--<div class="nctouch-home-top fixed-Width">
-
   <header id="header" class="transparent">
   	<div class="logo"></div>
     <div class="header-wrap">
@@ -131,11 +120,7 @@
       <sup></sup></a></div>
   </header>
   <div class="cohesive"></div>
-  
 </div>-->
-
-
-
 <!--<footer id="footer" class="fixed-Width"></footer>-->
 <script type="text/html" id="adv_list">
 	<div class="mui-slider">
@@ -143,7 +128,7 @@
 	  	<% for (var i in item) { %>
 				<div class="mui-slider-item">
 					<a href="<%= item[i].url %>">
-						<img src="<%= item[i].image %>" alt="">
+						<img src= "<%= item[i].image %>" alt="">
 					</a>
 				</div>
 			<% } %>
