@@ -587,11 +587,12 @@ class goodsControl extends mobileHomeControl{
     }
 
     public function auto_completeOp() {
-        $data = Model('search')->autoComplete(array('term'=>$_GET['term']));
-        foreach ($data as $k => $v) {
-            $data[$k] = $v['value'];
-        }
-        output_data(array('list'=>$data));
+        // $data = Model('search')->autoComplete(array('term'=>$_GET['term']));
+        // foreach ($data as $k => $v) {
+        //     $data[$k] = $v['value'];
+        // }
+        // output_data(array('list'=>$data));
+        output_data(array('list'=>['']));
     }
 
     /**
