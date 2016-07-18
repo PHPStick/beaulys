@@ -361,7 +361,8 @@ class goodsControl extends mobileHomeControl{
             $c = (int) Model('favorites')->getGoodsFavoritesCountByGoodsId($goods_id, $member_id);
             $goods_detail['is_favorate'] = $c > 0;
 
-            //QueueClient::push('addViewedGoods', array('goods_id'=>$goods_id,'member_id'=>$member_id));
+            // QueueClient::push('addViewedGoods', array('goods_id'=>$goods_id,'member_id'=>$member_id));
+            Model('goods_browse')->addViewedGoods($goods_id, $member_id);
 
             if (!$goods_detail['goods_info']['is_virtual']) {
                 // 店铺优惠券
