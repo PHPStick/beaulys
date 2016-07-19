@@ -79,7 +79,7 @@
             </dl>
             <div class="submit-div">
                 <input type="submit" id="submit" class="submit" value="<?php echo $lang['login_index_login'];?>">
-                <input type="hidden" value="<?php echo $_GET['ref_url']?>" name="ref_url">
+               <!-- <input type="hidden" value="<?php echo $_GET['ref_url']?>" name="ref_url">-->
               </div>
           </form>
         </div>
