@@ -7,13 +7,13 @@
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/ie6.js" charset="utf-8"></script>
 <![endif]-->
 <style type="text/css">
-.category { display: block !important; }
+/*.category { display: block !important; }*/
 </style>
 <div class="clear"></div>
 
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
-  <div class="right-sidebar">
+  <div class="right-sidebar" style="display: none;">
     <div class="right-panel">
       <?php if ($_SESSION['is_login']) {?>
       <div class="loginBox">
@@ -103,7 +103,7 @@
 <?php echo $output['web_html']['index'];?> 
 <!--StandardLayout End--> 
 <!--热门晒单str v3-b12-->
-<div class="comment">
+<!--<div class="comment">
   <div class="tit">
     <div class="cmttite"><span>
       <?php if(!empty($output['goods_evaluate_info']) && is_array($output['goods_evaluate_info'])){?>
@@ -157,7 +157,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 <!--热门晒单end-->
 
 <div class="wrapper mt10"><?php echo loadadv(9,'html');?></div>

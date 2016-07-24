@@ -43,16 +43,16 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 -------------------------------------- */
 .home-focus-layout { width: 100%; height: 585px; position: relative; z-index: 1; }
 /* 满屏背静切换焦点图 */
-.full-screen-slides { width: 100%; height: 400px; position: relative; z-index: 1; }
+.full-screen-slides { width: 1200px; height: 360px; position: relative; z-index: 1;margin: 10px auto;}
 .full-screen-slides li { width: 100%; height: 100%; position: absolute; z-index: 1; top: 0; left: 0; }
 .full-screen-slides li a { display: block; width:776px; height:270px; text-indent:-9999px; margin-left: -388px; position: absolute; z-index: 2; left: 50%; }
-.full-screen-slides-pagination { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: center; display:block; list-style:none; width:600px; height: 6px; padding:7px 8px ; margin-left: -325px; position:absolute; left:50%; top: 360px; z-index: 9; }
+.full-screen-slides-pagination { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: center; display:block; list-style:none; width:600px; height: 6px; padding:7px 8px ; margin-left: -325px; position:absolute; left:50%; top: 320px; z-index: 9; }
 .full-screen-slides-pagination li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; list-style:none;border-radius: 50%; margin-left:4px;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#3F000000', endColorstr='#3F000000');
 background:rgba(0,0,0,0.25); overflow: hidden; cursor: pointer; *zoom:1;}
 .full-screen-slides-pagination a {  display: block; width:18px;height:18px;line-height:18px;overflow: hidden;text-align: center; color:#fff;font-family:arial;font-size:12px; text-indent:-9999px; }
-.full-screen-slides-pagination .current { background: #F30; }
-.home-focus-layout .banner-arrow {width: 762px;position: absolute;top: 95px;left: 50%;margin-left: -395px; z-index:99999}
-.home-focus-layout .arrow { background: url(../images/home_bg.png) no-repeat; width: 45px; height: 100px; position: absolute; z-index: 2; top:25px; cursor: pointer;}/*40px*/
+.full-screen-slides-pagination .current { background: #34b3a1; }
+.home-focus-layout .banner-arrow {width: 1200px;position: relative;z-index:101;height: 0px;margin: auto;}
+.home-focus-layout .arrow { background: url(../images/home_bg.png) no-repeat; width: 45px; height: 100px; position: absolute; z-index: 2; top:-250px; cursor: pointer;}/*40px*/
 .home-focus-layout  .pre { background-position: 0 -100px; left:6px; }
 .home-focus-layout  .next { background-position: -45px -100px; right: 0;}
 .home-focus-layout .banner-arrow:hover .arrow { opacity: 0.5!important; }
@@ -159,9 +159,9 @@ background:rgba(0,0,0,0.5); text-overflow: ellipsis; white-space: nowrap; width:
 height: 40px; float: left; padding: 0; position: relative; z-index: 1; cursor: pointer; }
 .home-sale-layout .tabs-nav li h3 { font-size: 12px; font-weight: 600; line-height: 38px; text-align: center; }
 .home-sale-layout .tabs-nav li i { font-size: 0px; line-height: 0; display: none; width: 0px; height: 0px; float: right; margin-left: -4px; border-width: 5px; border-style: dashed dashed solid dashed; position: absolute; z-index: 1; bottom: 0; left: 50%; }
-.home-sale-layout .tabs-nav .tabs-selected { border-style: solid; border-width: 0 0 2px 0; border-color: #F87622; }
-.home-sale-layout .tabs-nav .tabs-selected i { display: block; border-color: transparent transparent #F87622; }
-.home-sale-layout .tabs-nav .tabs-selected h3 { color: #F87622; }
+.home-sale-layout .tabs-nav .tabs-selected { border-style: solid; border-width: 0 0 2px 0; border-color: #34b3a1; }
+.home-sale-layout .tabs-nav .tabs-selected i { display: block; border-color: transparent transparent #34b3a1; }
+.home-sale-layout .tabs-nav .tabs-selected h3 { color: #34b3a1; }
 .home-sale-layout .tabs-panel { width: 989px; overflow: hidden; }
 .home-sale-layout .tabs-panel ul { width: 990px; margin-left: -1px; overflow: hidden; }
 .home-sale-layout .tabs-panel ul li { width: 197px; height: 235px; padding: 15px 0 0; border-left: dotted 1px #F0F0F0; float: left; overflow: hidden; }
@@ -176,8 +176,8 @@ width: 160px; height: 160px; overflow: hidden; }
 .home-sale-layout .tabs-panel dl dd.goods-price { line-height: 20px; color: #999; position: absolute; z-index: auto; top: 200px; left: 0; }
 .home-sale-layout .tabs-panel dl dd.goods-price em { font-size: 14px; vertical-align: middle; }
 .home-sale-layout .right-sidebar { width: 211px; float: right; }
-.home-sale-layout .right-sidebar .title { height: 40px; border-bottom: solid 2px #f87622; }
-.home-sale-layout .right-sidebar .title h3 { font-size: 12px; font-weight: 600; line-height: 38px; color: #F87622; float: left; margin-left: 20px; }
+.home-sale-layout .right-sidebar .title { height: 40px; border-bottom: solid 2px #34b3a1; }
+.home-sale-layout .right-sidebar .title h3 { font-size: 12px; font-weight: 600; line-height: 38px; color: #34b3a1; float: left; margin-left: 20px; }
 .home-sale-layout .right-sidebar .title a { line-height: 38px; float: right; margin-right: 6px; }
 .home-sale-layout .sale-discount { width: 210px; height: 252px; overflow: hidden; position: relative; z-index: 1; }
 .home-sale-layout .sale-discount ul { width: auto; height: 252px; position: absolute; z-index: 1; }
@@ -548,7 +548,7 @@ list-style:none; width:24px; height:6px; margin-left:4px; cursor: pointer; }
 .cmtcon .cmtleft dl dt img { max-width: 90px; max-height: 90px; }
 .cmtcon .cmtleft dl dd h3 .datetime { float: right; color: #ccc; }
 .cmtcon .cmtleft dl dd p { color: #8c8c8c; line-height: 20px; margin-top: 10px; max-height: 40px; _height: 40px; overflow: hidden; }
-.cmtcon .cmtrigt { float: right; width: 219px; display: inline; border-right: 1px solid #e8ebed;border-bottom: 1px solid #e8ebed;border-top: 2px solid #F87622; height: 248px; }
+.cmtcon .cmtrigt { float: right; width: 219px; display: inline; border-right: 1px solid #e8ebed;border-bottom: 1px solid #e8ebed;border-top: 2px solid #34b3a1; height: 248px; }
 .grid_119011 .copyright_img a img { margin-left: 20px; }
 .floor-head .ad-panel .ad-links ul { float: right; }
 .floor-head .ad-panel .ad-links ul li a { text-align: right; }

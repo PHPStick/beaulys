@@ -143,8 +143,8 @@ $(function(){
     <div class="head-search-bar">
         <div id="search">
           <ul class="tab">
-            <li act="search" class="current"><span>商品</span><i class="arrow"></i></li>
-            <li act="store_list"><span>店铺</span></li>
+            <li act="search" class="current"><span>商品</span></li>
+           <!-- <li act="store_list"><span>店铺</span></li>-->
           </ul>
         </div>
       <form class="search-form" method="get" action="<?php echo SHOP_SITE_URL;?>">
@@ -238,11 +238,12 @@ $(function(){
       <?php if (C('cms_isuse')){ ?>
       <li><a href="<?php echo urlShop('special', 'special_list');?>" <?php if($output['index_sign'] == 'special' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> 专题</a></li>
       <?php } ?>
-      <li><a href="<?php echo urlShop('store_list', 'index');?>" <?php if($output['index_sign'] == 'store_list' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> 店铺</a></li>
-      <?php if (C('flea_isuse')){ ?>
+      <!--<li><a href="<?php echo urlShop('store_list', 'index');?>" <?php if($output['index_sign'] == 'store_list' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> 店铺</a></li>
+      -->
+      <!--<?php if (C('flea_isuse')){ ?>
       <li><a href="<?php echo urlShop('flea', 'index');?>" <?php if($output['index_sign'] == 'flea' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> 闲置</a></li>
-      <?php } ?>
-      <?php if(!empty($output['nav_list']) && is_array($output['nav_list'])){?>
+      <?php } ?>-->
+      <!--<?php if(!empty($output['nav_list']) && is_array($output['nav_list'])){?>
       <?php foreach($output['nav_list'] as $nav){?>
       <?php if($nav['nav_location'] == '1'){?>
       <li><a
@@ -276,7 +277,7 @@ $(function(){
         ?>><?php echo $nav['nav_title'];?></a></li>
       <?php }?>
       <?php }?>
-      <?php }?>
+      <?php }?>-->
     </ul>
   </div>
 </nav>
