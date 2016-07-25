@@ -272,7 +272,7 @@ function addFavorite(url, title) {
     <tr>
       <td class="menutd" valign="top" width="161"><div id="mainMenu" class="main-menu">
           <?php echo $output['left_nav'];?>
-        </div><div class="copyright" style="display:none">本程序来源于www.3 3 hao.com，淘宝店：http:// 33ha ocom.tao bao.com，旺旺:33 hao，Q Q-1-2-4-4-9-8-6-4-0</div></td>
+        </div><div class="copyright" style="display:none"></div></td>
       <td valign="top" width="100%"><iframe src="" id="workspace" name="workspace" style="overflow: visible;" frameborder="0" width="100%" height="100%" scrolling="yes" onload="window.parent"></iframe></td>
     </tr>
   </tbody>

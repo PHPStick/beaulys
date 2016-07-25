@@ -876,7 +876,8 @@ function ajaxpost(formid, showid, waitid, showidclass, submitbtn, recall) {
 	//showloading();
 	$$(formid).target = ajaxframeid;
 	var action = $$(formid).getAttribute('action');
-	action = hostconvert(action);
+	//action = hostconvert(action);
+	//alert(action.replace(/\&inajax\=1/g, ''))
 	$$(formid).action = action.replace(/\&inajax\=1/g, '')+'&inajax=1';
 	$$(formid).submit();
 	if(submitbtn) {

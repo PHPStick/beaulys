@@ -1,6 +1,6 @@
 $(function(){
-	//search v4 by 33 hao.c om
-	var act = "store_list";
+	//search v4 by 33 hao.c om 商品商铺
+	var act = "search";
 	if (act == "store_list"){
 		$('#search ul.tab li span').eq(0).html('店铺');
 		$('#search ul.tab li span').eq(1).html('商品');
