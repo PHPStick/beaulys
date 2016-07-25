@@ -58,4 +58,23 @@ $config['queue']['host'] = '127.0.0.1';
 $config['queue']['port'] = 6379;
 $config['cache_open'] = false;
 $config['delivery_site_url']    = '/delivery';
+
+/****** solr ********/
+$config['solr'] = [
+    'connections' => [
+        'goods' => [
+            'master'=>[
+                'host' => getenv('SOLR_HOST_GOODS_MASTER'),
+                'core' => getenv('SOLR_CORE_GOODS_MASTER'),
+                'port' => getenv('SOLR_PORT_GOODS_MASTER'),
+            ],
+            'slave'=>[
+                'host' => getenv('SOLR_HOST_GOODS_SLAVE'),
+                'core' => getenv('SOLR_CORE_GOODS_SLAVE'),
+                'port' => getenv('SOLR_PORT_GOODS_SLAVE'),
+            ],
+        ],
+    ]
+];
+
 return $config;

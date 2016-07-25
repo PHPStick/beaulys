@@ -2411,3 +2411,37 @@ if ( ! function_exists('dd'))
 		array_map(function($x) { var_dump($x); }, func_get_args()); die;
 	}
 }
+
+if ( ! function_exists('config'))
+{
+	/**
+	 * Dump the passed variables and end the script.
+	 *
+	 * @param  mixed
+	 * @return void
+	 */
+	function config()
+	{
+		array_map(function($x) { var_dump($x); }, func_get_args()); die;
+	}
+}
+
+if ( ! function_exists('endsWith'))
+{
+	/**
+	 * Determine if a given string ends with a given substring.
+	 *
+	 * @param  string  $haystack
+	 * @param  string|array  $needles
+	 * @return bool
+	 */
+	function endsWith($haystack, $needles)
+	{
+		foreach ((array) $needles as $needle)
+		{
+			if ((string) $needle === substr($haystack, -strlen($needle))) return true;
+		}
+
+		return false;
+	}
+}

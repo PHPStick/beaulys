@@ -24,16 +24,75 @@ class goodsControl extends mobileHomeControl{
      */
     public function goods_listOp() {
         $model_goods = Model('goods');
-        $model_search = Model('search');
-        $_GET['is_book'] = 0;
+        // $model_search = Model('search');
+        $model_goods_search = Model('goods_search');
+        // $_GET['is_book'] = 0;
 
+        //排序方式
+        $order = $this->_goods_list_order($_GET['key'], $_GET['order']);
+
+        //构造查询条件
+        $params = [];
+        //关键词
+        if(isset($_GET['keyword']) && $_GET['keyword']) {
+            $params['kw'] = $_GET['keyword']; //todo: 商品搜索关键词过滤
+        }
+        //类别
+        if(isset($_GET['gc_id']) && intval($_GET['gc_id']) > 0) {
+            $params['gc_id'] = intval($_GET['gc_id']);
+        }
+        //品牌
+        if(!empty($_GET['b_id']) && intval($_GET['b_id'] > 0)) {
+            $params['brand_id'] = intval($_GET['b_id']);
+        }
+        //价格
+        $price_from = preg_match('/^[\d.]{1,20}$/',$_GET['price_from']) ? $_GET['price_from'] : null;
+        $price_to = preg_match('/^[\d.]{1,20}$/',$_GET['price_to']) ? $_GET['price_to'] : null;
+        if($price_from || $price_to) {
+            $params['goods_promotion_price-range'] = [$price_from, $price_to];
+        }
+        //赠品
+        if(isset($_GET['gift']) && intavl($_GET['gift']) == 1) {
+            $params['have_gift'] = 1;
+        }
+        //团购和限时折扣
+        if(isset($_GET['groupbuy']) && intval($_GET['groupbuy']) == 1) {
+            $promotion_tmp[] = 1;
+        }
+        if(isset($_GET['xianshi']) && intval($_GET['xianshi']) == 1) {
+            $promotion_tmp[] = 2;
+        }
+        if($promotion_tmp) {
+            $params['goods_promotion_type-in'] = implode(',', $promotion_tmp);
+        }
+        unset($promotion_tmp);
+        //page & page_size
+        $params['page'] = intval($_GET['curpage']) ? intval($_GET['curpage']) : 1;
+        $params['page_size'] = intval($_GET['page']) ? intval($_GET['page']) : 10;
+
+        //只搜索上架的已审核的商品
+        $params['goods_state'] = 1;
+        $params['goods_verify'] = 1;
+        $params['goods_lock'] = 0;
+
+        //所需字段
+        $fieldstr = "goods_id,goods_commonid,store_id,goods_name,goods_jingle,goods_price,goods_promotion_price,goods_promotion_type,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count";
+
+        $fieldstr .= ',is_virtual,is_presell,is_fcode,have_gift,goods_jingle,store_id,store_name,is_own_shop';
+        $goods_list = $model_goods_search->mobile_search($params, $fieldstr);
+
+        /*
         //查询条件
         $condition = array();
         // ==== 暂时不显示定金预售商品，手机端未做。  ====
         //$condition['is_book'] = 0;
+
+        //根据商品类别搜索
         if(!empty($_GET['gc_id']) && intval($_GET['gc_id']) > 0) {
             $condition['gc_id'] = $_GET['gc_id'];
-        } elseif (!empty($_GET['keyword'])) {
+        }
+        //根据关键词搜索，也就说现在是不支持在某个类别下搜索关键词的
+        elseif (!empty($_GET['keyword'])) {
             $condition['goods_name|goods_jingle'] = array('like', '%' . $_GET['keyword'] . '%');
             if ($_COOKIE['hisSearch'] == '') {
                 $his_sh_list = array();
@@ -47,22 +106,15 @@ class goodsControl extends mobileHomeControl{
             }
             setcookie('hisSearch', implode('~', $his_sh_list), time()+2592000, '/', SUBDOMAIN_SUFFIX ? SUBDOMAIN_SUFFIX : '', false);
 
-        } elseif (!empty($_GET['barcode'])) {
-            $condition['goods_barcode'] = $_GET['barcode'];
-        } elseif (!empty($_GET['b_id']) && intval($_GET['b_id'] > 0)) {
+        }
+        // elseif (!empty($_GET['barcode'])) {
+        //     $condition['goods_barcode'] = $_GET['barcode'];
+        // }
+        elseif (!empty($_GET['b_id']) && intval($_GET['b_id'] > 0)) {
             $condition['brand_id'] = intval($_GET['b_id']);
         }
-        $price_from = preg_match('/^[\d.]{1,20}$/',$_GET['price_from']) ? $_GET['price_from'] : null;
-        $price_to = preg_match('/^[\d.]{1,20}$/',$_GET['price_to']) ? $_GET['price_to'] : null;
 
-        //所需字段
-        $fieldstr = "goods_id,goods_commonid,store_id,goods_name,goods_jingle,goods_price,goods_promotion_price,goods_promotion_type,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count";
-
-        $fieldstr .= ',is_virtual,is_presell,is_fcode,have_gift,goods_jingle,store_id,store_name,is_own_shop';
-
-        //排序方式
-        $order = $this->_goods_list_order($_GET['key'], $_GET['order']);
-
+        
         //全文搜索搜索参数
         $indexer_searcharr = $_GET;
         //搜索消费者保障服务
@@ -79,14 +131,29 @@ class goodsControl extends mobileHomeControl{
         }
         $indexer_searcharr['price_from'] = $price_from;
         $indexer_searcharr['price_to'] = $price_to;
+        // dd($indexer_searcharr);
 
+        
         //优先从全文索引库里查找
         list($goods_list,$indexer_count) = $model_search->indexerSearch($indexer_searcharr,$this->page);
         if (!is_null($goods_list)) {
             $goods_list = array_values($goods_list);
             pagecmd('setEachNum',$this->page);
             pagecmd('setTotalNum',$indexer_count);
-        } else {
+        }
+        
+
+        //优先从solr中搜索商品
+        // list($goods_list,$indexer_count) = $model_goods_search->indexerSearch($indexer_searcharr,$this->page);
+        $goods_list = null;
+        if (!is_null($goods_list)) {
+            $goods_list = array_values($goods_list);
+            pagecmd('setEachNum',$this->page);
+            pagecmd('setTotalNum',$indexer_count);
+        }
+        else
+        //全文搜索没有结果会回退到数据库搜索方案
+        {
             //查询消费者保障服务
             $contract_item = array();
             if (C('contract_allow') == 1) {
@@ -99,7 +166,7 @@ class goodsControl extends mobileHomeControl{
                 }
             }
 
-            if ($price_from && $price_from) {
+            if ($price_from && $price_to) {
                 $condition['goods_promotion_price'] = array('between',"{$price_from},{$price_to}");
             } elseif ($price_from) {
                 $condition['goods_promotion_price'] = array('egt',$price_from);
@@ -136,6 +203,7 @@ class goodsControl extends mobileHomeControl{
 
             $goods_list = $model_goods->getGoodsListByColorDistinct($condition, $fieldstr, $order, $this->page);
         }
+        */
         $page_count = $model_goods->gettotalpage();
         //处理商品列表(团购、限时折扣、商品图片)
         $goods_list = $this->_goods_list_extend($goods_list);
@@ -171,7 +239,7 @@ class goodsControl extends mobileHomeControl{
         }
         return $result;
     }
-	
+
 	private function _goods_list_extend($goods_list) {
         //获取商品列表编号数组
         $commonid_array = array();
