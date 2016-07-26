@@ -46,9 +46,9 @@ class goods_searchModel extends SolrModel {
             foreach ($searchList as $list) {
                 $goodsIDs[] = $list['id'];
             }
-            $where['goods_id'] = ["in", implode(',', $goodsIDs)];  //goods_state & goods_verify
+            $where['goods_id'] = ["in", implode(',', $goodsIDs)];
         }
-        $goodsList = $model->getGoodsListByColorDistinct($where, $fields);
+        $goodsList = $model->getGoodsListByColorDistinct($where, $fields, $order);
         return $goodsList;
     }
 

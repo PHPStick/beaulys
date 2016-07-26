@@ -30,6 +30,7 @@ class goodsControl extends mobileHomeControl{
 
         //排序方式
         $order = $this->_goods_list_order($_GET['key'], $_GET['order']);
+        //todo: 根据order排序展示列表顺序
 
         //构造查询条件
         $params = [];
@@ -79,7 +80,7 @@ class goodsControl extends mobileHomeControl{
         $fieldstr = "goods_id,goods_commonid,store_id,goods_name,goods_jingle,goods_price,goods_promotion_price,goods_promotion_type,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count";
 
         $fieldstr .= ',is_virtual,is_presell,is_fcode,have_gift,goods_jingle,store_id,store_name,is_own_shop';
-        $goods_list = $model_goods_search->mobile_search($params, $fieldstr);
+        $goods_list = $model_goods_search->mobile_search($params, $fieldstr, $order);
 
         /*
         //查询条件
