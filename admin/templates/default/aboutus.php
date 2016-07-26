@@ -8,7 +8,7 @@
     <tbody>
       <tr>
         <td class="w12"></td>
-        <td>欢迎使用【好商城V4-33hao】程序，祝君生意兴隆。<a href="http://www.haoid.cn?v4" title="技术支持" target="_blank">技术支持</a></td>
+        <td></td>
       </tr>
     </tbody><tfoot>
       <tr class="tfoot">

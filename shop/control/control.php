@@ -513,13 +513,6 @@ class BaseMemberControl extends Control {
                         'member_goodsbrowse'=> array('name' => '我的足迹', 'url'=>urlShop('member_goodsbrowse', 'list')),
                         'member_connect'    => array('name' => '第三方账号登录', 'url'=>urlShop('member_connect', 'qqbind')),
                         'member_sharemanage'=> array('name' => '分享绑定', 'url'=>urlShop('member_sharemanage', 'index'))
-                )),
-                'app' => array('name' => '应用管理', 'child' => array(
-                        'member_flea'     => array('name' => '我的闲置', 'url'=>urlShop('member_flea', 'index')),
-                        'sns'               => array('name' => '个人主页', 'url'=>urlShop('member_snshome', 'index')),
-                        'cms'               => array('name' => '我的CMS', 'url'=>urlCMS('member_article', 'article_list')),
-                        'circle'            => array('name' => '我的圈子', 'url'=>urlCircle('p_center', 'index')),
-                        'microshop'         => array('name' => '我的微商城', 'url'=>urlMicroshop('home', 'index', array('member_id' => $_SESSION['member_id'])))
                 ))
         );
     	return self::filter_menu($menu_list);

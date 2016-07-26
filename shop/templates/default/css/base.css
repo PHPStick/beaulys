@@ -26,7 +26,7 @@ html {min-height:101%; }
 /* 链接 */
 a { color: #333; text-decoration: none; outline: medium none; -webkit-transition-property:color; -webkit-transition-duration: 0.3s; -webkit-transition-timing-function: ease;}
 a:link, a:visited, a:active { text-decoration: none;}
-a:hover { color: #34b3a1; text-decoration: underline;}
+a:hover { color: #34b3a1; }
 
 /* 超出隐藏（需要再设置宽高） */
 .over_hidden{ display: block; overflow-x: hidden; overflow-y: hidden; text-overflow: ellipsis; white-space: nowrap;}
@@ -334,7 +334,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .public-top-layout .quick-menu dl { text-align: left; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; width: 90px; height: 30px; position: relative; z-index: 999; *zoom:1/*IE6、7*/;}
 .public-top-layout .quick-menu dl a { color: #777 !important;}
 .public-top-layout .quick-menu dl dt { font-size: 12px; line-height: 20px; height: 20px; padding: 5px 0; position: absolute; z-index: 2; top: 0px; left: 12px;}
-.public-top-layout .quick-menu dl dt a:hover { text-decoration: none; color: #F30;}
+.public-top-layout .quick-menu dl dt a:hover { text-decoration: none; color:#34b3a1;}
 .public-top-layout .quick-menu dl dt i { background: url(../images/top_bg.png) no-repeat 0 0; vertical-align: middle; display: inline-block; width: 6px; height: 3px; margin-left: 6px;-webkit-transition: .2s ease-in; -moz-transition: -webkit-transform .2s ease-in; -o-transition: -webkit-transform .2s ease-in; transition: .2s ease-in;}
 .public-top-layout .quick-menu dl.hover dt i { FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); -moz-transform: rotate(180deg); -moz-transform-origin: 50% 30%; -webkit-transform: rotate(180deg); -webkit-transform-origin: 50% 30%; -o-transform: rotate(180deg); -o-transform-origin: 50% 30%; transform: rotate(180deg); transform-origin: 50% 30%;}
 .public-top-layout .quick-menu dl dd { background-color: #FFF; display: none; width: 88px; border: solid 1px #F0F0F0; position: absolute; z-index: 1; top: 0; left: 0;}
@@ -608,7 +608,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .help .contact .tel { background-position: 0 -250px; color: #00B492; font-size: 20px; }
 .help .contact .tel:hover, .help .contact .mail:hover { text-decoration: none; }
 .help .contact .mail { font-size: 16px; background-position: 0 -280px; color: #666; }
-.help .contact .attention { padding-top: 10px; }
+.help .contact .attention { padding-top: 10px;display: none; }
 .help .contact .weixin { width: 155px; }
 .help .weixin p, .help .qq ul{ margin-top:10px;}
 
