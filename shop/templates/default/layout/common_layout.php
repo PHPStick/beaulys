@@ -51,54 +51,62 @@ var COOKIE_PRE = '<?php echo COOKIE_PRE;?>';var _CHARSET = '<?php echo strtolowe
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.masonry.js"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
 <script type="text/javascript">
-var PRICE_FORMAT = '<?php echo $lang['currency'];?>%s';
-$(function(){
-	//首页左侧分类菜单
-	$(".category ul.menu").find("li").each(
-		function() {
-			$(this).hover(
+var PRICE_FORMAT = '<?php echo $lang['currency']; ?>% s ';
+$(function() {
+			//首页左侧分类菜单
+			$(".category ul.menu").find("li").each(
 				function() {
-				    var cat_id = $(this).attr("cat_id");
-					var menu = $(this).find("div[cat_menu_id='"+cat_id+"']");
-					menu.show();
-					$(this).addClass("hover");					
-					var menu_height = menu.height();
-					if (menu_height < 60) menu.height(80);
-					menu_height = menu.height();
-					var li_top = $(this).position().top;
-					$(menu).css("top",-li_top + 38);
+					if(typeof($(this).find('.sub-class h3').get(0)) == "undefined") {
+						$(this).find('.arrow').hide()
+					}
+					
+					$(this).hover(
+						function() {
+							var cat_id = $(this).attr("cat_id");
+							var menu = $(this).find("div[cat_menu_id='" + cat_id + "']");
+							$(this).addClass("hover");
+							if(typeof($(this).find('.sub-class h3').get(0)) != "undefined") {
+								
+								menu.show();
+								var menu_height = menu.height();
+								if(menu_height < 60) menu.height(80);
+								menu_height = menu.height();
+								var li_top = $(this).position().top;
+								$(menu).css("top", -li_top + 38);
+							}else{
+								menu.hide();
+							}
+
+						},
+						function() {
+							$(this).removeClass("hover");
+							var cat_id = $(this).attr("cat_id");
+							$(this).find("div[cat_menu_id='" + cat_id + "']").hide();
+						}
+					);
+				}
+			);
+			$(".head-user-menu dl").hover(function() {
+					$(this).addClass("hover");
 				},
 				function() {
 					$(this).removeClass("hover");
-				    var cat_id = $(this).attr("cat_id");
-					$(this).find("div[cat_menu_id='"+cat_id+"']").hide();
+				});
+			$('.head-user-menu .my-mall').mouseover(function() { // 最近浏览的商品
+				load_history_information();
+				$(this).unbind('mouseover');
+			});
+			$('.head-user-menu .my-cart').mouseover(function() { // 运行加载购物车
+				load_cart_information();
+				$(this).unbind('mouseover');
+			});
+			$('#button').click(function() {
+				if($('#keyword').val() == '') {
+					return false;
 				}
-			);
-		}
-	);
-	$(".head-user-menu dl").hover(function() {
-		$(this).addClass("hover");
-	},
-	function() {
-		$(this).removeClass("hover");
-	});
-	$('.head-user-menu .my-mall').mouseover(function(){// 最近浏览的商品
-		load_history_information();
-		$(this).unbind('mouseover');
-	});
-	$('.head-user-menu .my-cart').mouseover(function(){// 运行加载购物车
-		load_cart_information();
-		$(this).unbind('mouseover');
-	});
-	$('#button').click(function(){
-	    if ($('#keyword').val() == '') {
-		    return false;
-	    }
-	});
-    <?php if (C('fullindexer.open')) { ?>
-	// input ajax tips
-	$('#keyword').focus(function(){
-		if ($(this).val() == $(this).attr('title')) {
+			});<?php if (C('fullindexer.open')) { ?>// input ajax tips
+$('#keyword').focus(function() {
+		if($(this).val() == $(this).attr('title')) {
 			$(this).val('').removeClass('tips');
 		}
 	}).blur(function(){
