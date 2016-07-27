@@ -4,11 +4,14 @@
   'ap_intro' => '商品列表页左侧广告位',
   'ap_class' => '0',
   'ap_display' => '1',
-  'is_use' => '1',
+  'is_use' => '0',
   'ap_width' => '206',
   'ap_height' => '300',
   'ap_price' => '100',
   'adv_num' => '0',
   'click_num' => '0',
-  'default_content' => '7a4832d109ee46fe7677c1d3c30e067f.gif',
+  'default_content' => '05228607497811566.png',
+  'adv_list' => 
+  array (
+  ),
 );
