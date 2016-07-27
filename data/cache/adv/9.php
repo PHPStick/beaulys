@@ -4,7 +4,7 @@
   'ap_intro' => '位于首页底部的通栏型图片广告',
   'ap_class' => '0',
   'ap_display' => '2',
-  'is_use' => '1',
+  'is_use' => '0',
   'ap_width' => '1200',
   'ap_height' => '90',
   'ap_price' => '100',
