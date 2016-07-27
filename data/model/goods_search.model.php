@@ -34,6 +34,7 @@ class goods_searchModel extends SolrModel {
 
     public function mobile_search(array $params, $fields, $order = '')
     {
+        $goodsList = [];
         $condition = $this->getSearchFilters($params);
         //search with filters from solr
         $searchResult = static::findAllWithFilter($condition['q'], $condition['fq'], $condition['limit'], $condition['offset'], $condition['fl'], $condition['orders'], $condition['setParams']);
@@ -47,8 +48,8 @@ class goods_searchModel extends SolrModel {
                 $goodsIDs[] = $list['id'];
             }
             $where['goods_id'] = ["in", implode(',', $goodsIDs)];
+            $goodsList = $model->getGoodsListByColorDistinct($where, $fields, $order);
         }
-        $goodsList = $model->getGoodsListByColorDistinct($where, $fields, $order);
         return $goodsList;
     }
 
