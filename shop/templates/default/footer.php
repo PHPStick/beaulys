@@ -58,6 +58,7 @@
     <?php }?>
     <?php }?>
     <?php }?>
+    |<a href="/shop/index.php?act=seller_login&amp;op=show_login" target="_blank" title="登录商家管理中心">商家登录</a>
   </p>
   <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?><br/><?php echo $output['setting_config']['icp_number']; ?></div>
 <?php if (C('debug') == 1){?>

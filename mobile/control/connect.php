@@ -61,7 +61,7 @@ class connectControl extends mobileHomeControl{
                         if(!empty($member)) {//检查手机号是否已被注册
                             $state = '当前手机号已被注册，请更换其他号码。';
                         }
-                        $log_msg .= '申请注册会员，动态码：'.$captcha.'。';
+                        $log_msg .= '申请注册会员，验证码：'.$captcha.'。';
                         break;
                     case '2':
                         if(C('sms_login') != 1) {

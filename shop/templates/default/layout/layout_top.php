@@ -152,7 +152,7 @@
                         </div>
     </dd>      </dl>
     <?php } ?>
-	<dl>
+	<!--<dl>
         <dt><em class="ico_shop"></em><a href="<?php echo urlShop('show_joinin','index');?>" title="商家管理">商家管理</a><i></i></dt>
         <dd>
           <ul>
@@ -160,7 +160,7 @@
             <li><a href="<?php echo urlShop('seller_login','show_login');?>" target="_blank" title="登录商家管理中心">商家登录</a></li>
           </ul>
         </dd>
-      </dl>
+      </dl>-->
       <dl>
         <dt><em class="ico_order"></em><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order">我的订单</a><i></i></dt>
         <dd>

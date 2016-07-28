@@ -103,7 +103,7 @@ class connect_smsControl extends BaseHomeControl{
             $condition['log_type'] = $log_type;
             $sms_log = $model_sms_log->getSmsInfo($condition);
             if(!empty($sms_log) && ($sms_log['add_time'] > TIMESTAMP-600)) {//同一IP十分钟内只能发一条短信
-                $state = '同一IP地址十分钟内，请勿多次获取动态码！';
+                $state = '同一IP地址十分钟内，请勿多次获取验证码！';
             } else {
                 $state = 'true';
                 $log_array = array();
@@ -119,7 +119,7 @@ class connect_smsControl extends BaseHomeControl{
                         if(!empty($member)) {//检查手机号是否已被注册
                             $state = '当前手机号已被注册，请更换其他号码。';
                         }
-                        $log_msg .= '申请注册会员，动态码：'.$captcha.'。';
+                        $log_msg .= '申请注册会员，验证码：'.$captcha.'。';
                         break;
                     case '2':
                         if(C('sms_login') != 1) {
@@ -128,7 +128,7 @@ class connect_smsControl extends BaseHomeControl{
                         if(empty($member)) {//检查手机号是否已绑定会员
                             $state = '当前手机号未注册，请检查号码是否正确。';
                         }
-                        $log_msg .= '申请登录，动态码：'.$captcha.'。';
+                        $log_msg .= '申请登录，验证码：'.$captcha.'。';
                         $log_array['member_id'] = $member['member_id'];
                         $log_array['member_name'] = $member['member_name'];
                         break;
@@ -139,7 +139,7 @@ class connect_smsControl extends BaseHomeControl{
                         if(empty($member)) {//检查手机号是否已绑定会员
                             $state = '当前手机号未注册，请检查号码是否正确。';
                         }
-                        $log_msg .= '申请重置登录密码，动态码：'.$captcha.'。';
+                        $log_msg .= '申请重置登录密码，验证码：'.$captcha.'。';
                         $log_array['member_id'] = $member['member_id'];
                         $log_array['member_name'] = $member['member_name'];
                         break;

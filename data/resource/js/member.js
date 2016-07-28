@@ -30,7 +30,9 @@ $(function(){
 	        items = items.substr(0, (items.length - 1));
 	        /* 将选中的项通过GET方式提交给指定的URI */
 //	        window.location.href=uri + '&' + name + '=' + items;
-	        ajaxget(uri + '&' + name + '=' + items);
+	        //ajaxget(uri + '&' + name + '=' + items);
+	        ajaxget("http://"+document.domain+uri + '&' + name + '=' + items);
+	        
 	        return false;
         }
         if($(this).attr('confirm')){
