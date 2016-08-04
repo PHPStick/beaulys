@@ -133,7 +133,7 @@
       <?php }?>
     </div>
     <div class="quick-menu">
-    <dl class="invite"><dt><a href="<?php echo BASE_SITE_URL;?>/index.php?act=invite"><span>邀请返利</span></a></dt></dl>
+<!--    <dl class="invite"><dt><a href="<?php echo BASE_SITE_URL;?>/index.php?act=invite"><span>邀请返利</span></a></dt></dl>-->
 	<?php if (C('mobile_isuse') && C('mobile_app')){?>
 	<dl class="down_app">
         <dt><em class="ico_tel"></em><a href="<?php echo WAP_SITE_URL;?>">手机移动端</a><i></i></dt>

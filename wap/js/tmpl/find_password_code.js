@@ -44,7 +44,7 @@ function send_sms(e, c, a) {
 			$(".code-countdown").show().find("em").html(e.datas.sms_time);
 			var c = setInterval(function() {
 				var e = $(".code-countdown").find("em");
-				var a = parseInt(e.html() - 1);
+				var a = parseInt(e.html()*1 - 1);
 				if (a == 0) {
 					$(".code-again").show();
 					$(".code-countdown").hide();

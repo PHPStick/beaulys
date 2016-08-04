@@ -29,7 +29,7 @@
     <li><a id="demo2Btn" href="#demo2" class="demoBtn">详情描述</a></li>
     <li><a id="demo3Btn" href="#demo3" class="demoBtn">特殊商品</a></li>
     <li><a id="demo4Btn" href="#demo4" class="demoBtn">物流运费</a></li>
-    <li><a id="demo5Btn" href="#demo5" class="demoBtn">发票信息</a></li>
+    <!--<li><a id="demo5Btn" href="#demo5" class="demoBtn">发票信息</a></li>-->
     <li><a id="demo6Btn" href="#demo6" class="demoBtn">其他信息</a></li>
   </ul>
 </div>
