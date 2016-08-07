@@ -3,7 +3,7 @@
 
 $config = array();
 $config['base_site_url'] 		= '/';
-$config['shop_site_url'] 		= '/shop';
+$config['shop_site_url'] 		= getenv('SHOP_URL');
 $config['cms_site_url'] 		= '/cms';
 $config['microshop_site_url'] 	= '/microshop';
 $config['circle_site_url'] 		= '/circle';
