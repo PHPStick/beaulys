@@ -17,7 +17,7 @@ defined('InShopNC') or exit('Access Invalid!');
  * @param string $nchash 哈希数
  * @return string
  */
-function makeSeccode($nchash){
+function makeSeccode($nchash, $cookieSetting = []){
 	$seccode = random(6, 1);
 	$seccodeunits = '';
 
@@ -30,7 +30,12 @@ function makeSeccode($nchash){
 			$seccode .= ($unit >= 0x30 && $unit <= 0x39) ? $seccodeunits[$unit - 0x30] : $seccodeunits[$unit - 0x57];
 		}
 	}
-	setNcCookie('seccode'.$nchash, encrypt(strtoupper($seccode)."\t".(time())."\t".$nchash,MD5_KEY),3600);
+	//处理设置的cookie expire & path & domain参数
+	$expire = isset($cookieSetting['expire']) && $cookieSetting['expire'] ? $cookieSetting['expire'] : '3600';
+	$path = isset($cookieSetting['path']) && $cookieSetting['path'] ? $cookieSetting['path'] : '/';
+	$domain = isset($cookieSetting['domain']) && $cookieSetting['domain'] ? $cookieSetting['domain'] : (SUBDOMAIN_SUFFIX ? SUBDOMAIN_SUFFIX : '');
+	// dd('11', $expire, $path, $domain);
+	setNcCookie('seccode'.$nchash, encrypt(strtoupper($seccode)."\t".(time())."\t".$nchash,MD5_KEY), $expire, $path, $domain);
 	return $seccode;
 }
 function getFlexigridArray($in_array, $fields_array, $data, $format_array)//多频道

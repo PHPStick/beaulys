@@ -35,6 +35,8 @@ class connectControl extends mobileHomeControl{
      * 短信动态码
      */
     public function get_sms_captchaOp(){
+        // header('Access-Control-Allow-Credentials: true');
+        // header('Access-Control-Allow-Origin: http://m.dev.beaulys.com');
         $state = '发送失败';
         $phone = $_GET['phone'];
         if ($this->check() && strlen($phone) == 11){

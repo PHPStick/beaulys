@@ -26,41 +26,49 @@ $(function() {
         return false
     })
 });
+
 function send_sms(e, c, a) {
-    $.getJSON(ApiUrl + "/index.php?act=connect&op=get_sms_captcha", {
-        type: 1,
-        phone: e,
-        sec_val: c,
-        sec_key: a
-    },
-    function(e) {
-        if (e.datas.error=='1') {
-            $.sDialog({
-                skin: "green",
-                content: "发送成功",
-                okBtn: false,
-                cancelBtn: false
-            });
-            $(".code-again").hide();
-            $(".code-countdown").show().find("em").html(e.datas.sms_time);
-            var c = setInterval(function() {
-                var e = $(".code-countdown").find("em");
-                var a = parseInt(e.html()*1 - 1);
-                if (a == 0) {
-                    $(".code-again").show();
-                    $(".code-countdown").hide();
-                    clearInterval(c)
-                } else {
-                    e.html(a)
-                }
-            },
-            1e3)
-        } else {
-            loadSeccode();
-            errorTipsShow("<p>" + e.datas.error + "<p>")
+    var data = "type=1&phone="+e+"&sec_val="+c+"&sec_key="+a;
+    $.ajax({
+        url: ApiUrl + "/index.php?act=connect&op=get_sms_captcha",
+        data: data,
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        // jsonpCallback: '',
+        type: 'GET',
+        // xhrFields: {
+        //     withCredentials: true,
+        // },
+        success: function(e) {
+            if (e.datas.error=='1') {
+                $.sDialog({
+                    skin: "green",
+                    content: "发送成功",
+                    okBtn: false,
+                    cancelBtn: false
+                });
+                $(".code-again").hide();
+                $(".code-countdown").show().find("em").html(e.datas.sms_time);
+                var c = setInterval(function() {
+                    var e = $(".code-countdown").find("em");
+                    var a = parseInt(e.html()*1 - 1);
+                    if (a == 0) {
+                        $(".code-again").show();
+                        $(".code-countdown").hide();
+                        clearInterval(c)
+                    } else {
+                        e.html(a)
+                    }
+                },
+                1e3)
+            } else {
+                loadSeccode();
+                errorTipsShow("<p>" + e.datas.error + "<p>")
+            }
         }
-    })
+    });
 }
+
 function check_sms_captcha(e, c) {
     $.getJSON(ApiUrl + "/index.php?act=connect&op=check_sms_captcha", {
         type: 1,
