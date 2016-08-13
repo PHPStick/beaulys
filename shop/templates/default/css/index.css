@@ -217,7 +217,7 @@ width: 150px; height: 150px; overflow: hidden; }
 .home-standard-layout .left-sidebar .title .txt-type { height: 36px; padding-top:2px; }
 .home-standard-layout .left-sidebar .title .txt-type span { font: 22px/32px "Microsoft YaHei", 微软雅黑, \9ed1\4f53, \5b8b\4f53, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu; line-height: 28px; vertical-align: middle; text-align: center; display: inline-block; width: 28px; height: 28px; margin: 2px auto auto 16px; color:#fff }
 .home-standard-layout .left-sidebar .title .txt-type h2 { font: 22px/32px "Microsoft YaHei", 微软雅黑, \9ed1\4f53, \5b8b\4f53, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu; color: #fff; vertical-align: middle; display: inline-block; *display: inline/*IE6,7*/;
-zoom:1; }
+zoom:1; text-align: center;    width: 100%;}
 /*区块左侧广告*/.home-standard-layout .left-ads { width:180px; height: 180px; margin:0 auto; overflow:hidden;}
 .home-standard-layout .left-ads img { width: 180px; height:auto; }
 .home-standard-layout .left-hot-goods { color: #666; margin: 10px; padding: 10px 10px 3px; }

@@ -107,7 +107,7 @@
 .public-nav-layout .all-category .title i { font-size: 0px; line-height: 0; background: url(../images/top_bg.png) no-repeat -182px -186px; width: 18px; height: 14px; float: left; margin: 4px 4px 0 0;}
 .public-nav-layout .all-category .category { display:none; width: 212px;}
 .public-nav-layout .all-category:hover .category { display:block;}
-.public-nav-layout .category .menu { height:400px; background:#333;background:rgba(0,0,0,0.9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#99000000", endColorstr="#99000000")\9; *float:left; padding-top: 2px; }
+.public-nav-layout .category .menu { height:auto; background:#333;background:rgba(0,0,0,0.9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#99000000", endColorstr="#99000000")\9; *float:left; padding-top: 2px; }
 .public-nav-layout .category .menu li { width: 212px; height: 36px; *float: left; *clear: left; position: relative; z-index: 1; zoom:1;}
 .public-nav-layout .category .menu li.hover { z-index: 2;}
 .public-nav-layout .category .menu li:last-child { height: 37px;}
