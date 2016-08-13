@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 *{ word-wrap:break-word; outline:none; }
-body{ background:#FFF;overflow: hidden;}
+body{ background:#FFF;}
 body, td, input, textarea, select, button{ color:#555; font:12px "Microsoft Yahei", "Lucida Grande", Verdana, Lucida, Helvetica, Arial, 'Simsun', sans-serif; }
 body, ul, ol, li,  dl, dt , dd, p, h1, h2, h3, h4, h5, h6, form, fieldset { margin:0; padding:0; }
 ul , ol , li { list-style-image: none; list-style-type: none; }
