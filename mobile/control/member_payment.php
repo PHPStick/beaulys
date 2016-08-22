@@ -244,7 +244,11 @@ class member_paymentControl extends mobileMemberControl {
      *
      */
     private function _api_pay($order_pay_info) {
-        $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code.DS.$this->payment_code.'.php';
+        if($this->payment_code == 'alipay') {
+            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code . '_wap' .DS.$this->payment_code.'.php';
+        } else {
+            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code.DS.$this->payment_code.'.php';
+        }
         if(!is_file($inc_file)){
             exit('支付接口不存在');
         }

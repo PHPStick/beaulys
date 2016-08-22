@@ -11,7 +11,8 @@ class alipay{
 	/**
 	 *支付宝网关地址（新）
 	 */
-	private $alipay_gateway_new = 'https://mapi.alipay.com/gateway.do?';
+	private $alipay_gateway_new = 'https://mapi.alipay.com/gateway.do?';     //正式地址
+    // private $alipay_gateway_new = 'https://openapi.alipaydev.com/gateway.do?';  //测试地址
 	/**
 	 * 消息验证地址
 	 *
@@ -48,11 +49,21 @@ class alipay{
      */
     private $order_type;
 
+    /**
+     * 支付接口类型，forex:海外接口/domestic:国内支付宝接口
+     * @var [string]
+     */
+    private $payment_api_type;
+
+    const ALIPAY_FOREX = 'forex';         //海外支付类型
+    const ALIPAY_DOMESTIC = 'domestic';   //国内支付类型
+
     public function __construct($payment_info = array(),$order_info = array()){
     	if (!extension_loaded('openssl')) $this->alipay_verify_url = 'http://notify.alipay.com/trade/notify_query.do?';
     	if(!empty($payment_info) and !empty($order_info)){
     		$this->payment	= $payment_info;
     		$this->order	= $order_info;
+            $this->payment_api_type = (isset($payment_info['payment_api_type']) && !empty($payment_info['payment_api_type'])) ? $payment_info['payment_api_type'] : self::ALIPAY_FOREX;
     	}
     }
 
@@ -62,34 +73,88 @@ class alipay{
      * @return string
      */
     public function get_payurl(){
-    	$this->parameter = array(
-            'service'		    => 'create_direct_pay_by_user',	//服务名
-            'partner'		    => $this->payment['payment_config']['alipay_partner'],	//合作伙伴ID
+        switch ($this->payment_api_type) {
+            case self::ALIPAY_FOREX:
+            case self::ALIPAY_DOMESTIC:
+                $this->parameter = call_user_func([$this, "get_{$this->payment_api_type}_pay_params"]);
+                break;
+            default:
+                die("支付宝暂不支持其余支付接口");
+                break;
+        }
+        $this->parameter['sign']	= $this->sign($this->parameter);
+        return $this->create_url();
+    }
+
+    /**
+     * 获取国内支付接口的请求地址
+     *
+     * @return string
+     */
+    public function get_domestic_pay_params()
+    {
+        return array(
+            'service'           => 'create_direct_pay_by_user', //服务名
+            'partner'           => $this->payment['payment_config']['alipay_partner'],  //合作伙伴ID
             'key'               => $this->payment['payment_config']['alipay_key'],
-            '_input_charset'	=> CHARSET,					//网站编码
-            'notify_url'	    => SHOP_SITE_URL."/api/payment/alipay/notify_url.php",	//通知URL
-            'sign_type'		    => 'MD5',				//签名方式
-            'return_url'	    => SHOP_SITE_URL."/api/payment/alipay/return_url.php",	//返回URL
+            '_input_charset'    => CHARSET,                 //网站编码
+            'notify_url'        => SHOP_SITE_URL."/api/payment/alipay/notify_url.php",  //通知URL
+            'sign_type'         => 'MD5',               //签名方式
+            'return_url'        => SHOP_SITE_URL."/api/payment/alipay/return_url.php",  //返回URL
             'extra_common_param'=> $this->order['order_type'],
-            'subject'		    => $this->order['subject'],	//商品名称
-            'body'			    => $this->order['pay_sn'],	//商品描述
-            'out_trade_no'	    => $this->order['pay_sn'],		//外部交易编号
-            'payment_type'	    => 1,							//支付类型
-            'logistics_type'    => 'EXPRESS',					//物流配送方式：POST(平邮)、EMS(EMS)、EXPRESS(其他快递)
-            'logistics_payment'	=> 'BUYER_PAY',				     //物流费用付款方式：SELLER_PAY(卖家支付)、BUYER_PAY(买家支付)、BUYER_PAY_AFTER_RECEIVE(货到付款)
-            'receive_name'		=> $_SESSION['member_name'],//收货人姓名
-            'receive_address'	=> 'N',	//收货人地址
-            'receive_zip'		=> 'N',	//收货人邮编
-            'receive_phone'		=> 'N',//收货人电话
-            'receive_mobile'	=> 'N',//收货人手机
-            'seller_email'		=> $this->payment['payment_config']['alipay_account'],	//卖家邮箱
+            'subject'           => $this->order['subject'], //商品名称
+            'body'              => $this->order['pay_sn'],  //商品描述
+            'out_trade_no'      => $this->order['pay_sn'],      //外部交易编号
+            'payment_type'      => 1,                           //支付类型
+            'logistics_type'    => 'EXPRESS',                   //物流配送方式：POST(平邮)、EMS(EMS)、EXPRESS(其他快递)
+            'logistics_payment' => 'BUYER_PAY',                  //物流费用付款方式：SELLER_PAY(卖家支付)、BUYER_PAY(买家支付)、BUYER_PAY_AFTER_RECEIVE(货到付款)
+            'receive_name'      => $_SESSION['member_name'],//收货人姓名
+            'receive_address'   => 'N', //收货人地址
+            'receive_zip'       => 'N', //收货人邮编
+            'receive_phone'     => 'N',//收货人电话
+            'receive_mobile'    => 'N',//收货人手机
+            'seller_email'      => $this->payment['payment_config']['alipay_account'],  //卖家邮箱
             'price'             => $this->order['api_pay_amount'],//订单总价
             'quantity'          => 1,//商品数量
             'total_fee'         => 0,//物流配送费用
             'extend_param'      => "isv^sh32",
         );
-        $this->parameter['sign']	= $this->sign($this->parameter);
-        return $this->create_url();
+    }
+
+    /**
+     * 获取海外支付宝支付接口
+     * @desc sing和sing_type不参与要生成签名的参数组中，参数key是需要在生成sign是参与md5的
+     * @param service 网关服务入口
+     * @param partner 支付宝pid
+     * @param key 支付宝Key
+     * @param sign_type 加密类型
+     * @param notify_url 支付宝交易完成后异步回调的接口
+     * @param return_url 支付宝交易完成后前端网页跳转的页面链接，给客户看的
+     * @param out_trade_no 外部系统交易订单ID（区别于支付宝自己的订单号）
+     * @param subject 商品名称，考虑多个商品的情况
+     * @param rmb_fee total_fee的替代参数，订单金额，表示订单交易使用人民币支付，与total_fee参数互斥出现
+     * @param currency 外汇币种，表示支付宝会将受到的金额转化为此种外汇打到商户账上
+     * @param _input_charset 字符集，只支持gbk和utf-8
+     * @return [array]
+     */
+    public function get_forex_pay_params()
+    {
+        return array(
+            "service"        => 'create_forex_trade', //海外交易服务网关
+            "partner"        => $this->payment['payment_config']['alipay_partner'],
+            // 'partner'        => '2088101122136241',
+            'key'            => $this->payment['payment_config']['alipay_key'],
+            // 'key'            => '760bdzec6y9goq7ctyx96ezkz78287de',
+            'sign_type'      => 'MD5',
+            "notify_url"     => SHOP_SITE_URL."/api/payment/alipay/notify_url.php",
+            "return_url"     => SHOP_SITE_URL."/api/payment/alipay/return_url.php",
+            "out_trade_no"   => $this->order['pay_sn'],
+            "subject"        => $this->order['subject'], //商品名称,
+            "rmb_fee"        => $this->order['api_pay_amount'], //订单总价
+            "body"           => $this->order['subject'],
+            "currency"       => 'RMB',
+            "_input_charset" => CHARSET,
+        );
     }
 
 	/**
