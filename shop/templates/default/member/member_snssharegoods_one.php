@@ -71,7 +71,7 @@
 
 .dialog-share label.error { font-size: 12px; color: #F00; line-height: 24px;}
 .dialog-share .bottom { background: #FAFAFA; text-align: center; padding: 10px 0; border-top: solid 1px #EEE;}
-.dialog-share .bottom .button { color: #FFF; background-color: #D93600; height: 28px; width: 80px; border: solid 1px #0d9683; cursor: pointer;}
+.dialog-share .bottom .button { color: #FFF; background-color: #D93600; height: 28px; width: 80px; border: solid 1px #ce0f36; cursor: pointer;}
 .dialog-share .bottom .cancel { color: #555; background-color: #EEE; vertical-align: top; display: inline-block; *display: inline; height: 20px; padding: 3px 10px; border: solid 1px #CCC; margin-left: 5px; *zoom:1;}
 
 /*绑定工具提示*/

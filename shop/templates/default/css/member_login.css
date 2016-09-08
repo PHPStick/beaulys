@@ -11,12 +11,12 @@ body { background-color: #FAFAFA;}
 .header-wrap .wrapper { width: 1000px}
 .public-head-layout .site-logo { margin: 10px 0 0 0;}
 .public-head-layout .nc-login-now { font-size: 14px; color: #AAA; line-height: 24px; float: right; height: 24px; margin-top: 50px;}
-.public-head-layout .nc-login-now a { font-weight: 600; margin-left: 4px;color: #34b3a1;}
+.public-head-layout .nc-login-now a { font-weight: 600; margin-left: 4px;color: #e61742;}
 .public-head-layout .nc-regist-now { font-size: 14px; color: #AAA; line-height: 20px; float: right; height: 40px; margin-top: 30px;}
 .public-head-layout .nc-regist-now span { vertical-align: top; display: inline-block; *display: inline; *zoom: 1;}
 .public-head-layout .nc-regist-now .avatar { width: 40px; height: 40px; margin-right: 6px; border-radius: 100%;}
 .public-head-layout .nc-regist-now .avatar img { width: 40px; height: 40px; border-radius: 100%;}
-.public-head-layout .nc-regist-now a { font-weight: 600; margin-left: 4px;color: #34b3a1;}
+.public-head-layout .nc-regist-now a { font-weight: 600; margin-left: 4px;color: #e61742;}
 .nc-register-bg { background: #FAFAFA url(../images/register_bg.png) repeat 50% 50% ; width: 100%; height: 680px; overflow: hidden;}
 .nc-register-box { filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#26000000', endColorstr='#26000000');background:rgba(0,0,0,0.15); width: 860px; height: 560px; padding: 10px; margin: 60px auto;}
 .nc-register-layout { background-color: #FFF; display: block; width: 820px; height: 520px; padding: 19px; border: solid 1px #CCC; overflow: hidden;}
@@ -26,15 +26,15 @@ body { background-color: #FAFAFA;}
 .tabs-nav li { vertical-align: bottom; letter-spacing: normal; word-spacing: normal; text-align: center; display: inline-block; *display: inline; width: 50%; height: 40px; margin-bottom: -1px; *zoom: 1;}
 .tabs-nav li a { font-size: 18px; color: #999; line-height: 24px; padding-bottom: 13px; position: relative; z-index: 1;}
 .tabs-nav li a:hover { text-decoration: none; color: #000;}
-.tabs-nav li a.tabulous_active { color: #34b3a1; display: block; border-bottom: 3px solid #34b3a1}
-.tabs-nav li a i { font-size: 0; line-height: 0; border-color: #34b3a1 transparent transparent transparent; border-style: solid dashed dashed dashed; border-width: 7px; display: none; width: 0; height: 0; margin-left: -4px; position: absolute; z-index: 1; left: 50%; bottom: -17px;}
+.tabs-nav li a.tabulous_active { color: #e61742; display: block; border-bottom: 3px solid #e61742}
+.tabs-nav li a i { font-size: 0; line-height: 0; border-color: #e61742 transparent transparent transparent; border-style: solid dashed dashed dashed; border-width: 7px; display: none; width: 0; height: 0; margin-left: -4px; position: absolute; z-index: 1; left: 50%; bottom: -17px;}
 .tabs-nav li a.tabulous_active i { display: block;}
 .tabs-container { position: relative; z-index: 1;}
 .nc-register-mode .tabs-content { padding: 50px 80px 0 100px;}
 .nc-login-form { display: block;}
 .nc-login-form dl { background-color: #FFF; width: 398px; height: 52px; margin-top: -1px; border: solid 1px #E6E6E6; position: relative; z-index: 1;}
 .nc-login-form dl.focus { border-color: #7ABD54; z-index: 3;}
-.nc-login-form dl.error { border-color: #34b3a1 !important; z-index: 2;}
+.nc-login-form dl.error { border-color: #e61742 !important; z-index: 2;}
 .nc-login-form dl dt { font-size: 14px; line-height: 20px; color: #666; width: 72px; padding: 16px 0 16px 20px; float: left;}
 .nc-login-form dl dd { height: 28px; float: left; padding: 12px 0;}
 .nc-login-form dl dd .text { font-family: "microsoft yahei"; font-size: 14px; line-height: 28px; width: 290px; height: 28px; padding: 0; border: none 0;}
@@ -55,7 +55,7 @@ body { background-color: #FAFAFA;}
 .nc-login-form .tiptext a:hover { text-decoration: none; background-color: #1FA67A;}
 .nc-login-form .tiptext a i { font-size: 14px; margin-right: 4px;}
 .nc-login-form .submit-div { margin-top: 15px;}
-.nc-login-form .submit-div .submit { font-family: "microsoft yahei"; font-size: 16px; font-weight: 600; color: #FFF; background-color: #34b3a1; width: 398px; height: 42px; border: solid 1px #0d9683; border-radius: 3px; cursor: pointer;}
+.nc-login-form .submit-div .submit { font-family: "microsoft yahei"; font-size: 16px; font-weight: 600; color: #FFF; background-color: #e61742; width: 398px; height: 42px; border: solid 1px #ce0f36; border-radius: 3px; cursor: pointer;}
 .nc-login-form label.error { color: #000; line-height: 24px; background: #FFF5D9 no-repeat 0 0; text-align: left; white-space: nowrap; height: 24px; padding: 8px 12px 8px 24px; position: absolute; z-index: 2; top: 5px; left: 300px; }
 .nc-login-form label.error i { font-size: 24px; margin-right: 12px; color: #FF875A; vertical-align: middle;}
 .nc-login-form .clause-div label.error { top: -5px; right: 50px;}

@@ -22,7 +22,7 @@
 .goods-detail-turn { position: absolute; z-index: 2; bottom: 0.5rem; left: 50%; width: 6rem; margin-left: -3rem; text-align: center;}
 .goods-detail-turn ul { font-size: 0; margin: 0 auto; white-space: nowrap;}
 .goods-detail-turn ul li { display: inline-block; width: 0.35rem; height: 0.35rem; margin-right: 0.25rem; background-color: #BBB; border-radius: 100%;}
-.goods-detail-turn ul li.cur { background-color: #34b3a1;}
+.goods-detail-turn ul li.cur { background-color: #e61742;}
 
 .goods-detail-top .round { margin: 0; position: absolute; z-index: 2; bottom: 0.75rem; right: 0.75rem; }
 .goods-detail-top .round i { display: block; width: 100%; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 60%; opacity: 0.75;}
@@ -33,19 +33,19 @@
 /*商品详情名称*/
 .goods-detail-name { display: block; padding: 0.5rem 0.5rem 0.25rem 0.5rem; background-color: #FFF; border-top: solid 0.05rem #EEE;}
 .goods-detail-name dt { display: block; font-size: 0.7rem; line-height: 0.85rem;}
-.goods-detail-name dt span { display: inline-block; padding: 0 0.15rem; border-radius: 0.1rem; margin-right: 0.1rem; background-color: #34b3a1; color: #FFF; font-size: 0.6rem; line-height: 0.9rem; vertical-align: middle; height: 0.9rem;}
+.goods-detail-name dt span { display: inline-block; padding: 0 0.15rem; border-radius: 0.1rem; margin-right: 0.1rem; background-color: #e61742; color: #FFF; font-size: 0.6rem; line-height: 0.9rem; vertical-align: middle; height: 0.9rem;}
 .goods-detail-name dd { margin-top: 0.15rem; font-size: 0.55rem; color: #777; line-height: 0.69rem;}
 
 /*商品详情价格*/
 .goods-detail-price { position: relative; z-index: 1; display: block; padding: 0 0.5rem; background-color: #FFF;}
 .goods-detail-price dl { display: inline-block;}
-.goods-detail-price dt { display: inline-block; font-size: 0.55rem; color: #34b3a1; line-height: 1rem;}
+.goods-detail-price dt { display: inline-block; font-size: 0.55rem; color: #e61742; line-height: 1rem;}
 .goods-detail-price dt em { font-size: 1rem;}
 .goods-detail-price dd { display: inline-block; font-size: 0.55rem; text-decoration: line-through; color: #999; line-height: 0.9rem;}
 .goods-detail-price .activity { display: inline-block; font-size: 0.45rem;}
 .goods-detail-price .sold { position: absolute; z-index: 1; top: 0.25rem; right: 0.75rem; display: block; font-size: 0.55rem; line-height: 1rem; height: 1rem;}
 .goods-detail-price .activity { font-size: 0.45rem; line-height: 0.6rem; vertical-align: middle; display: inline-block; height: 0.6rem; padding-right: 0.1rem; margin-top: 0.05rem; border: solid #EC5464 0.05rem; color: #EC5464;}
-.goods-detail-price .activity i { display: inline-block; vertical-align: middle; margin-right: 0.1rem; width: 0.6rem; height: 0.6rem; background: #34b3a1 url(../images/mobile_w.png) no-repeat 50% 50%; background-size: 80%;}
+.goods-detail-price .activity i { display: inline-block; vertical-align: middle; margin-right: 0.1rem; width: 0.6rem; height: 0.6rem; background: #e61742 url(../images/mobile_w.png) no-repeat 50% 50%; background-size: 80%;}
 
 /*商品详情项目*/
 .goods-detail-item { position: relative; z-index: 1; padding: 0.5rem; background: #FFF; border-bottom: solid 0.05rem #EEE;}
@@ -59,7 +59,7 @@
 /*促销活动*/
 .goods-detail-sale { position: relative; z-index: 1; margin-bottom: 0.4rem;}
 .goods-detail-sale dt { display: inline-block; vertical-align: top; margin-right: 0.1rem;}
-.goods-detail-sale dt i { display: inline-block; vertical-align: top; height: 0.7rem; padding: 0 0.1rem; margin-top: 0.1rem; font-size: 0.45rem; color: #FFF; line-height: 0.7rem; background: #34b3a1; border-radius: 0.15rem;}
+.goods-detail-sale dt i { display: inline-block; vertical-align: top; height: 0.7rem; padding: 0 0.1rem; margin-top: 0.1rem; font-size: 0.45rem; color: #FFF; line-height: 0.7rem; background: #e61742; border-radius: 0.15rem;}
 .goods-detail-sale dd { display: inline-block; vertical-align: top; font-size: 0.55rem; line-height: 0.9rem; color: #555;}
 .goods-detail-sale dd.mansong-rule { display: block; margin-bottom: 0.1rem;}
 .goods-detail-sale dd.mansong-rule em { font-weight: 600; color: #333;}
@@ -71,11 +71,11 @@
 /*商品详情领取代金券*/
 .goods-detail-voucher { padding: 0.5rem;}
 .goods-detail-voucher a { font-size: 0.6rem; color: #555; line-height: 1rem; display: block;}
-.goods-detail-voucher i { display: inline-block; vertical-align: top;width: 0.4rem; height: 0.4rem; line-height: 0.4rem; text-align: center; padding: 0.1rem; margin: 0.2rem 0.2rem 0 0; font-size: 0.45rem; background-color: #34b3a1; color: #FFF; border-radius: 0.1rem;}
+.goods-detail-voucher i { display: inline-block; vertical-align: top;width: 0.4rem; height: 0.4rem; line-height: 0.4rem; text-align: center; padding: 0.1rem; margin: 0.2rem 0.2rem 0 0; font-size: 0.45rem; background-color: #e61742; color: #FFF; border-radius: 0.1rem;}
 
 /*地区运费*/
 .goods-detail-freight {}
-.goods-detail-freight dt strong { color: #34b3a1; margin-left: 0.5rem;}
+.goods-detail-freight dt strong { color: #e61742; margin-left: 0.5rem;}
 .goods-detail-freight dd { line-height: 0.9rem; margin-top: 0.2rem;}
 
 /*虚拟订单线下店*/
@@ -90,7 +90,7 @@
 .goods-detail-o2o .default p { position: absolute; z-index: 1; right: 0.5rem; top: 0.5rem; border-left: solid 0.05rem #EEE; padding-left: 0.5rem;}
 .goods-detail-o2o .default p a { display: block;  width: 2rem; height: 2rem; background-image: url(../images/tel_b.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: 50%; opacity: 0.65; margin: 0;}
 .goods-detail-o2o .more-location { border-top: solid #EEE 0.05rem; font-size: 0.6rem; line-height: 0.9rem; padding: 0.5rem; position: relative;}
-.goods-detail-o2o .more-location a { display: block; color: #34b3a1; font-weight: 600;}
+.goods-detail-o2o .more-location a { display: block; color: #e61742; font-weight: 600;}
 .goods-detail-o2o .more-location i { position: absolute; z-index:1; top: 0.5rem; right: 0.5rem; width: 0.8rem; height: 0.9rem; background-image: url(../images/arrow_right_b.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; opacity: 0.4;}
 
 
@@ -103,7 +103,7 @@
 .goods-detail-contract { padding-bottom: 0.5rem;}
 .goods-detail-contract dt { display: block; height: 0.9rem; font-size: 0.6rem; line-height: 0.9rem; margin-bottom: 0.2rem; white-space: nowrap; overflow: hidden;}
 .goods-detail-contract dd { display: block; font-size: 0;}
-.goods-detail-contract dd span { display: inline-block; height: 0.65rem; margin-right: 0.5rem; font-size: 0.55rem; font-weight:600; color: #34b3a1; line-height: 0.65rem;}
+.goods-detail-contract dd span { display: inline-block; height: 0.65rem; margin-right: 0.5rem; font-size: 0.55rem; font-weight:600; color: #e61742; line-height: 0.65rem;}
 .goods-detail-contract dd span i { display: block; width: 0.6rem; height: 0.6rem; float: left; margin-right: 0.1rem;}
 .goods-detail-contract dd span i img { width: 100%; height: 100%;}
 
@@ -111,7 +111,7 @@
 .goods-detail-comment { background-color: #FFF; padding: 0 0.5rem; margin-top: 0.5rem; border-top: solid #EEE 0.05rem; border-bottom: solid #EEE 0.05rem;}
 .goods-detail-comment .title { display: block;}
 .goods-detail-comment .title a { display: block; position: relative; z-index: 1; height: 0.9rem; padding: 0.5rem 0; font-size: 0.6rem; line-height: 0.9rem; color: #888;}
-.goods-detail-comment .title span { font-size: 0.55rem; margin-left: 1rem; color: #34b3a1;}
+.goods-detail-comment .title span { font-size: 0.55rem; margin-left: 1rem; color: #e61742;}
 .goods-detail-comment .title span em { font-size: 0.6rem; font-weight: 600; margin-left: 0.2rem;}
 .goods-detail-comment .title .rate-num { position: absolute; z-index: 1; top: 0.5rem; right: 1rem; color: #888; font-size: 0.55rem;}
 .goods-detail-comment .title .item-more { right: 0;}
@@ -133,15 +133,15 @@
 .goods-detail-store { display: block; position: relative; z-index: 1; padding: 0 0.5rem; margin: 0.5rem 0; background: #FFF; border: solid #EEE; border-width: 0.05rem;}
 .goods-detail-store .store-name { height: 0.9rem; padding: 0.5rem 0 0.25rem  0; font-size: 0.7rem; line-height: 0.9rem; color: #333; }
 .goods-detail-store .store-name .icon-store { display: inline-block; width: 0.8rem; height: 0.9rem; vertical-align: top; margin-right: 0.2rem; background-image: url(../images/store_b.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; opacity: 0.75;}
-.goods-detail-store .store-name .icon-mall { color: #34b3a1;font-size: 0.55rem; margin-left: 0.5rem;}
+.goods-detail-store .store-name .icon-mall { color: #e61742;font-size: 0.55rem; margin-left: 0.5rem;}
 .goods-detail-store .store-rate { height: 0.7rem; padding: 0.4rem 0 0.5rem 0; border-top: solid 0.05rem #EEE; font-size: 0; }
 .goods-detail-store .store-rate span { display: inline-block; width: 33.33%; height: 0.7rem; font-size: 0.55rem; line-height: 0.7rem; color: #888; }
 .goods-detail-store .store-rate span em { display: inline-block; vertical-align: middle; font-size: 0.7rem; font-weight: 600;}
 .goods-detail-store .store-rate span i { display: inline-block; vertical-align: middle; width: 0.7rem; height: 0.7rem; font-size: 0.45rem; line-height: 0.7rem; font-style: normal; text-align: center; border-radius: 0.1rem;}
 .goods-detail-store .store-rate span.high em,
-.goods-detail-store .store-rate span.equal em { color: #34b3a1;}
+.goods-detail-store .store-rate span.equal em { color: #e61742;}
 .goods-detail-store .store-rate span.high i,
-.goods-detail-store .store-rate span.equal i { color: #FFF; background-color: #34b3a1}
+.goods-detail-store .store-rate span.equal i { color: #FFF; background-color: #e61742}
 .goods-detail-store .store-rate span.low em { color: #48CFAE;}
 .goods-detail-store .store-rate span.low i { color: #FFF; background-color: #48CFAE;}
 
@@ -164,9 +164,9 @@
 .goods-options-info .goods-pic img { width: 100%; height: 100%;}
 .goods-options-info dl { margin-left: 4rem;}
 .goods-options-info dt { font-size: 0.6rem; line-height: 0.75rem; margin: 0.2rem 0.6rem 0.4rem 0;}
-.goods-options-info .goods-price { height: 1rem; font-size: 0.55rem; color: #34b3a1; font-weight: 600; line-height: 1rem;}
+.goods-options-info .goods-price { height: 1rem; font-size: 0.55rem; color: #e61742; font-weight: 600; line-height: 1rem;}
 .goods-options-info .goods-price em { font-size: 0.66rem;}
-.goods-options-info .goods-price .activity { display: inline-block; height: 0.7rem; vertical-align: top; padding: 0 0.1rem; margin: 0.14rem 0 0 0.1rem; font-size: 0.45rem; line-height: 0.7rem; font-weight: lighter; color: #FFF; background-color: #34b3a1; border-radius: 0.1rem;}
+.goods-options-info .goods-price .activity { display: inline-block; height: 0.7rem; vertical-align: top; padding: 0 0.1rem; margin: 0.14rem 0 0 0.1rem; font-size: 0.45rem; line-height: 0.7rem; font-weight: lighter; color: #FFF; background-color: #e61742; border-radius: 0.1rem;}
 .goods-options-info .goods-storage { display: block; float: right; font-size: 0.5rem; line-height: 1rem; color: #888;}
 
 .goods-options-stock { padding: 0.25rem 0.5rem;}
@@ -175,7 +175,7 @@
 .goods-options-stock dd { display: block; font-size: 0rem;}
 .goods-options-stock dd a { display: inline-block; height: 0.9rem; padding: 0.25rem 0.5rem; margin-left: 0.3rem; margin-bottom: 0.3rem; font-size: 0.55rem; color: #888; line-height: 0.9rem; background: #FFF; border: solid 0.05rem #BBB; border-radius: 0.15rem;}
 .goods-options-stock dd a:first-child { margin-left: 0;}
-.goods-options-stock dd a.current { padding: 0.28rem 0.53rem; color: #FFF; background: #34b3a1; border: none;}
+.goods-options-stock dd a.current { padding: 0.28rem 0.53rem; color: #FFF; background: #e61742; border: none;}
 .goods-option-value { display: block; height: 1.2rem; padding: 0.5rem; margin-bottom: 2rem; line-height: 1.2rem; font-size: 0.6rem; color: #999; border-top: solid 0.05rem #EEE;}
 
 .goods-detail-bottom { margin: 0.5rem 0 2.5rem 0; text-align: center;}
@@ -202,7 +202,7 @@
 .goods-detail-foot .otreh-handle a p,
 .goods-option-foot .otreh-handle a p { display: block; height: 0.8rem; font-size: 0.55rem; line-height: 0.8rem; }
 .goods-detail-foot .otreh-handle a sup, 
-.goods-option-foot .otreh-handle a sup { position: absolute; z-index: 1; top: 0.1rem; right: 0.5rem; min-width: 0.5rem; height: 0.5rem; font-size: 0.45rem; line-height: 0.5rem; color: #34b3a1; text-align: center; border: solid 0.05rem #34b3a1; border-radius: 0.3rem; }
+.goods-option-foot .otreh-handle a sup { position: absolute; z-index: 1; top: 0.1rem; right: 0.5rem; min-width: 0.5rem; height: 0.5rem; font-size: 0.45rem; line-height: 0.5rem; color: #e61742; text-align: center; border: solid 0.05rem #e61742; border-radius: 0.3rem; }
 .goods-detail-foot .buy-handle,
 .goods-option-foot .buy-handle { float: right; width: 65%; font-size: 0;}
 .goods-detail-foot .buy-handle a,
@@ -212,7 +212,7 @@
 .goods-detail-foot .buy-handle a.add-cart,
 .goods-option-foot .buy-handle a.add-cart { float: right; width: 55%; background-color: #FB6E52;}
 .goods-detail-foot .buy-handle a.buy-now,
-.goods-option-foot .buy-handle a.buy-now { background-color: #34b3a1;}
+.goods-option-foot .buy-handle a.buy-now { background-color: #e61742;}
 
 /*图文描述*/
 .fixed-tab-pannel { min-width: 320px; max-width: 640px; overflow: hidden;}
@@ -245,4 +245,4 @@
 .product-eval-list .eval-con dd a img { max-width: 1.6rem; max-height: 1.6rem;}
 .product-eval-list .again-eval { height: 0.9rem; margin-top: 0.2rem; font-size: 0.55rem; line-height: 0.9rem; color: #555;}
 
-.product-eval-list .eval-explain { font-size: 0.6rem; color: #34b3a1; line-height: 0.8rem; padding: 0.5rem 0;}
+.product-eval-list .eval-explain { font-size: 0.6rem; color: #e61742; line-height: 0.8rem; padding: 0.5rem 0;}
