@@ -315,7 +315,8 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 -------------------------------------- */
 .public-top-layout { font-family: Arial, "宋体"; line-height: 20px; color: #777; background-color: #FAFAFA; border-bottom: solid 1px #F0F0F0;}
 .public-top-layout .topbar { height: 30px;}
-.public-top-layout .user-entry { width: 45%; height: 20px; float: left; padding: 5px 0;}
+.public-top-layout .topbar:before{content: '';background:url(../images/toplogo.png) no-repeat;width: 235px;height: 57px;display: block;position: absolute;z-index: 9; }
+.public-top-layout .user-entry { width: auto; height: 20px; float: right; padding: 5px 0;}
 .public-top-layout .user-entry a { color: #777;}
 .public-top-layout .user-entry span{margin:0 4px;}
 .public-top-layout .user-entry .other { margin:0 0 0 5px }
@@ -330,7 +331,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .public-top-layout .user-entry .other a.wx i { background-position:-40px 0 }
 .public-top-layout .user-entry .other a:hover.wx { color:#4EA335 }
 .public-top-layout .user-entry .other a:hover.wx i { background-position:-100px 0; text-decoration:none }
-.public-top-layout .quick-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: right; width: 55%; height: 30px; float: right;}
+.public-top-layout .quick-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: right; width:auto; height: 30px; float: right;}
 .public-top-layout .quick-menu dl { text-align: left; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; width: 90px; height: 30px; position: relative; z-index: 999; *zoom:1/*IE6、7*/;}
 .public-top-layout .quick-menu dl a { color: #777 !important;}
 .public-top-layout .quick-menu dl dt { font-size: 12px; line-height: 20px; height: 20px; padding: 5px 0; position: absolute; z-index: 2; top: 0px; left: 12px;}
