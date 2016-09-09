@@ -18,7 +18,8 @@ class AlipaySubmit {
 	/**
 	 *支付宝网关地址（新）
 	 */
-	var $alipay_gateway_new = 'https://openapi.alipaydev.com/gateway.do?';
+	// var $alipay_gateway_new = 'https://openapi.alipaydev.com/gateway.do?';  //测试环境
+    var $alipay_gateway_new = 'https://mapi.alipay.com/gateway.do?';  //正式环境
 
 	function __construct($alipay_config){
 		$this->alipay_config = $alipay_config;

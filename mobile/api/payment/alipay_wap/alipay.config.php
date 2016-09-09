@@ -15,32 +15,39 @@
  
 //↓↓↓↓↓↓↓↓↓↓请在这里配置您的基本信息↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 //合作身份者ID，签约账号，以2088开头由16位纯数字组成的字符串，登陆https://globalprod.alipay.com/order/myOrder.htm
-$alipay_config['partner']		= '2088101122136241';
+// $alipay_config['partner']		= '2088101122136241';
+$alipay_config['partner']       = '';
 
 // MD5密钥，安全检验码，由数字和字母组成的32位字符串，查看地址：https://globalprod.alipay.com/order/myOrder.htm
-$alipay_config['key']			= '760bdzec6y9goq7ctyx96ezkz78287de';
+// $alipay_config['key']			= '760bdzec6y9goq7ctyx96ezkz78287de';
+$alipay_config['key']           = '';
 
 // 服务器异步通知页面路径  需http(s)://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['notify_url'] = "http://商户网址/create_forex_trade-PHP-UTF-8/notify_url.php";
+// $alipay_config['notify_url'] = "http://商户网址/create_forex_trade-PHP-UTF-8/notify_url.php";
+$alipay_config['notify_url']    = MOBILE_SITE_URL.'/api/payment/alipay_wap/notify_url.php';
 
 // 页面跳转同步通知页面路径 需http(s)://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['return_url'] = "http://www.alipay.com";
+// $alipay_config['return_url'] = "http://www.alipay.com";
+$alipay_config['return_url']    = MOBILE_SITE_URL.'/api/payment/alipay_wap/return_url.php';
 
 //签名方式
-$alipay_config['sign_type']    = strtoupper('MD5');
+$alipay_config['sign_type']     = strtoupper('MD5');
 
 //字符编码格式 目前支持 gbk 或 utf-8
-$alipay_config['input_charset']= strtolower('utf-8');
+$alipay_config['input_charset'] = strtolower('utf-8');
 
 //ca证书路径地址，用于curl中ssl校验,在verify_nofity中使用
 //请保证cacert.pem文件在当前文件夹目录中
-$alipay_config['cacert']    = getcwd().'\\cacert.pem';
+$alipay_config['cacert']        = getcwd().'\\cacert.pem';
 
 //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-$alipay_config['transport']    = 'http';
-		
+$alipay_config['transport']     = 'http';
+
 // 产品类型，无需修改
-$alipay_config['service'] = "create_forex_trade_wap";
+$alipay_config['service']       = "create_forex_trade_wap";
+
+// 货币
+$alipay_config['currency']      = "HKD"; //港币
 
 //↑↑↑↑↑↑↑↑↑↑请在这里配置您的基本信息↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 

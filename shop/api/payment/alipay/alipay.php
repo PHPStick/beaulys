@@ -73,6 +73,7 @@ class alipay{
      * @return string
      */
     public function get_payurl(){
+        Log::record("获取支付宝支付跳转链接");
         switch ($this->payment_api_type) {
             case self::ALIPAY_FOREX:
             case self::ALIPAY_DOMESTIC:
@@ -139,6 +140,34 @@ class alipay{
      */
     public function get_forex_pay_params()
     {
+        Log::record("支付宝海外支付接口，组装海外接口参数");
+        //根据订单类型返回不同的return_url & notify_url
+        $return_url = SHOP_SITE_URL."/api/payment/alipay/";
+        $notify_url = SHOP_SITE_URL."/api/payment/alipay/";
+        switch ($this->order['order_type']) {
+            //实物订单
+            case 'real_order':
+                $notify_url_suffix = 'notify_url_real_order.php';
+                $return_url_suffix = 'return_url_real_order.php';
+                break;
+            //预付款订单
+            case 'pd_order':
+                $notify_url_suffix = 'notify_url_pd_order.php';
+                $return_url_suffix = 'return_url_pd_order.php';
+                break;
+            //虚拟订单
+            case 'vr_order':
+                $notify_url_suffix = 'notify_url_vr_order.php';
+                $return_url_suffix = 'return_url_vr_order.php';
+                break;
+            default:
+                $notify_url_suffix = 'notify_url.php';
+                $return_url_suffix = 'return_url.php';
+                break;
+        }
+        $notify_url = $notify_url . $notify_url_suffix;
+        $return_url = $return_url . $return_url_suffix;
+        Log::record("根据订单类型同步通知和异步通知链接也不同,return_url: {$return_url}, notify_url:{$notify_url}");
         return array(
             "service"        => 'create_forex_trade', //海外交易服务网关
             "partner"        => $this->payment['payment_config']['alipay_partner'],
@@ -146,13 +175,13 @@ class alipay{
             'key'            => $this->payment['payment_config']['alipay_key'],
             // 'key'            => '760bdzec6y9goq7ctyx96ezkz78287de',
             'sign_type'      => 'MD5',
-            "notify_url"     => SHOP_SITE_URL."/api/payment/alipay/notify_url.php",
-            "return_url"     => SHOP_SITE_URL."/api/payment/alipay/return_url.php",
+            "notify_url"     => $notify_url,
+            "return_url"     => $return_url,
             "out_trade_no"   => $this->order['pay_sn'],
             "subject"        => $this->order['subject'], //商品名称,
             "rmb_fee"        => $this->order['api_pay_amount'], //订单总价
             "body"           => $this->order['subject'],
-            "currency"       => 'RMB',
+            "currency"       => 'HKD',
             "_input_charset" => CHARSET,
         );
     }
@@ -165,9 +194,12 @@ class alipay{
 	public function notify_verify() {
 		$param	= $_POST;
 		$param['key']	= $this->payment['payment_config']['alipay_key'];
+        Log::record("notify_verify的原始参数:" . json_encode($param));
 		$veryfy_url = $this->alipay_verify_url. "partner=" .$this->payment['payment_config']['alipay_partner']. "&notify_id=".$param["notify_id"];
 		$veryfy_result  = $this->getHttpResponse($veryfy_url);
+        Log::record("发起notify请求，url:{$veryfy_url}, 请求结果:{$veryfy_result}");
 		$mysign = $this->sign($param);
+        Log::record("检查参数校验 生成签名参数:" . json_encode($param) . ", mysign:{$mysign}, 参数中的sign:{$param['sign']}");
 		if (preg_match("/true$/i",$veryfy_result) && $mysign == $param["sign"])  {
 			return true;
 		} else {
@@ -181,15 +213,20 @@ class alipay{
 	 * @return bool
 	 */
 	public function return_verify() {
+        Log::record("开始同步返回地址验证");
 		$param	= $_GET;
 		//将系统的控制参数置空，防止因为加密验证出错
 		$param['act']	= '';
 		$param['op']	= '';
 		$param['payment_code'] = '';
+        $param['extra_common_param'] = '';
 		$param['key']	= $this->payment['payment_config']['alipay_key'];
+        Log::record("return_verify的原始参数:" . json_encode($param));
 		$veryfy_url = $this->alipay_verify_url. "partner=" .$this->payment['payment_config']['alipay_partner']. "&notify_id=".$param["notify_id"];
 		$veryfy_result  = $this->getHttpResponse($veryfy_url);
+        Log::record("发起同步返回验证请求，请求地址: {$veryfy_url}， 请求结果:{$veryfy_result}");
 		$mysign = $this->sign($param);
+        Log::record("检查参数校验 生成签名参数:" . json_encode($param) . ",mysign:{$mysign}, 参数中的sign:{$param['sign']}");
 		if (preg_match("/true$/i",$veryfy_result) && $mysign == $param["sign"])  {
             return true;
 		} else {
@@ -283,17 +320,21 @@ class alipay{
 	 */
 	private function sign($parameter) {
 		$mysign = "";
-		
+        Log::record("生成sign传入参数:" . json_encode($parameter));
 		$filtered_array	= $this->para_filter($parameter);
+        Log::record("取得支付宝签名-参数过滤结果:" . json_encode($filtered_array));
 		$sort_array = $this->arg_sort($filtered_array);
+        Log::record("取得支付宝签名-参数排序结果:" . json_encode($sort_array));
 		$arg = "";
         while (list ($key, $val) = each ($sort_array)) {
 			$arg	.= $key."=".$this->charset_encode($val,(empty($parameter['_input_charset'])?"UTF-8":$parameter['_input_charset']),(empty($parameter['_input_charset'])?"UTF-8":$parameter['_input_charset']))."&";
 		}
 		$prestr = substr($arg,0,-1);  //去掉最后一个&号
 		$prestr	.= $parameter['key'];
+        Log::record("取得支付宝签名-加密前的参数:{$prestr}");
         if($parameter['sign_type'] == 'MD5') {
 			$mysign = md5($prestr);
+            Log::record("md5加密方式后的结果:{$mysign}");
 		}elseif($parameter['sign_type'] =='DSA') {
 			//DSA 签名方法待后续开发
 			die("DSA 签名方法待后续开发，请先使用MD5签名方式");
@@ -311,11 +352,23 @@ class alipay{
 	 * @return array
 	 */
 	private function para_filter($parameter) {
+        Log::record("para_filter before:" . json_encode($parameter));
 		$para = array();
+        foreach ($parameter as $key => $val) {
+            if ($key == "sign" || $key == "sign_type" || $key == "key" || $val == "") {
+                continue;
+            }
+            else {
+                $para[$key] = $parameter[$key];
+            }
+        }
+        /*
 		while (list ($key, $val) = each ($parameter)) {
 			if($key == "sign" || $key == "sign_type" || $key == "key" || $val == "")continue;
 			else	$para[$key] = $parameter[$key];
 		}
+        */
+        Log::record("para_filter after:" . json_encode($para));
 		return $para;
 	}
 

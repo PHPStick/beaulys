@@ -9,15 +9,17 @@ class Log{
 
     const SQL       = 'SQL';
     const ERR       = 'ERR';
+    const DEBUG     = 'DEBUG';
     private static $log =   array();
 
-    public static function record($message,$level=self::ERR) {
+    public static function record($message,$level=self::DEBUG) {
         $now = @date('Y-m-d H:i:s',time());
         switch ($level) {
             case self::SQL:
                self::$log[] = "[{$now}] {$level}: {$message}\r\n";
                break;
             case self::ERR:
+            case self::DEBUG:
                 $log_file = BASE_DATA_PATH.'/log/'.date('Ymd',TIMESTAMP).'.log';
                 $url = $_SERVER['REQUEST_URI'] ? $_SERVER['REQUEST_URI'] : $_SERVER['PHP_SELF'];
                 $url .= " ( act={$_GET['act']}&op={$_GET['op']} ) ";
