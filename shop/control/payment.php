@@ -20,6 +20,7 @@ class paymentControl extends BaseHomeControl{
 	 * 实物商品订单
 	 */
 	public function real_orderOp(){
+        Log::record("实物订单下单逻辑");
 	    $pay_sn = $_POST['pay_sn'];
 		$payment_code = $_POST['payment_code'];
         $url = 'index.php?act=member_order';
@@ -28,6 +29,7 @@ class paymentControl extends BaseHomeControl{
             showMessage('参数错误','','html','error');
         }
 
+        //获取支付方式参数
         $logic_payment = Logic('payment');
         $result = $logic_payment->getPaymentInfo($payment_code);
         if(!$result['state']) {
@@ -118,6 +120,7 @@ class paymentControl extends BaseHomeControl{
 	 *
 	 */
 	private function _api_pay($order_info, $payment_info) {
+        Log::record("调用第三方支付API进行支付");
     	$payment_api = new $payment_info['payment_code']($payment_info,$order_info);
     	if($payment_info['payment_code'] == 'chinabank') {
     		$payment_api->submit();
@@ -139,7 +142,9 @@ class paymentControl extends BaseHomeControl{
             Tpl::output('nav_list', rkcache('nav',true));
             Tpl::showpage('payment.wxpay');
     	} else {
-    		@header("Location: ".$payment_api->get_payurl());
+            $redirect_url = $payment_api->get_payurl();
+            Log::record("除了微信和网银的支付方式都是直接跳转页面，跳转链接:{$redirect_url}");
+    		@header("Location: ".$redirect_url);
     	}
     	exit();
 	}
@@ -149,18 +154,19 @@ class paymentControl extends BaseHomeControl{
 	 *
 	 */
 	public function notifyOp(){
+        Log::record('alipay notify start');
         switch ($_GET['payment_code']) {
             case 'alipay':
                 $success = 'success'; $fail = 'fail'; break;
             case 'chinabank':
                 $success = 'ok'; $fail = 'error'; break;
-            default: 
+            default:
                 exit();
         }
-
-        $order_type = $_POST['extra_common_param'];
-        $out_trade_no = $_POST['out_trade_no'];
-        $trade_no = $_POST['trade_no'];
+        $order_type = $_GET['extra_common_param']; //订单类型
+        $out_trade_no = $_POST['out_trade_no'];        //系统订单号
+        $trade_no = $_POST['trade_no'];                //支付宝订单号
+        Log::record("订单参数order_type:{$order_type},out_trade_no:{$out_trade_no},trade_no:{$trade_no}");
 
 		//参数判断
 		if(!preg_match('/^\d{18}$/',$out_trade_no)) exit($fail);
@@ -198,6 +204,7 @@ class paymentControl extends BaseHomeControl{
 		//取得支付方式
 		$result = $logic_payment->getPaymentInfo($_GET['payment_code']);
 		if (!$result['state']) {
+            Log::record("订单状态{$result['state']}为错误状态，返回异步通知失败信息");
 		    exit($fail);
 		}
 		$payment_info = $result['data'];
@@ -208,6 +215,7 @@ class paymentControl extends BaseHomeControl{
 		//对进入的参数进行远程数据判断
 		$verify = $payment_api->notify_verify();
 		if (!$verify) {
+            Log::record("异步通知验证失败，返回支付方失败信息，一般支付方会再次通过异步通知来确认支付状态");
 		    exit($fail);
 		}
 
@@ -228,6 +236,7 @@ class paymentControl extends BaseHomeControl{
 	 *
 	 */
 	public function returnOp(){
+        Log::record("开始支付返回逻辑");
 	    $order_type = $_GET['extra_common_param'];
 		if ($order_type == 'real_order') {
 		    $act = 'member_order';
@@ -242,6 +251,7 @@ class paymentControl extends BaseHomeControl{
 		$out_trade_no = $_GET['out_trade_no'];
 		$trade_no = $_GET['trade_no'];
 		$url = SHOP_SITE_URL.'/index.php?act='.$act;
+        Log::record("同步返回参数: 支付宝订单号:{$trade_no}, 订单号:{$out_trade_no}, 订单类型:{$order_type}, url:{$url}");
 
 		//对外部交易编号进行非空判断
 		if(!preg_match('/^\d{18}$/',$out_trade_no)) {
@@ -253,9 +263,13 @@ class paymentControl extends BaseHomeControl{
 		if ($order_type == 'real_order') {
 
 		    $result = $logic_payment->getRealOrderInfo($out_trade_no);
+            //检查订单状态，是否存在
+            Log::record("订单状态:{$result['state']}");
 		    if(!$result['state']) {
 		        showMessage($result['msg'], $url, 'html', 'error');
 		    }
+            //检查订单第三方支付状态，是否已经支付成功
+            Log::record("订单支付状态:{$result['data']['api_pay_state']}");
 		    if ($result['data']['api_pay_state']) {
 		        $payment_state = 'success';
 		    }
@@ -285,6 +299,7 @@ class paymentControl extends BaseHomeControl{
 		$api_pay_amount = $result['data']['api_pay_amount'];
 
 		if ($payment_state != 'success') {
+            Log::record("同步返回时订单支付状态还不是已支付状态");
 		    //取得支付方式
 		    $result = $logic_payment->getPaymentInfo($_GET['payment_code']);
 		    if (!$result['state']) {
@@ -298,12 +313,14 @@ class paymentControl extends BaseHomeControl{
 		    //返回参数判断
 		    $verify = $payment_api->return_verify();
 		    if(!$verify) {
+                Log::record("订单同步返回验证失败");
 		        showMessage('支付数据验证失败',$url,'html','error');
 		    }
 
 		    //取得支付结果
 		    $pay_result	= $payment_api->getPayResult($_GET);
 		    if (!$pay_result) {
+                Log::record("订单支付状态不是支付成功状态，表示支付失败");
 		        showMessage('非常抱歉，您的订单支付没有成功，请您后尝试',$url,'html','error');
 		    }
 
@@ -328,6 +345,7 @@ class paymentControl extends BaseHomeControl{
 		} elseif ($order_type == 'pd_order') {
 		    $pay_ok_url = SHOP_SITE_URL.'/index.php?act=predeposit';
 		}
+        Log::record("支付成功后同步页面跳转链接: {$pay_ok_url}");
         if ($payment_info['payment_code'] == 'tenpay') {
             showMessage('',$pay_ok_url,'tenpay');
         } else {

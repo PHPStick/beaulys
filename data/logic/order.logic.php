@@ -315,6 +315,7 @@ class orderLogic {
      * @return array
      */
     public function changeOrderReceivePay($order_list, $role, $user = '', $post = array()) {
+        Log::record("开始更新订单状态");
         $model_order = Model('order');
 
         try {
@@ -383,7 +384,7 @@ class orderLogic {
                     'order_sn' => $order_info['order_sn'],
                     'order_url' => urlShop('member_order', 'show_order', array('order_id' => $order_info['order_id']))
             );
-            QueueClient::push('sendMemberMsg', $param);
+            // QueueClient::push('sendMemberMsg', $param);
 
             // 支付成功发送店铺消息
             $param = array();
@@ -392,7 +393,7 @@ class orderLogic {
             $param['param'] = array(
                     'order_sn' => $order_info['order_sn']
             );
-            QueueClient::push('sendStoreMsg', $param);
+            // QueueClient::push('sendStoreMsg', $param);
 
             //添加订单日志
             $data = array();
@@ -401,7 +402,8 @@ class orderLogic {
             $data['log_user'] = $user;
             $data['log_msg'] = '收到了货款 ( 支付平台交易号 : '.$post['trade_no'].' )';
             $data['log_orderstate'] = ORDER_STATE_PAY;
-            $model_order->addOrderLog($data);            
+            $model_order->addOrderLog($data);
+            Log::record("添加订单日志,订单ID:{$order_id}");
         }
 
         return callback(true,'操作成功');

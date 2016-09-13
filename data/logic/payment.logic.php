@@ -148,6 +148,7 @@ class paymentLogic {
      * 支付成功后修改实物订单状态
      */
     public function updateRealOrder($out_trade_no, $payment_code, $order_list, $trade_no) {
+        Log::record("支付成功后修改实物订单状态,订单号:{$out_trade_no}, 支付宝订单号:{$trade_no}");
         $post['payment_code'] = $payment_code;
         $post['trade_no'] = $trade_no;
         return Logic('order')->changeOrderReceivePay($order_list, 'system', '系统', $post);
