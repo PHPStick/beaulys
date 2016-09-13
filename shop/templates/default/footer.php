@@ -18,11 +18,15 @@
     <?php }?>
     <?php }?>	    	
 	</ul>	
-<div class="help">
+<div class="help" style="width: 360px;float: right;">
 		<div class="w1190 clearfix">
     		<div class="contact f-l">
     			<div class="contact-border clearfix">
-        			<span class="ic tel t20"><?php echo $GLOBALS['setting_config']['site_tel400']; ?></span>
+    				<p>公司名称： 香港雷允上药妆</p>
+<p>公司地址：</p>
+<p>上海：上海市外高桥保税区富特北路240号</p>
+<p>香港 ：18/F BEDFORD 必发道 91-93 TAI KOK TSUI 大角咀</p>
+        			<!--<span class="ic tel t20"><?php echo $GLOBALS['setting_config']['site_tel400']; ?></span>
         			<span class="ic mail"><?php echo $GLOBALS['setting_config']['site_email']; ?></span>
         			<div class="attention cleafix">
         				<div class="weixin f-l">						
@@ -36,7 +40,7 @@
         					<div class="ic qq" style="padding-left: 0px;"><?php echo rec(8);?></div>
         					<div class="ic sina" style="padding-left: 0px;"><?php echo rec(7);?></div>
         				</div>
-        			</div>
+        			</div>-->
     			</div>
     		</div>
 		</div>
