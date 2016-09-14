@@ -25,6 +25,7 @@ class paymentControl extends mobileHomeControl{
      * 支付回调
      */
     public function returnOp() {
+        Log::record("mobile端支付return逻辑");
         unset($_GET['act']);
         unset($_GET['op']);
         unset($_GET['payment_code']);
@@ -58,6 +59,7 @@ class paymentControl extends mobileHomeControl{
      * 支付提醒
      */
     public function notifyOp() {
+        Log::recode("mobile端支付notify开始");
 
         // wxpay_jsapi
         if ($this->payment_code == 'wxpay_jsapi') {
@@ -84,13 +86,14 @@ class paymentControl extends mobileHomeControl{
         }
 
         // 恢复框架编码的post值
-        $_POST['notify_data'] = html_entity_decode($_POST['notify_data']);
+        // $_POST['notify_data'] = html_entity_decode($_POST['notify_data']);
 
         $payment_api = $this->_get_payment_api();
 
         $payment_config = $this->_get_payment_config();
 
         $callback_info = $payment_api->getNotifyInfo($payment_config);
+        Log::record("获取notify结果:{$callback_info}");
 
         if($callback_info) {
             //验证成功
@@ -108,7 +111,8 @@ class paymentControl extends mobileHomeControl{
      * 获取支付接口实例
      */
     private function _get_payment_api() {
-        $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code.DS.$this->payment_code.'.php';
+        $inc_file = Logic('payment')->getWapPaymentIncFile($this->payment_code);
+        // $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code.DS.$this->payment_code.'.php';
 
         if(is_file($inc_file)) {
             require($inc_file);
@@ -133,7 +137,7 @@ class paymentControl extends mobileHomeControl{
             $condition['payment_code'] = $this->payment_code;
         }
         $payment_info = $model_mb_payment->getMbPaymentOpenInfo($condition);
-        
+
         return $payment_info['payment_config'];
     }
 
@@ -198,8 +202,7 @@ class paymentControl extends mobileHomeControl{
         }
         if ($result['state']) {
             //记录消费日志
-            QueueClient::push('addConsume', array('member_id'=>$log_buyer_id,'member_name'=>$log_buyer_name,
-            'consume_amount'=>ncPriceFormat($api_pay_amount),'consume_time'=>TIMESTAMP,'consume_remark'=>$log_desc));
+            // QueueClient::push('addConsume', array('member_id'=>$log_buyer_id,'member_name'=>$log_buyer_name,'consume_amount'=>ncPriceFormat($api_pay_amount),'consume_time'=>TIMESTAMP,'consume_remark'=>$log_desc));
         }
 
         return $result;

@@ -172,11 +172,11 @@ final class Base{
 					continue;
 				}
 			}
-			header('location: http://www.haoid.cn');exit();
+			header('location: ' . BASE_SITE_URL);exit();
 		}else{
 			$d = strtolower(stristr($_SERVER['HTTP_HOST'],self::CPURL));
 			if ($d != strtolower(self::CPURL)){
-				header('location: http://www.haoid.cn');exit();
+				header('location: ' . BASE_SITE_URL);exit();
 			}
 		}
 	}

@@ -51,6 +51,7 @@ class member_paymentControl extends mobileMemberControl {
      * 实物订单支付 新方法
      */
     public function pay_newOp() {
+        Log::record("wap端订单支付开始");
         @header("Content-type: text/html; charset=".CHARSET);
         $pay_sn = $_GET['pay_sn'];
         if (!preg_match('/^\d{18}$/',$pay_sn)){
@@ -66,7 +67,7 @@ class member_paymentControl extends mobileMemberControl {
             }
 
             $this->payment_code = $_GET['payment_code'];
-            $this->payment_config = $mb_payment_info['payment_config'];            
+            $this->payment_config = $mb_payment_info['payment_config'];
         } else {
             exit('支付方式提交错误');
         }
@@ -244,11 +245,7 @@ class member_paymentControl extends mobileMemberControl {
      *
      */
     private function _api_pay($order_pay_info) {
-        if($this->payment_code == 'alipay') {
-            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code . '_wap' .DS.$this->payment_code.'.php';
-        } else {
-            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$this->payment_code.DS.$this->payment_code.'.php';
-        }
+        $inc_file = Logic('payment')->getWapPaymentIncFile($this->payment_code);
         if(!is_file($inc_file)){
             exit('支付接口不存在');
         }

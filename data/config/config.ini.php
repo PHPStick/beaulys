@@ -2,13 +2,13 @@
 
 
 $config = array();
-$config['base_site_url'] 		= '/';
-$config['shop_site_url'] 		= getenv('SHOP_URL');
+$config['base_site_url'] 		= getenv('BASE_SITE_URL');
+$config['shop_site_url'] 		= getenv('BASE_SITE_URL') . '/shop';
 $config['cms_site_url'] 		= '/cms';
 $config['microshop_site_url'] 	= '/microshop';
 $config['circle_site_url'] 		= '/circle';
 $config['admin_site_url'] 		= '/admin';
-$config['mobile_site_url'] 		= '/mobile';
+$config['mobile_site_url'] 		= getenv('BASE_SITE_URL') . '/mobile';
 $config['wap_site_url'] 		= '/wap';
 $config['chat_site_url'] 		= '/chat';
 $config['node_site_url'] 		= 'http://219.83.164.157:8090';

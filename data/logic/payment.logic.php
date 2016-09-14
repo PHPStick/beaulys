@@ -210,4 +210,14 @@ class paymentLogic {
             return callback(false,$e->getMessage());
         }
     }
+
+    public function getWapPaymentIncFile($payment_code)
+    {
+        if($payment_code == 'alipay') {
+            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$payment_code . '_wap' .DS.$payment_code.'.php';
+        } else {
+            $inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$payment_code.DS.$payment_code.'.php';
+        }
+        return $inc_file;
+    }
 }

@@ -58,6 +58,8 @@ class alipay{
     const ALIPAY_FOREX = 'forex';         //海外支付类型
     const ALIPAY_DOMESTIC = 'domestic';   //国内支付类型
 
+    const DEFAULT_FOREX_CURRENCY = 'HKD'; //默认海外支付货币
+
     public function __construct($payment_info = array(),$order_info = array()){
     	if (!extension_loaded('openssl')) $this->alipay_verify_url = 'http://notify.alipay.com/trade/notify_query.do?';
     	if(!empty($payment_info) and !empty($order_info)){
@@ -181,7 +183,7 @@ class alipay{
             "subject"        => $this->order['subject'], //商品名称,
             "rmb_fee"        => $this->order['api_pay_amount'], //订单总价
             "body"           => $this->order['subject'],
-            "currency"       => 'HKD',
+            "currency"       => self::DEFAULT_FOREX_CURRENCY,
             "_input_charset" => CHARSET,
         );
     }
