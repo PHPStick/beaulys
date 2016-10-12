@@ -99,7 +99,7 @@ class member_orderControl extends mobileMemberControl {
 				$condition['order_state'] = '30';
 				break;
 			case 'state_notakes':
-				$condition['order_type'] = '3';
+				// $condition['order_type'] = '3';
 				$condition['order_state'] = '30';
 				break;
 			case 'state_noeval':

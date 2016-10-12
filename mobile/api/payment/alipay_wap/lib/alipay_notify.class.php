@@ -82,6 +82,7 @@ class AlipayNotify {
 		else {
 			//生成签名结果
 			$isSign = $this->getSignVeryfy($_GET, $_GET["sign"]);
+            Log::record("verify return 生成签名参数:" . json_encode($_GET) . ", 生成签名结果:".$isSign);
 			return $isSign;
 		}
 	}
@@ -95,22 +96,21 @@ class AlipayNotify {
 	function getSignVeryfy($para_temp, $sign) {
 		//除去待签名参数数组中的空值和签名参数
 		$para_filter = paraFilter($para_temp);
-		
+        Log::record("参数过滤前:" . json_encode($para_temp) . ", 参数过滤后:" . json_encode($para_filter));
 		//对待签名参数数组排序
 		$para_sort = argSort($para_filter);
-		
+        Log::record("排序后的参数:" . json_encode($para_sort));
 		//把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串
 		$prestr = createLinkstring($para_sort);
-		
+        Log::record("参数拼接字符串结果:{$prestr}");
 		$isSgin = false;
 		switch (strtoupper(trim($this->alipay_config['sign_type']))) {
 			case "MD5" :
-				$isSgin = md5Verify($prestr, $sign, $this->alipay_config['key']);
+				$isSgin = md5Verify($prestr, $sign, $this->alipay_config['alipay_key']);
 				break;
 			default :
 				$isSgin = false;
 		}
-		
 		return $isSgin;
 	}
 

@@ -30,6 +30,7 @@ function md5Sign($prestr, $key) {
 function md5Verify($prestr, $sign, $key) {
 	$prestr = $prestr . $key;
 	$mysgin = md5($prestr);
+	Log::record("md5生成的签名结果:{$mysgin}");
 
 	if($mysgin == $sign) {
 		return true;

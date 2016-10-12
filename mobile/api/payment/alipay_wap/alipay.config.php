@@ -41,7 +41,7 @@ $alipay_config['input_charset'] = strtolower('utf-8');
 $alipay_config['cacert']        = getcwd().'\\cacert.pem';
 
 //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-$alipay_config['transport']     = 'http';
+$alipay_config['transport']     = 'https';
 
 // 产品类型，无需修改
 $alipay_config['service']       = "create_forex_trade_wap";
