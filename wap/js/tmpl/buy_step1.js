@@ -57,7 +57,7 @@ $(function() {
         wrapper: "#select-payment-wrapper",
         scroll: ""
     });
-    $("#new-address-wrapper").on("click", "#varea_info",
+    $("#new-address-wrapper").on("click", "#area_info_div",
     function() {
         $.areaSelected({
             success: function(e) {

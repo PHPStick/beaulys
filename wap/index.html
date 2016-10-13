@@ -59,7 +59,7 @@
 	    </aside>
 	<!-- 主页面标题 -->
 
-	<div class="mui-inner-wrap">
+	<div class="mui-inner-wrap" style="    overflow: auto;">
 		<div class="mui-off-canvas-backdrop"></div>
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title left-logo">Beaulys</h1>
@@ -67,8 +67,8 @@
 			<a href="tmpl/cart_list.html" class="header-icon shop"></a>
 			<a href="tmpl/search.html" class="mui-icon mui-action-menu mui-icon-search mui-pull-right"></a>
 		</header>
-		<div  id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
-			<div class="mui-scroll">
+		<div  id="offCanvasContentScroll" class="" style="margin-top: 44px;">
+			<div class="">
 				<div class="headerNav_list">
 					<ul>
 						<li><a href="tmpl/product_first_categroy.html">品牌</a></li>
@@ -109,19 +109,6 @@
 
 
 </div>
-<!--<div class="nctouch-home-top fixed-Width">
-  <header id="header" class="transparent">
-  	<div class="logo"></div>
-    <div class="header-wrap">
-      <a href="tmpl/search.html" class="header-inp"> <i class="icon"></i> <span class="search-input" id="keyword">请输入关键词</span> </a>
-    </div>
-    <div class="header-r"><a id="header-nav" href="tmpl/member/chat_list.html"><i class="message"></i>
-      <p>消息</p>
-      <sup></sup></a></div>
-  </header>
-  <div class="cohesive"></div>
-</div>-->
-<!--<footer id="footer" class="fixed-Width"></footer>-->
 <script type="text/html" id="adv_list">
 	<div class="mui-slider">
 	  <div class="mui-slider-group mui-slider-loop">
@@ -282,19 +269,14 @@
 			});
 			
 		},1500);
-			//mui('#offCanvasContentScroll').scroll();
-			
 			document.getElementById('offCanvasShow').addEventListener('tap', function() {
 				 mui('.mui-off-canvas-wrap').offCanvas('show');
 			});
-//		
 		var nowhost=window.location.host;
 		if(nowhost.indexOf('www.beaulys.com')>=0){
 			window.location.href=('http://m.beaulys.com');
 		}
 	});
-	
 </script>
-
 </body>
 </html>
