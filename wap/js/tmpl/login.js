@@ -29,14 +29,14 @@ $(function() {
     });
     var a = true;
     $("#loginbtn").click(function() {
-        if (!$(this).parent().hasClass("ok")) {
-            return false
-        }
-        if (a) {
-            a = false
-        } else {
-            return false
-        }
+//      if (!$(this).parent().hasClass("ok")) {
+//          return false
+//      }
+//      if (a) {
+//          a = false
+//      } else {
+//          return false
+//      }
         var e = $("#username").val();
         var i = $("#userpwd").val();
         var t = "wap";

@@ -3,6 +3,13 @@ $(function(){
     
     //渲染list
     var load_class = new ncScrollLoad();
+    if(!key){
+    	$('#viewlist').hide();
+    	$('#viewlist_data_login').show();
+    }else{
+    	$('#viewlist').show();
+    	$('#viewlist_data_login').hide();
+    }
     load_class.loadInit({
         'url':ApiUrl + '/index.php?act=member_goodsbrowse&op=browse_list',
         'getparam':{'key':key},

@@ -275,16 +275,19 @@
 <script>
 	$(function(){
 		setTimeout(function(){
-			mui('#offCanvasContentScroll').scroll();
 			var gallery = mui('.mui-slider');
 			
 			gallery.slider({
 			  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
 			});
+			
+		},1500);
+			//mui('#offCanvasContentScroll').scroll();
+			
 			document.getElementById('offCanvasShow').addEventListener('tap', function() {
 				 mui('.mui-off-canvas-wrap').offCanvas('show');
 			});
-		},1500);
+//		
 		var nowhost=window.location.host;
 		if(nowhost.indexOf('www.beaulys.com')>=0){
 			window.location.href=('http://m.beaulys.com');
