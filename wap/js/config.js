@@ -1,6 +1,6 @@
 
-parHost = 'dev.beaulys.com'
-mbHost = 'm.dev.beaulys.com'
+parHost = 'www.beaulys.com'
+mbHost = 'm.beaulys.com'
 
 httpParHost="http://"+parHost
 var SiteUrl = "http://" + parHost + "/shop"; //"http://v3.haoid.cn/mobile";
