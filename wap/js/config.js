@@ -20,3 +20,10 @@ function filterUrl(Furl){
 	}
 	return Furl;
 }
+for (var i = 0; i < document.getElementsByTagName("meta").length; i++) {
+	if(document.getElementsByTagName("meta")[i].getAttribute('name')=='viewport'){
+		document.getElementsByTagName("meta")[i].setAttribute('content','initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no')
+	}
+	
+}
+
