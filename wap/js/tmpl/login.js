@@ -1,7 +1,7 @@
 $(function() {
     var e = getCookie("key");
     if (e) {
-        //window.location.href = WapSiteUrl + "/tmpl/member/member.html";
+        window.location.href = "member.html";
         return
     }
     var r = document.referrer;
@@ -28,7 +28,7 @@ $(function() {
         }
     });
     var a = true;
-    $("#loginbtn").click(function() {
+    $("#loginbtn").on('click',function(){
 //      if (!$(this).parent().hasClass("ok")) {
 //          return false
 //      }
