@@ -276,10 +276,12 @@ $(function() {
             t, e);
             function a() {
                 $(window).scroll(function() {
-                    if ($(window).scrollTop() <= e.scrollHeight) {
-                        $(e.valve).addClass("transparent").removeClass("posf")
-                    } else {
-                        $(e.valve).addClass("posf").removeClass("transparent")
+                	if(!$(e.valve).hasClass('goodsd')){
+	                    if ($(window).scrollTop() <= e.scrollHeight) {
+	                        $(e.valve).addClass("transparent").removeClass("posf")
+	                    } else {
+	                        $(e.valve).addClass("posf").removeClass("transparent")
+	                    }
                     }
                 })
             }
