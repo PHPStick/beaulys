@@ -63,7 +63,7 @@
 		<div class="mui-off-canvas-backdrop"></div>
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title left-logo">Beaulys</h1>
-			<a id='offCanvasShow' href="#"  class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+			<div id='offCanvasShow' href="#"  class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></div>
 			<a href="tmpl/cart_list.html" class="header-icon shop"></a>
 			<a href="tmpl/search.html" class="mui-icon mui-action-menu mui-icon-search mui-pull-right"></a>
 		</header>
@@ -269,9 +269,9 @@
 			});
 			
 		},1500);
-			document.getElementById('offCanvasShow').addEventListener('tap', function() {
-				 mui('.mui-off-canvas-wrap').offCanvas('show');
-			});
+			$('#offCanvasShow').on('click',function(){
+				mui('.mui-off-canvas-wrap').offCanvas('show');
+			})
 		var nowhost=window.location.host;
 		if(nowhost.indexOf('www.beaulys.com')>=0){
 			window.location.href=('http://m.beaulys.com');
