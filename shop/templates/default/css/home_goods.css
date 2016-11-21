@@ -711,3 +711,12 @@ zoom: 1; }
 .pagination li a span, .pagination li a:visited span { color: #005AA0; text-decoration: none; background-color: #FFF; position: relative; z-index: 1; }
 .pagination li a:hover span, .pagination li a:active span { color: #FFF; text-decoration: none; background-color: #e61742; border-color: #CA3300; position: relative; z-index: 9; cursor:pointer; }
 .pagination li span.currentpage { color: #AAA; font-weight: bold; background-color: #FAFAFA; border-color: #E6E6E6; position: relative; z-index: 2; }
+.ncs-sidebar-container.ncs-top-bar{display:none;}
+
+#main-nav-holder .ncs-recommend{display:none;}
+
+#consulting_demo .top{display: none;}
+
+.ncs-goods-title-bar{display: none;}
+
+.ncs-goods-summary .rate{display: none;}
