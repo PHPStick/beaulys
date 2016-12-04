@@ -64,9 +64,9 @@
           <!-- E 描述相符评分 -->
         </dl>
         <!-- E 商品发布价格 -->
-        <div class="ncs-goods-code">
+        <!--<div class="ncs-goods-code">
           <p><img src="<?php echo goodsQRCode($output['goods']);?>"  title="用商城手机客户端扫描二维码直达商品详情内容"></p>
-          <span class="ncs-goods-code-note"><i></i>客户端扫购有惊喜</span> </div>
+          <span class="ncs-goods-code-note"><i></i>客户端扫购有惊喜</span> </div>-->
       </div>
       <?php if($output['goods']['goods_state'] != 10 && $output['goods']['goods_verify'] == 1){?>
       <!-- S 促销 -->
@@ -350,7 +350,7 @@
       <!--E 商品信息 --> 
     </div>
     <!-- E 商品图片及收藏分享 -->
-    <div class="ncs-handle"> 
+    <div class="ncs-handle" style="display: none;"> 
       <!-- S 分享 --> 
       <a href="javascript:void(0);" class="share" nc_type="sharegoods" data-param='{"gid":"<?php echo $output['goods']['goods_id'];?>"}'><i></i><?php echo $lang['goods_index_snsshare_goods'];?><span>(<em nc_type="sharecount_<?php echo $output['goods']['goods_id'];?>"><?php echo intval($output['goods']['sharenum'])>0?intval($output['goods']['sharenum']):0;?></em>)</span></a> 
       <!-- S 收藏 --> 
