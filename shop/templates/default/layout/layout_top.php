@@ -70,7 +70,7 @@
     </div>
     <?php }?>
     <ul class="tools">
-      <li><a href="tencent://message/?uin=1022717201" id="chat_show_user" class="chat TA_delay"><div class="tools_img TA"></div><span class="TA">在线客服</span><i id="new_msg" class="new_msg" style="display:none;"></i></a></li>
+      <li><a onclick="$('.layer-3').trigger('click')"  style="cursor: pointer;" id="chat_show_user" class="chat TA_delay"><div class="tools_img TA"></div><span class="TA">在线客服</span><i id="new_msg" class="new_msg" style="display:none;"></i></a></li>
       <?php if (!$output['hidden_rtoolbar_cart']) { ?>
       <li><a href="javascript:void(0);" id="rtoolbar_cart" class="cart TA_delay"><div class="tools_img TA"></div><span class="TA">购物车</span><i id="rtoobar_cart_count" class="new_msg" style="display:none;"></i></a></li>
       <?php } ?>
@@ -79,6 +79,7 @@
       <?php } ?>
       <li><a href="javascript:void(0);" id="gotop" class="gotop TA_delay"><div class="tools_img TA"></div><span class="TA">顶部</span></a></li>
     </ul>
+     <script src="https://qiyukf.com/script/064f62a3b4062af4595a6a586828835f.js" defer async></script>
     <div class="content-box" id="content-compare">
       <div class="top">
         <h3>商品对比</h3>
