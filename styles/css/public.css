@@ -1,1 +1,20 @@
-.public-top-layout .topbar{height: 40px;}
+.public-top-layout .topbar {
+	height: 40px;
+}
+
+.public-top-layout:before {
+	background-image: none;
+	content: 'www.beaulys.com';
+	position: relative;
+	margin: auto;
+	width: 180px;
+	height: 24px;
+	line-height: 24px;
+	display: block;
+	background-color: #fff;
+	top: -13px; text-align: center;
+}
+.public-top-layout{
+	    margin-top: 13px;
+	        border-top: 1px solid #c9c9c9;
+}
