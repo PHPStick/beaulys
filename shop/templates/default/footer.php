@@ -1,10 +1,12 @@
 <?php defined('InShopNC') or exit('Access Invalid!'); ?> 
 <?php //echo getChat($layout); ?>
-	<script>//通用组件
+	<script>
+	window.cssjsheader='http://127.0.0.1/beaulys/';
+	//
 var publicjscss = {
-	css: ['http://127.0.0.1/beaulys/styles/css/css.js',
+	css: ['styles/css/css.js',
 	],
-	js: ['http://127.0.0.1/beaulys/styles/js/public.js',
+	js: ['styles/js/public.js',
 	],
 };
 configCssJs(publicjscss);
