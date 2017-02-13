@@ -6,7 +6,7 @@
 <title><?php echo $output['html_title'];?></title>
 <meta name="keywords" content="<?php echo $output['seo_keywords']; ?>" />
 <meta name="description" content="<?php echo $output['seo_description']; ?>" />
-<link href="<?php echo MICROSHOP_TEMPLATES_URL;?>/css/base.css" rel="stylesheet" type="text/css">
+<link href="<?php echo MICROSHOP_TEMPLATES_URL;?>/css/base.css?001" rel="stylesheet" type="text/css">
 <link href="<?php echo MICROSHOP_TEMPLATES_URL;?>/css/layout.css" rel="stylesheet" type="text/css">
 <!--[if IE 6]><style type="text/css">body { _behavior: url(<?php echo MICROSHOP_TEMPLATES_URL;?>/css/csshover.htc);}</style><![endif]-->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
