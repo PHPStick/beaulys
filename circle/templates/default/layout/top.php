@@ -2,6 +2,7 @@
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
 <div class="public-top-layout w">
+	
   <div class="topbar wrapper">
     <div class="user-entry">
     <?php if($_SESSION['is_login'] == '1'){?>

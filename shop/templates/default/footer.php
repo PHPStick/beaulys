@@ -1,36 +1,87 @@
-<?php defined('InShopNC') or exit('Access Invalid!');?> 
-<?php //echo getChat($layout);?>
-	<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+<?php defined('InShopNC') or exit('Access Invalid!'); ?> 
+<?php //echo getChat($layout); ?>
+	<script>//通用组件
+var publicjscss = {
+	css: ['http://127.0.0.1/beaulys/styles/css/css.js',
+	],
+	js: ['http://127.0.0.1/beaulys/styles/js/public.js',
+	],
+};
+configCssJs(publicjscss);
+//配置css,js方法
+function configCssJs(cssjsobj) {
+	var headEl = document.getElementsByTagName('head')[0],
+		sync = true;
+	for(var i = 0, j = cssjsobj['css']; i < j.length; i++) {
+		addTag('link', {
+			rel: 'stylesheet',
+			href: window.cssjsheader + j[i] + window.versionsNum
+		});
+	}
+	for(var q = 0, w = cssjsobj['js']; q < w.length; q++) {
+		addTag('script', {
+			src: window.cssjsheader + w[q] + window.versionsNum
+		}, sync);
+	}
+
+	function addTag(name, attributes, sync) {
+		var el = document.createElement(name),
+			attrName;
+
+		for(attrName in attributes) {
+			el.setAttribute(attrName, attributes[attrName]);
+		}
+		sync ? document.write(outerHTML(el)) : headEl.appendChild(el);
+	}
+
+	function outerHTML(node) {
+		// if IE, Chrome take the internal method otherwise build one
+		return node.outerHTML || (function(n) {
+			var div = document.createElement('div'),
+				h;
+			div.appendChild(n);
+			h = div.innerHTML;
+			div = null;
+			return h;
+		})(node);
+	}
+}</script>
+	<script>(function() {
+	var bp = document.createElement('script');
+	var curProtocol = window.location.protocol.split(':')[0];
+	if(curProtocol === 'https') {
+		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	} else {
+		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(bp, s);
+})();</script>
 <div id="faq">
   <div class="faq-wrapper">
     <?php if(is_array($output['article_list']) && !empty($output['article_list'])){ ?><ul>
     <?php foreach ($output['article_list'] as $k=> $article_class){ ?>
     <?php if(!empty($article_class)){ ?>
-   <li> <dl class="s<?php echo ''.$k+1;?>">
+   <li> <dl class="s<?php echo '' . $k + 1; ?>">
       <dt>
-        <?php if(is_array($article_class['class'])) echo $article_class['class']['ac_name'];?>
+        <?php
+		if (is_array($article_class['class']))
+			echo $article_class['class']['ac_name'];
+	?>
       </dt>
       <?php if(is_array($article_class['list']) && !empty($article_class['list'])){ ?>
       <?php foreach ($article_class['list'] as $article){ ?>
-      <dd><i></i><a href="<?php if($article['article_url'] != '')echo $article['article_url'];else echo urlShop('article', 'show',array('article_id'=> $article['article_id']));?>" title="<?php echo $article['article_title']; ?>"> <?php echo $article['article_title'];?> </a></dd>
-      <?php }?>
-      <?php }?>
+      <dd><i></i><a href="<?php
+		if ($article['article_url'] != '')
+			echo $article['article_url'];
+		else
+			echo urlShop('article', 'show', array('article_id' => $article['article_id']));
+	?>" title="<?php echo $article['article_title']; ?>"> <?php echo $article['article_title']; ?> </a></dd>
+      <?php } ?>
+      <?php } ?>
     </dl></li>
-    <?php }?>
-    <?php }?>	    	
+    <?php } ?>
+    <?php } ?>	    	
 	</ul>	
 <div class="help" style="width: 360px;float: right;">
 		<div class="w1190 clearfix">
@@ -59,51 +110,62 @@
     		</div>
 		</div>
 	</div>			
-    <?php }?>
+    <?php } ?>
   </div>
 </div>
 <div id="footer" class="wrapper">
-  <p><a href="<?php echo SHOP_SITE_URL;?>"><?php echo $lang['nc_index'];?></a>
+  <p><a href="<?php echo SHOP_SITE_URL; ?>"><?php echo $lang['nc_index']; ?></a>
     <?php if(!empty($output['nav_list']) && is_array($output['nav_list'])){?>
     <?php foreach($output['nav_list'] as $nav){?>
     <?php if($nav['nav_location'] == '2'){?>
-    | <a  <?php if($nav['nav_new_open']){?>target="_blank" <?php }?>href="<?php switch($nav['nav_type']){
-    	case '0':echo $nav['nav_url'];break;
-    	case '1':echo urlShop('search', 'index', array('cate_id'=>$nav['item_id']));break;
-    	case '2':echo urlShop('article', 'article',array('ac_id'=>$nav['item_id']));break;
-    	case '3':echo urlShop('activity', 'index',array('activity_id'=>$nav['item_id']));break;
-    }?>"><?php echo $nav['nav_title'];?></a>
-    <?php }?>
-    <?php }?>
-    <?php }?>
+    | <a  <?php if($nav['nav_new_open']){?>target="_blank" <?php } ?>href="<?php
+		switch($nav['nav_type']) {
+			case '0' :
+				echo $nav['nav_url'];
+				break;
+			case '1' :
+				echo urlShop('search', 'index', array('cate_id' => $nav['item_id']));
+				break;
+			case '2' :
+				echo urlShop('article', 'article', array('ac_id' => $nav['item_id']));
+				break;
+			case '3' :
+				echo urlShop('activity', 'index', array('activity_id' => $nav['item_id']));
+				break;
+		}
+	?>"><?php echo $nav['nav_title']; ?></a>
+    <?php } ?>
+    <?php } ?>
+    <?php } ?>
     |<a href="/shop/index.php?act=seller_login&amp;op=show_login" target="_blank" title="登录商家管理中心">商家登录</a>
   </p>
-  <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?><br/><?php echo $output['setting_config']['icp_number']; ?></div>
+  <?php echo html_entity_decode($output['setting_config']['statistics_code'], ENT_QUOTES); ?><br/><?php echo $output['setting_config']['icp_number']; ?></div>
 <?php if (C('debug') == 1){?>
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
-    <legend><?php echo $lang['nc_debug_trace_title'];?></legend>
-    <div> <?php print_r(Tpl::showTrace());?> </div>
+    <legend><?php echo $lang['nc_debug_trace_title']; ?></legend>
+    <div> <?php print_r(Tpl::showTrace()); ?> </div>
   </fieldset>
 </div>
-<?php }?>
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.cookie.js"></script>
-<link href="<?php echo RESOURCE_SITE_URL;?>/js/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/perfect-scrollbar.min.js"></script>
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/qtip/jquery.qtip.min.js"></script>
-<link href="<?php echo RESOURCE_SITE_URL;?>/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css">
+<?php } ?>
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL; ?>/js/jquery.cookie.js"></script>
+<link href="<?php echo RESOURCE_SITE_URL; ?>/js/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL; ?>/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL; ?>/js/qtip/jquery.qtip.min.js"></script>
+<link href="<?php echo RESOURCE_SITE_URL; ?>/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css">
 <!-- 对比 -->
-<script src="<?php echo SHOP_RESOURCE_SITE_URL;?>/js/compare.js"></script>
-<script type="text/javascript">
-$(function(){
+<script src="<?php echo SHOP_RESOURCE_SITE_URL; ?>/js/compare.js"></script>
+<script type="text/javascript">$(function() {
 	// Membership card
-	$('[nctype="mcard"]').membershipCard({type:'shop'});
+	$('[nctype="mcard"]').membershipCard({
+		type: 'shop'
+	});
 });
 //v4
 function fade() {
-	$("img[rel='lazy']").each(function () {
+	$("img[rel='lazy']").each(function() {
 		var $scroTop = $(this).offset();
-		if ($scroTop.top <= $(window).scrollTop() + $(window).height()) {
+		if($scroTop.top <= $(window).scrollTop() + $(window).height()) {
 			$(this).hide();
 			$(this).attr("src", $(this).attr("data-url"));
 			$(this).removeAttr("rel");
@@ -113,10 +175,10 @@ function fade() {
 	});
 }
 if($("img[rel='lazy']").length > 0) {
-	$(window).scroll(function () {
+	$(window).scroll(function() {
 		fade();
 	});
 };
-fade();
-</script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260929847'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260929847%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+fade();</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1260929847'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260929847%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
