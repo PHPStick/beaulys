@@ -149,31 +149,31 @@ $('#keyword').focus(function() {
       <?php echo loadadv(1048);?>
       </div>
     <div class="head-search-bar">
-        <div id="search">
+       <!--<div id="search">
           <ul class="tab">
             <li act="search" class="current"><span>商品</span></li>
-           <!-- <li act="store_list"><span>店铺</span></li>-->
+            <li act="store_list"><span>店铺</span></li>
           </ul>
-        </div>
+        </div>-->
       <form class="search-form" method="get" action="<?php echo SHOP_SITE_URL;?>">
         <input type="hidden" value="search" id="search_act" name="act">
          <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" type="text" class="input-text" value="<?php echo $_GET['keyword'];?>" maxlength="60" x-webkit-speech lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
         <input type="submit" id="button" value="<?php echo $lang['nc_common_search'];?>" class="input-submit">
       </form>
       <!--搜索关键字-->
-      <div class="keyword"><?php echo $lang['hot_search'].$lang['nc_colon'];?>
+      <!--<div class="keyword"><?php echo $lang['hot_search'].$lang['nc_colon'];?>
         <ul>
           <?php if(is_array($output['hot_search']) && !empty($output['hot_search'])) { foreach($output['hot_search'] as $val) { ?>
           <li><a href="<?php echo urlShop('search', 'index', array('keyword' => $val));?>"><?php echo $val; ?></a></li>
           <?php } }?>
         </ul>
-      </div>
+      </div>-->
 
     </div>
     
     
     <div class="head-user-menu">
-      <dl class="my-mall">
+      <!--<dl class="my-mall">
         <dt><span class="ico"></span>我的商城<i class="arrow"></i></dt>
         <dd>
           <div class="sub-title">
@@ -207,7 +207,7 @@ $('#keyword').focus(function() {
             </ul>
           </div>
         </dd>
-      </dl>
+      </dl>-->
       <dl class="my-cart">
         <?php if ($output['cart_goods_num'] > 0) { ?>
         <div class="addcart-goods-num"><?php echo $output['cart_goods_num'];?></div>
