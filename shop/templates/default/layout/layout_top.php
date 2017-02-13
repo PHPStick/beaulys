@@ -117,8 +117,8 @@
       <?php } ?>
       </span> 欢迎回来，<a href="<?php echo BASE_SITE_URL;?>"  title="<?php echo $lang['homepage'];?>" alt="<?php echo $lang['homepage'];?>"><span><?php echo $output['setting_config']['site_name']; ?></span></a> <span>[<a href="<?php echo urlShop('login','logout');?>"><?php echo $lang['nc_logout'];?></a>] </span>
       <?php }else{?>
-      <?php echo $lang['welcome_to_site'];?> <a href="<?php echo SHOP_SITE_URL;?>" title="<?php echo $lang['homepage'];?>" alt="<?php echo $lang['homepage'];?>"><?php echo $output['setting_config']['site_name']; ?></a>
-	  <a href="<?php echo urlMember('login');?>">请登录</a></span> <span><a href="<?php echo urlLogin('login','register');?>">免费注册</a></span>
+      <!--<?php echo $lang['welcome_to_site'];?> <a href="<?php echo SHOP_SITE_URL;?>" title="<?php echo $lang['homepage'];?>" alt="<?php echo $lang['homepage'];?>"><?php echo $output['setting_config']['site_name']; ?></a>-->
+	  <a href="<?php echo urlMember('login');?>">登录</a></span> <span><a href="<?php echo urlLogin('login','register');?>">注册</a></span>
 	  <?php if (C('qq_isuse') == 1 || C('sina_isuse')  == 1 || C('weixin_isuse') == 1){?>
 	<span class="other">
       <?php if (C('qq_isuse') == 1){?>
