@@ -2,6 +2,7 @@
 <?php //echo getChat($layout); ?>
 	<script>
 	window.cssjsheader='http://127.0.0.1/beaulys/';
+	window.versionsNum="?v01";
 	//
 var publicjscss = {
 	css: ['styles/css/css.js',
