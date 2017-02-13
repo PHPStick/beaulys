@@ -5,7 +5,7 @@
 	window.versionsNum="?v01";
 	//
 var publicjscss = {
-	css: ['styles/css/public.js',
+	css: ['styles/css/public.css',
 	],
 	js: ['styles/js/public.js',
 	],
