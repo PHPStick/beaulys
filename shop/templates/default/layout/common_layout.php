@@ -155,11 +155,7 @@ $('#keyword').focus(function() {
             <li act="store_list"><span>店铺</span></li>
           </ul>
         </div>-->
-      <form class="search-form" method="get" action="<?php echo SHOP_SITE_URL;?>">
-        <input type="hidden" value="search" id="search_act" name="act">
-         <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" type="text" class="input-text" value="<?php echo $_GET['keyword'];?>" maxlength="60" x-webkit-speech lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
-        <input type="submit" id="button" value="<?php echo $lang['nc_common_search'];?>" class="input-submit">
-      </form>
+      
       <!--搜索关键字-->
       <!--<div class="keyword"><?php echo $lang['hot_search'].$lang['nc_colon'];?>
         <ul>
