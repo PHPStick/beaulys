@@ -4,7 +4,7 @@ body {
 }
 
 .mui-bar-nav {
-	background-color: #e61742;
+	background-color: #333;
 }
 
 .mui-bar-nav.mui-bar .mui-icon {
@@ -44,7 +44,7 @@ body {
 
 .headerNav_list li a {
 	padding: 14px 14px 11px;
-	color: #e61742;
+	color: #000;
 	font-size: 16px;
 }
 
@@ -78,7 +78,7 @@ aside .title {
 }
 
 .mb-header-box {
-	background: #e61742;
+	background: #333;
 	text-align: center;
 	font-size: 12px;
 	font-weight: 700;
