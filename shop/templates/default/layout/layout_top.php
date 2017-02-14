@@ -159,8 +159,8 @@
       </form>
       	</span>
     </div>
-    <div class="quick-menu">
-<!--    <dl class="invite"><dt><a href="<?php echo BASE_SITE_URL;?>/index.php?act=invite"><span>邀请返利</span></a></dt></dl>-->
+    <!--<div class="quick-menu">
+    <dl class="invite"><dt><a href="<?php echo BASE_SITE_URL;?>/index.php?act=invite"><span>邀请返利</span></a></dt></dl>
 	<?php if (C('mobile_isuse') && C('mobile_app')){?>
 	<dl class="down_app">
         <dt><em class="ico_tel"></em><a href="<?php echo WAP_SITE_URL; ?>">手机移动端</a><i></i></dt>
@@ -178,7 +178,7 @@
           <?php } ?>
                         </div>
     </dd>      </dl>
-    <?php } ?>
+    <?php } ?>-->
 	<!--<dl>
         <dt><em class="ico_shop"></em><a href="<?php echo urlShop('show_joinin','index');?>" title="商家管理">商家管理</a><i></i></dt>
         <dd>
