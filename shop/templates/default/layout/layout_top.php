@@ -132,6 +132,8 @@
       </span>
       <?php } ?>
       <?php }?>
+      	<span class="gouwuche"></span>|
+      	<span class="sousuo"></span>
     </div>
     <div class="quick-menu">
 <!--    <dl class="invite"><dt><a href="<?php echo BASE_SITE_URL;?>/index.php?act=invite"><span>邀请返利</span></a></dt></dl>-->

@@ -377,10 +377,10 @@ $(function(){
 	});	
 });
 //首页顶部固定
-$(".header-wrap").waypoint(function(a, b) {
-        $(this).toggleClass("sticky", "down" === b);
-        a.stopPropagation()
-    });
+//$(".header-wrap").waypoint(function(a, b) {
+//      $(this).toggleClass("sticky", "down" === b);
+//      a.stopPropagation()
+//  });
 //返利链链
 var uid = window.location.href.split("#V3");
 var fragment = uid[1];
