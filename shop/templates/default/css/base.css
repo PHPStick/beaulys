@@ -561,7 +561,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .fttff29 { background-color: #f5f5f5; width: 100%; }
 .warp-all236 { width: 980px; margin: 0 auto; }
 .mod_agree { padding: 15px 0px 10px 0px; text-align: center; }
-.mod_agree_con { overflow: hidden; zoom: 1; }
+.mod_agree_con { overflow: hidden; zoom: 1; width: 100%;}
 .mod_agree_item { margin-top: 10px; display: inline; float: left; width: 198px; border-right: 1px dotted #CCC; }
 
 

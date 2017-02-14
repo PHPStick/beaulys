@@ -60,7 +60,7 @@ function configCssJs(cssjsobj) {
 	var s = document.getElementsByTagName("script")[0];
 	s.parentNode.insertBefore(bp, s);
 })();</script>
-<div id="faq">
+<div id="faq" style="display: none;">
   <div class="faq-wrapper">
     <?php if(is_array($output['article_list']) && !empty($output['article_list'])){ ?><ul>
     <?php foreach ($output['article_list'] as $k=> $article_class){ ?>
