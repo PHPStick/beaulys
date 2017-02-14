@@ -80,7 +80,7 @@ ol,ul {
 caption,th {
 	text-align:left;
 }
-.wrapper  { width:1200px; margin:0 auto}
+.wrapper  { width:980px; margin:0 auto}
 /* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
 h1,h2,h3,h4,h5,h6 {
 	font-size:100%;
@@ -147,7 +147,7 @@ body .fn-hide {
 /*==============================*/
 /* 全局 */
 /*==============================*/
-.content{ width:1200px; margin:0 auto;}
+.content{ width:980px; margin:0 auto;}
 .backToTop { font-size: 12px; line-height: 1.2; color: #fff; background-color: #000; text-align: center; display: none; width: 18px; padding: 5px 0; position: fixed; _position: absolute; right: 10px; bottom: 100px; _bottom: "auto"; cursor: pointer; opacity: .6; filter: Alpha(opacity=60);}
 
 /*图片等比例缩放*/
@@ -168,7 +168,7 @@ body .fn-hide {
 /*==============================*/
 /* 头部区域 */
 /*==============================*/
-#topHeader { width: 1200px; height: 90px; margin: 0 auto; position: relative; z-index: 99;}
+#topHeader { width: 980px; height: 90px; margin: 0 auto; position: relative; z-index: 99;}
 #topHeader .site-logo { position: absolute; top: 20px; left: 0px; width:220px; height:60px; overflow:hidden}
 #topHeader .site-logo img { max-width:220px;}
 /* 头部搜索Tab切换样式 */
@@ -182,7 +182,7 @@ body .fn-hide {
 		#search .form { background: url(../images/flea/flea_hbg.png) no-repeat left -69px; width:492px; height: 30px; position: absolute; z-index: 1; top: 31px; left: 0px; }
 			#search .form form div.formstyle { background: url(../images/flea/flea_hbg.png) repeat-x 0px -99px; display: inline; height: 30px; float: left; margin: 0 0 0 25px;}
 			#search .form form div.formstyle .textinput { font-family: Tahoma, Arial; font-size: 12px; line-height: 20px; color: #555; text-indent: 4px; display: block; width: 380px; height: 20px; padding: 0; margin: 5px 0; float: left; border: 0;}
-			#search .form form div.formstyle .search-button { line-height: 1200px; background: url(../images/flea/flea_hbg.png) no-repeat 0 -129px; width: 63px; height: 30px; padding: 0; margin: 0; border: 0; overflow: hidden; cursor: pointer; _float: left;}
+			#search .form form div.formstyle .search-button { line-height: 980px; background: url(../images/flea/flea_hbg.png) no-repeat 0 -129px; width: 63px; height: 30px; padding: 0; margin: 0; border: 0; overflow: hidden; cursor: pointer; _float: left;}
 		#search div.advanced-search { line-height: 24px; display: block; position: absolute;  z-index: 99; top:32px; left:505px; }
 		#search div.tag { line-height: 20px; display: block; width: 500px; height: 20px; position: absolute; z-index: 1; overflow: hidden; top: 65px; left: 10px;}
 		#search div.tag a { color: #555; float: left; padding-top: 0; padding-right: 12px;}
@@ -206,7 +206,7 @@ body .fn-hide {
 		
 		/* 主导航条样式 */		
 #navBar{ width:100%; height:35px; background: #454545;}
-  #navBar ul{ width:1200px; height:35px; margin:0 auto; overflow:hidden;}
+  #navBar ul{ width:980px; height:35px; margin:0 auto; overflow:hidden;}
   #navBar ul li{display:block;/* background:url(../images/flea/line.png) no-repeat; */}  
   #navBar ul li.none{ background:none;}
   #navBar ul li.link{ background: #FF5A5A;}
@@ -244,7 +244,7 @@ a.gray2{ float:right; color:#333;}
 .gray{ color:#999;}
 .blue2{ color:#58c2fb;}
 .price{ padding-right:5px;}   
-.ad{ width:1200px; text-align:center; margin:20px 0;}
+.ad{ width:980px; text-align:center; margin:20px 0;}
 .ad img{display: block;}
 .size790{ width:990px;}
 .size200{ width:200px;}
@@ -264,7 +264,7 @@ a.gray2{ float:right; color:#333;}
      #buttonContainer a{ margin-top:16px; background:url(../images/flea/flea_buy.png) 0 0 no-repeat; width:250px; height:40px; display:block;}
 	 #buttonContainer a:hover{background:url(../images/flea/flea_buy.png) 0 -65px no-repeat;}
 	 
-  #fir_items,#third_items,#five_items{ width:1200px;}
+  #fir_items,#third_items,#five_items{ width:980px;}
   
   #fir_items h2{background:url(../images/flea/text.gif) 0 -108px no-repeat; height:22px; line-height:22px; overflow:hidden; margin-top:20px; padding-bottom:10px;}
   #fir_items .people{ margin-left:85px; margin-right:5px; float:left;font-family: Arial,Helvetica,sans-serif;font-size: 14px;font-weight: bold;}
@@ -295,7 +295,7 @@ a.gray2{ float:right; color:#333;}
 	.look_items li p span{ padding-left:5px; padding-right:0}
 	.look_items .pic{ width:132px; height:132px;border:1px solid #eaeaea;}
 	
-  #fourth_items{ width:1200px; margin-top:20px; margin-bottom:20px; float:left;}	
+  #fourth_items{ width:980px; margin-top:20px; margin-bottom:20px; float:left;}	
   #fourth_items h2{background:url(../images/flea/text.gif) 0 -142px no-repeat; width:100%; height:22px; line-height:22px; overflow:hidden;}
     #fourth_items ul{ margin-top:10px;}
     #fourth_items ul li{ width:290px; height:100px; margin-right:13px;}
@@ -594,7 +594,7 @@ a.sell_btn2:active{background:url(../images/flea/flea_icon.png) 0 -267px no-repe
 #five_items{ float:left;}
 .cont{padding:10px;}
 .hidden{display:none;}
-.scrolldoorFrame{width:1200px; height:540px; overflow:hidden; margin:0px auto 20px; position:relative;}
+.scrolldoorFrame{width:980px; height:540px; overflow:hidden; margin:0px auto 20px; position:relative;}
 .scrolldoorFrame h2{ position:absolute; top:5px; left:0; background:url(../images/flea/text.gif) 0 -310px no-repeat; width:102px; height:23px;}
 .scrollUl{width:875px;overflow:hidden; position:absolute; left:125px; top:11px;}
 .scrollUl li{float:left;}

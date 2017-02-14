@@ -3,11 +3,11 @@
 
 
 /*页面整体宽度控制*/
-.wrapper { width: 1200px; margin: auto;}
+.wrapper { width: 980px; margin: auto;}
 /* 公用头部区域 
 -------------------------------------- */
-.header-wrap { background-color: #FFF; width: 100%;}
-.public-head-layout { height: 100px;}
+.header-wrap { background-color: #FFF; width: 100%;    border-bottom: 2px solid #000;}
+.public-head-layout { height:90px;}
 /* 站点logo */
 .public-head-layout .site-logo { width: 240px; height: 60px; float: left; margin: 15px 10px auto 0;}
 .public-head-layout .site-logo img { max-width: 240px; max-height: 60px;}
@@ -32,21 +32,21 @@
 #search .tab li i.arrow{top: 17px;transition: all 0.2s ease-in 0s;}
 #search .tab li i.over{top: 17px;transform: rotate(180deg);transform-origin: 50% 30% 0;}
 /* 头部用户型菜单*/
-.head-user-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; float: right; margin: 20px 0 0 0; }
-.head-user-menu dl { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; margin-left: 10px; position: relative; z-index: 3; *zoom:1/*IE6、7*/;}
+.head-user-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; margin:0;display:inline;    line-height: 24px;}
+.head-user-menu dl { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; margin-left: 0px; position: relative; z-index: 3; *zoom:1/*IE6、7*/;}
 .head-user-menu dl.my-mall { width: 108px;}
-.head-user-menu dl.my-cart { width: 124px;}
+.head-user-menu dl.my-cart {width: 90px; }
 .head-user-menu dl.hover { z-index: 101;}
-.head-user-menu dl dt { line-height: 20px; color: #555; background-color: #FAFAFA; height: 20px; padding: 10px; border: solid 1px #F0F0F0; position: absolute; z-index: 2; top: 0; right: 0; cursor: pointer;}
+.head-user-menu dl dt { line-height: 24px; color: #555;height: 20px; padding:0px; position: absolute; z-index: 2; top: 0; right: 0; cursor: pointer;}
 .head-user-menu dl.my-mall dt { width: 90px;}
-.head-user-menu dl.my-cart dt { width: 106px;}
+.head-user-menu dl.my-cart dt { width: 90px;}
 .head-user-menu dl.hover dt { background-color: #FFF; border-width: 1px; border-color: #F0F0F0 #F0F0F0 #FFF #F0F0F0;}
-.head-user-menu dl dt span.ico { background: url(../images/top_bg.png) no-repeat; vertical-align: middle; display: inline-block; width: 20px; height: 16px; }
+.head-user-menu dl dt span.ico { background: url(../images/top_bg.png) no-repeat; vertical-align: middle; display: inline-block; width: 20px; height: 16px;}
 .head-user-menu dl.my-mall span.ico { background-position: -100px 0; margin-right: 4px;}
 .head-user-menu dl.my-cart span.ico { background-position: -120px 0; margin-right: 8px;}
 .head-user-menu dl dt i { font-size: 0px; line-height: 0; vertical-align: middle; display: inline-block; width: 0px; height: 0px; margin-left: 8px; border-width: 4px; border-color: #777 transparent transparent transparent; border-style:solid dashed dashed dashed; -webkit-transition: .2s ease-in; -moz-transition: -webkit-transform .2s ease-in; -o-transition: -webkit-transform .2s ease-in; transition: .2s ease-in;}
 .head-user-menu dl.hover dt i { FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); -moz-transform: rotate(180deg); -moz-transform-origin: 50% 30%; -webkit-transform: rotate(180deg); -webkit-transform-origin: 50% 30%; -o-transform: rotate(180deg); -o-transform-origin: 50% 30%; transform: rotate(180deg); transform-origin: 50% 30%;}
-.head-user-menu dl dd { background-color: #FFF; display: none; border: solid 1px #F0F0F0; position: absolute; z-index: 1; top: 40px; right: 0; }
+.head-user-menu dl dd { background-color: #FFF; display: none; border: solid 1px #000; position: absolute; z-index: 1; top: 20px; right: 0; }
 .head-user-menu dl.my-mall dd { width: 308px;}
 .head-user-menu dl.my-cart dd { width: 348px;}
 .head-user-menu dl.hover dd { display: block;}
@@ -90,14 +90,14 @@
 
 /* 公用导航区域
 -------------------------------------- */
-.public-nav-layout { width: 100%; height: 36px; border-bottom: solid 2px #e61742; margin: 0 auto; position: relative; z-index: 99; zoom: 1;background-color: #333;}
+.public-nav-layout { width: 100%; height: 36px; margin: 0 auto; position: relative; z-index: 99; zoom: 1;}
 .public-nav-layout .div { margin: 0; padding: 0; _zoom: 1;}
 /*站点导航菜单*/
-.public-nav-layout .site-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; white-space: nowrap; max-width: 988px; float: left; overflow: hidden;}
+.public-nav-layout .site-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; white-space: nowrap;width: 980px; float: left; overflow: hidden;border-bottom: 1px solid #ccc;}
 .public-nav-layout .site-menu li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; *zoom: 1;}
-.public-nav-layout .site-menu li a {  font-size: 14px; font-weight: normal; line-height: 20px; color: #ddd; height: 20px; padding: 8px 18px; display: inline-block; *display:inline/*IE6、7*/; zoom:1;}
-.public-nav-layout .site-menu li a:hover { text-decoration: none; color: #fff;}
-.public-nav-layout .site-menu li a.current { font-weight: 600; color: #fff; }
+.public-nav-layout .site-menu li a {  font-size: 14px; font-weight: normal; line-height: 20px; color: #000; height: 20px; padding: 8px 18px; display: inline-block; *display:inline/*IE6、7*/; zoom:1;}
+.public-nav-layout .site-menu li a:hover { text-decoration: none; color: #db5d2c;}
+.public-nav-layout .site-menu li a.current { font-weight: 600; color: #db5d2c; }
 
 /*分类导航菜单*/
 .public-nav-layout .all-category { background-color: #e61742; display: block; width: 212px; height: 36px; float: left;}

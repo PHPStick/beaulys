@@ -8,7 +8,7 @@
 /* ================================ */
 
 
-.nch-activity { width: 1200px; margin: 10px auto; overflow: hidden;}
+.nch-activity { width: 980px; margin: 10px auto; overflow: hidden;}
 .sale { width: 100%; overflow: hidden;}
 .sale .list_pic { font-size: 0; *word-spacing:-1px/*IE6、7*/; width: 1199px; border: solid #E6E6E6; border-width: 1px 0 0 1px;}
 .sale .list_pic li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE7*/; width: 240px; margin: 0 -1px 0 0; *zoom:1;}

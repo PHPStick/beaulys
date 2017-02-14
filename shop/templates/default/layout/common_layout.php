@@ -155,11 +155,7 @@ $('#keyword').focus(function() {
             <li act="store_list"><span>店铺</span></li>
           </ul>
         </div>-->
-      <form class="search-form" method="get" action="<?php echo SHOP_SITE_URL;?>">
-        <input type="hidden" value="search" id="search_act" name="act">
-         <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" type="text" class="input-text" value="<?php echo $_GET['keyword'];?>" maxlength="60" x-webkit-speech lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
-        <input type="submit" id="button" value="<?php echo $lang['nc_common_search'];?>" class="input-submit">
-      </form>
+      
       <!--搜索关键字-->
       <!--<div class="keyword"><?php echo $lang['hot_search'].$lang['nc_colon'];?>
         <ul>
@@ -172,58 +168,7 @@ $('#keyword').focus(function() {
     </div>
     
     
-    <div class="head-user-menu">
-      <!--<dl class="my-mall">
-        <dt><span class="ico"></span>我的商城<i class="arrow"></i></dt>
-        <dd>
-          <div class="sub-title">
-            <h4><?php echo $_SESSION['member_name'];?>
-            <?php if ($output['member_info']['level_name']){ ?>
-            <div class="nc-grade-mini" style="cursor:pointer;" onClick="javascript:go('<?php echo urlShop('pointgrade','index');?>');"><?php echo $output['member_info']['level_name'];?></div>
-            <?php } ?>            
-            </h4>
-            <a href="<?php echo urlShop('member', 'home');?>" class="arrow">我的用户中心<i></i></a></div>
-          <div class="user-centent-menu">
-            <ul>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_message&op=message">站内消息(<span><?php echo $output['message_num']>0 ? $output['message_num']:'0';?></span>)</a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order" class="arrow">我的订单<i></i></a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_consult&op=my_consult">咨询回复(<span id="member_consult">0</span>)</a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_favorites&op=fglist" class="arrow">我的收藏<i></i></a></li>
-              <?php if (C('voucher_allow') == 1){?>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_voucher">代金券(<span id="member_voucher">0</span>)</a></li>
-              <?php } ?>
-              <?php if (C('points_isuse') == 1){ ?>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_points" class="arrow">我的积分<i></i></a></li>
-              <?php } ?>
-            </ul>
-          </div>
-          <div class="browse-history">
-            <div class="part-title">
-              <h4>最近浏览的商品</h4>
-              <span style="float:right;"><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_goodsbrowse&op=list">全部浏览历史</a></span>
-            </div>
-            <ul>
-              <li class="no-goods"><img class="loading" src="<?php echo SHOP_TEMPLATES_URL;?>/images/loading.gif" /></li>
-            </ul>
-          </div>
-        </dd>
-      </dl>-->
-      <dl class="my-cart">
-        <?php if ($output['cart_goods_num'] > 0) { ?>
-        <div class="addcart-goods-num"><?php echo $output['cart_goods_num'];?></div>
-        <?php } ?>
-        <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
-        <dd>
-          <div class="sub-title">
-            <h4>最新加入的商品</h4>
-          </div>
-          <div class="incart-goods-box">
-            <div class="incart-goods"> <img class="loading" src="<?php echo SHOP_TEMPLATES_URL;?>/images/loading.gif" /> </div>
-          </div>
-          <div class="checkout"> <span class="total-price">共<i><?php echo $output['cart_goods_num'];?></i><?php echo $lang['nc_kindof_goods'];?></span><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=cart" class="btn-cart">结算购物车中的商品</a> </div>
-        </dd>
-      </dl>
-    </div>
+    
   </header>
 </div>
 <!-- PublicHeadLayout End -->
@@ -231,11 +176,81 @@ $('#keyword').focus(function() {
 <!-- publicNavLayout Begin -->
 <nav class="public-nav-layout">
   <div class="wrapper">
-    <div class="all-category">
-      <?php require template('layout/home_goods_class');?>
-    </div>
+    <!--  <div class="all-category">
+    <?php require template('layout/home_goods_class');?>
+    </div>-->
     <ul class="site-menu">
       <li><a href="<?php echo BASE_SITE_URL;?>" <?php if($output['index_sign'] == 'index' && $output['index_sign'] != '0') {echo 'class="current"';} ?>><?php echo $lang['nc_index'];?></a></li>
+      
+       <?php if (!empty($output['show_goods_class']) && is_array($output['show_goods_class'])) { $i = 0; ?>
+    <?php foreach ($output['show_goods_class'] as $key => $val) { $i++; ?>
+    <li cat_id="<?php echo $val['gc_id'];?>" class="<?php echo $i%2==1 ? 'odd':'even';?>" <?php if($i>11){?>style="display:none;"<?php }?>>
+      <div class="class">
+      <span class="arrow"></span>
+        <?php if(!empty($val['pic'])) { ?>
+        <span class="ico"><img src="<?php echo $val['pic'];?>"></span>
+        <?php } ?>
+              <?php if (!empty($val['channel_id'])) {?>
+              <h4><a href="<?php echo urlShop('channel','index',array('id'=> $val['channel_id']));?>"><?php echo $val['gc_name'];?></a></h4>
+              <?php }else{?>
+              <h4><a href="<?php echo urlShop('search','index',array('cate_id'=> $val['gc_id']));?>"><?php echo $val['gc_name'];?></a></h4>
+              <?php } ?>
+         </div>
+      <div class="sub-class" cat_menu_id="<?php echo $val['gc_id'];?>">
+      <div class="sub-class-content">
+        <div class="recommend-class">
+            <?php if (!empty($val['cn_classs']) && is_array($val['cn_classs'])) { ?>
+            <?php foreach ($val['cn_classs'] as $k => $v) { ?>
+          <span><a href="<?php echo urlShop('search','index',array('cate_id'=> $v['gc_id']));?>" title="<?php echo $v['gc_name']; ?>"><?php echo $v['gc_name'];?></a></span>
+          <?php } ?>
+          <?php } ?>
+        </div>
+        <?php if (!empty($val['class2']) && is_array($val['class2'])) { ?>
+        <?php foreach ($val['class2'] as $k => $v) { ?>
+        <dl>
+          <dt>
+              <?php if (!empty($v['channel_id'])) {?>
+              <h3><a href="<?php echo urlShop('channel','index',array('id'=> $v['channel_id']));?>"><?php echo $v['gc_name'];?></a></h3>
+              <?php }else{?>
+             <h3><a href="<?php echo urlShop('search','index',array('cate_id'=> $v['gc_id']));?>"><?php echo $v['gc_name'];?></a></h3>
+              <?php } ?>
+          </dt>
+          <dd class="goods-class">
+            <?php if (!empty($v['class3']) && is_array($v['class3'])) { ?>
+            <?php foreach ($v['class3'] as $k3 => $v3) { ?>
+            <a href="<?php echo urlShop('search','index',array('cate_id'=> $v3['gc_id']));?>"><?php echo $v3['gc_name'];?></a>
+            <?php } ?>
+            <?php } ?>
+          </dd>
+        </dl>
+        <?php } ?>
+        <?php } ?>
+        </div>
+        <div class="sub-class-right">
+          <?php if (!empty($val['cn_brands'])) {?>
+          <div class="brands-list">
+            <ul>
+              <?php foreach ($val['cn_brands'] as $brand) {?>
+              <li> <a href="<?php echo urlShop('brand', 'list', array('brand'=>$brand['brand_id']));?>" title="<?php echo $brand['brand_name'];?>"><?php if ($brand['brand_pic'] != '') {?><img src="<?php echo brandImage($brand['brand_pic']);?>"/><?php }?>
+                <span><?php echo $brand['brand_name'];?></span>
+                </a></li>
+              <?php }?>
+            </ul>
+          </div>
+          <?php }?>
+          <div class="adv-promotions">
+          <?php if($val['cn_adv1'] != '') { ?>
+          <a <?php echo $val['cn_adv1_link'] == '' ? 'href="javascript:;"' : 'target="_blank" href="'.$val['cn_adv1_link'].'"';?>><img src="<?php echo $val['cn_adv1'];?>" data-url="<?php echo $val['cn_adv1'];?>" class="scrollLoading" /></a>
+          <?php } ?>
+          <?php if($val['cn_adv2'] != '') { ?>
+          <a <?php echo $val['cn_adv2_link'] == '' ? 'href="javascript:;"' : 'target="_blank" href="'.$val['cn_adv2_link'].'"';?>><img src="<?php echo $val['cn_adv2'];?>" data-url="<?php echo $val['cn_adv2'];?>" class="scrollLoading" /></a>
+          <?php } ?></div>
+        </div>
+      </div>
+    </li>
+    <?php } ?>
+    <?php } ?>
+      
       <?php if (C('groupbuy_allow')){ ?>
       <li><a href="<?php echo urlShop('show_groupbuy', 'index');?>" <?php if($output['index_sign'] == 'groupbuy' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> <?php echo $lang['nc_groupbuy'];?></a></li>
       <?php } ?>

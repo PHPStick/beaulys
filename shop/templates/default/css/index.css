@@ -10,7 +10,7 @@ ul, ol { list-style: none outside none; }
 fieldset, img { border: medium none; }
 caption, th { text-align: left; }
 table { border-collapse: collapse; border-spacing: 0; }
-body { font: 12px/150% "Hiragino Sans GB", "Microsoft Yahei", arial, 宋体, "Helvetica Neue", Helvetica, STHeiTi, sans-serif; color: #666666; background: #FFF none repeat scroll 0 0; margin: 0; padding: 0; }
+body { font: 宋体; color: #666666; background: #FFF none repeat scroll 0 0; margin: 0; padding: 0; }
 a { color: #555; outline: medium none; }
 a:link, a:visited, a:active { text-decoration: none; }
 a:hover { color: #E4393C; text-decoration: underline; }
@@ -23,7 +23,7 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
  * 常用宽度、高度、边距、边框属性
  * ========================== */
 .w { width: 100% }
-.wrapper { width: 1200px; margin: auto; }
+.wrapper { width: 980px; margin: auto; }
 .fl { float: left; }
 .fr { float: right; }
 .block { display: block; }
@@ -43,7 +43,7 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 -------------------------------------- */
 .home-focus-layout { width: 100%; height: 385px; position: relative; z-index: 1; }
 /* 满屏背静切换焦点图 */
-.full-screen-slides { width: 1200px; height: 360px; position: relative; z-index: 1;margin: 10px auto;}
+.full-screen-slides { width: 980px; height: 360px; position: relative; z-index: 1;margin: 10px auto;}
 .full-screen-slides li { width: 100%; height: 100%; position: absolute; z-index: 1; top: 0; left: 0; }
 .full-screen-slides li a { display: block; width:776px; height:270px; text-indent:-9999px; margin-left: -388px; position: absolute; z-index: 2; left: 50%; }
 .full-screen-slides-pagination { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: center; display:block; list-style:none; width:600px; height: 6px; padding:7px 8px ; margin-left: -325px; position:absolute; left:50%; top: 320px; z-index: 9; }
@@ -51,7 +51,7 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 background:rgba(0,0,0,0.25); overflow: hidden; cursor: pointer; *zoom:1;}
 .full-screen-slides-pagination a {  display: block; width:18px;height:18px;line-height:18px;overflow: hidden;text-align: center; color:#fff;font-family:arial;font-size:12px; text-indent:-9999px; }
 .full-screen-slides-pagination .current { background: #e61742; }
-.home-focus-layout .banner-arrow {width: 1200px;position: relative;z-index:101;height: 0px;margin: auto;}
+.home-focus-layout .banner-arrow {width: 980px;position: relative;z-index:101;height: 0px;margin: auto;}
 .home-focus-layout .arrow { background: url(../images/home_bg.png) no-repeat; width: 45px; height: 100px; position: absolute; z-index: 2; top:-250px; cursor: pointer;}/*40px*/
 .home-focus-layout  .pre { background-position: 0 -100px; left:6px; }
 .home-focus-layout  .next { background-position: -45px -100px; right: 0;}
@@ -83,7 +83,7 @@ transform:rotate(360deg) translate3d(0, 0, 0)
 }
 
 
-.jfocus-trigeminybox { width:1200px; height: 164px; margin:0px auto; overflow: hidden; margin-top:10px; display: none; }/*180px*/
+.jfocus-trigeminybox { width:980px; height: 164px; margin:0px auto; overflow: hidden; margin-top:10px; display: none; }/*180px*/
 .jfocus-trigeminy { float:left;width:985px; height: 164px; margin-left: -388px; clear: both; position: absolute; z-index: 2; top:410px; left: 50%; overflow: hidden; }/*776px*/
 .jfocus-trigeminy ul { background-color: #FFF; width: auto; height: 164px; position: absolute; z-index: 1; overflow: hidden;}
 .jfocus-trigeminy ul li { width:985px; height: 164px; float: left; }/*749px*/
@@ -207,7 +207,7 @@ width: 150px; height: 150px; overflow: hidden; }
 -------------------------------------- */
 .home-standard-layout { height: 462px; overflow: hidden; margin-top: 15px; }
 /*首页楼层横幅 v3-b12*/
-.home-floor-banner { margin:10px auto; width: 1200px; overflow: hidden; }
+.home-floor-banner { margin:10px auto; width: 980px; overflow: hidden; }
 .right-side-layout {float:left; width:358px;}
 /*区块左侧*/
 .home-standard-layout .left-sidebar { width: 212px; height: 462px; float: left; }
@@ -458,7 +458,7 @@ width: 72px; height: 72px; float: left; padding: 3px; border: solid 1px #EBF5EC;
 #faq { border-top: solid 1px #f5f5f5; }
 .footer-line { border-top: 4px solid #e7e7e7; font-family: "微软雅黑"; margin-top:20px; min-width: 1190px; padding: 0; }
 /* 友情链接 */
-.index-link {width: 1200px; margin-top:10px; font-size:14px;}
+.index-link {width: 980px; margin-top:10px; font-size:14px;}
 .website { height: 50px; line-height: 50px; border: 1px solid #eee; }
 .website dt, .website dd { float: left; }
 .website dt { position: relative; width: 140px; text-align: center; background: #eee; }
@@ -523,7 +523,7 @@ list-style:none; width:24px; height:6px; margin-left:4px; cursor: pointer; }
 .right-panel .panelimg-side .pre { display:none}
 .right-panel .panelimg-side .next {  display:none}
 
-.comment { margin: 0 auto; width: 1200px; }
+.comment { margin: 0 auto; width: 980px; }
 .comment .tit { height: 46px; line-height: 46px; margin-top: 0px; overflow: hidden; }
 .comment .tit .cmttite { float: left; }
 .comment .tit .cmttite span { font-size: 20px; color: #666; }

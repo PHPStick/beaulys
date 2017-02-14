@@ -8,7 +8,7 @@
 /* ================================ */
 
 .ncsl-nav { margin: 0 auto; width: 100%; text-align:center;}
-.ncsl-nav .banner{ width:1200px; margin:0 auto; overflow:hidden;}
+.ncsl-nav .banner{ width:980px; margin:0 auto; overflow:hidden;}
 .ncsl-nav-banner img { width:100%;}
 .banner-upload-thumb img { max-width: 300px;}
 .slide-upload-thumb img { max-width: 300px; max-height: 200px;}
@@ -18,7 +18,7 @@
 
 /* 商家中心店铺装页面
 -------------------------------------*/
-.store-decoration-page .goods-list { filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5FFFFFF', endColorstr='#E5FFFFFF');background:rgba(255,255,255,0.9); width: 1200px; margin: 0 auto; font-size: 0; *word-spacing:-1px/*IE6、7*/;}
+.store-decoration-page .goods-list { filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5FFFFFF', endColorstr='#E5FFFFFF');background:rgba(255,255,255,0.9); width: 980px; margin: 0 auto; font-size: 0; *word-spacing:-1px/*IE6、7*/;}
 .store-decoration-page .goods-list li { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: center; display: inline-block; *display: inline/*IE7*/; width: 220px; padding: 15px; *zoom: 1;}
 .store-decoration-page .goods-list li:hover { background-color: #FFF;}
 .store-decoration-page .goods-thumb { width: 220px; height: 220px; }

@@ -192,7 +192,7 @@ i[class*="icon-"] { font-size: 14px; margin-right: 4px;}
  * 买家中心及账户设置框架头部菜单样式
  * ============================ */
 /*用户中心布局*/
-.ncm-container { width: 1200px; margin: 0 auto 30px auto;}
+.ncm-container { width: 980px; margin: 0 auto 30px auto;}
 .ncm-container .left-layout { width: 210px; float: left; margin-right: -1px;}
 .ncm-container .right-layout { width: 990px; float: right; padding: 1px 0 0; margin-left: -1px;}
 .ncm-container .right-layout .wrap { width: 980px; float: right;}

@@ -5,7 +5,7 @@
 /*页面整体宽度控制*/
 .ncs-nav{ width:100%; margin:0 auto;}
 .public-head-layout wrapper{width: 100%}
-.wrapper{width: 1200px; margin: 0 auto;}
+.wrapper{width: 980px; margin: 0 auto;}
 /* 公用头部区域 
 -------------------------------------- */
 .header-wrap { background-color: #FFF; width: 100%; margin: 0 auto;}

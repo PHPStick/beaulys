@@ -171,47 +171,7 @@
         <?php }?>
         <!--送达时间 end  --> 
       
-      <div class="ncs-logistics"><!-- S 物流与运费新布局展示  -->
-        <?php if($output['goods']['goods_state'] == 1 && $output['goods']['goods_verify'] == 1 && $output['goods']['is_virtual'] == 0){ ?>
-        <dl id="ncs-freight" class="ncs-freight">
-          <dt>配&nbsp;&nbsp;送&nbsp;&nbsp;至：</dt>
-          <dd class="ncs-freight_box">
-            <div id="ncs-freight-selector" class="ncs-freight-select">
-              <div class="text">
-                <div><?php echo $output['store_info']['deliver_region'] ? str_replace(' ','',$output['store_info']['deliver_region'][1]) : '请选择地区'?></div>
-                <b>∨</b> </div>
-              <div class="content">
-                <div id="ncs-stock" class="ncs-stock" data-widget="tabs">
-                  <div class="mt">
-                    <ul class="tab">
-                      <li data-index="0" data-widget="tab-item" class="curr"><a href="#none" class="hover"><em><?php echo $output['store_info']['deliver_region_names'][0] ? $output['store_info']['deliver_region_names'][0] : '请选择'?></em><i> ∨</i></a></li>
-                    </ul>
-                  </div>
-                  <div id="stock_province_item" data-widget="tab-content" data-area="0">
-                    <ul class="area-list">
-                    </ul>
-                  </div>
-                  <div id="stock_city_item" data-widget="tab-content" data-area="1" style="display: none;">
-                    <ul class="area-list">
-                    </ul>
-                  </div>
-                  <div id="stock_area_item" data-widget="tab-content" data-area="2" style="display: none;">
-                    <ul class="area-list">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <a href="javascript:;" class="close" onclick="$('#ncs-freight-selector').removeClass('hover')">关闭</a> </div>
-            <div id="ncs-freight-prompt"> <strong><?php echo $output['goods']['goods_storage'] > 0 ? '有货' : '无货'?></strong>
-              <?php if (!$output['goods']['transport_id']) { ?>
-              <?php echo $output['goods']['goods_freight'] > 0 ? '运费：'.ncPriceFormat($output['goods']['goods_freight']).' 元' : '免运费' ?>
-              <?php } ?>
-            </div>
-          </dd>
-        </dl>
-        <!-- S 物流与运费新布局展示  -->
-        <?php } ?>
-      </div>
+
       <div class="ncs-key"> 
         
         <!-- S 商品规格值-->
@@ -362,12 +322,13 @@
       <?php } ?>
       <!-- End --> </div>
     
-    <!--S 店铺信息-->
+    <!--S 店铺信息--><!--S 看了又看 -->
     <div style="position: absolute; z-index: 2; top: -1px; right: -1px;">
+    	
       <?php include template('store/info');?>
       <?php if ($output['store_info']['is_own_shop']) { ?>
-      <!--S 看了又看 -->
-      <div class="ncs-lal">
+      
+      <div class="ncs-lal" style="display: none;">
         <div class="title">看了又看</div>
         <div class="content">
           <ul>
@@ -380,11 +341,13 @@
           </ul>
         </div>
       </div>
-      <!--E 看了又看 -- > 
+      
       
     </div>
     <?php } ?>
+    	<!--E 看了又看 -- > 
     <!--E 店铺信息 --> 
+    
   </div>
   <div class="clear"></div>
 </div>
