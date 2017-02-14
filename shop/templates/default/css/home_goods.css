@@ -380,7 +380,7 @@ background-color: #FFF; border: solid #DDD; border-width: 0 1px 1px; padding:10p
 .switch-bar a:hover { text-decoration: none; }
 .ncs-sidebar { display: none; width: 210px _position:relative/*IE6*/
 }
-.expanded .ncs-goods-main { margin:auto;float: right; width: 980px; _position:relative/*IE6*/ }
+.expanded .ncs-goods-main { margin:auto; width: 980px; _position:relative/*IE6*/ }
 .expanded #main-nav { width: 980px; _position:relative/*IE6*/ }
 .expanded .switch-bar { background-position: 0 0; left: -23px; _block:none/*if IE6*/ }
 .expanded .ncs-sidebar { width: 210px; display: block; float:left; _position:relative/*IE6*/ }

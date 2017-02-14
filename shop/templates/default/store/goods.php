@@ -363,12 +363,12 @@
       <!-- End --> </div>
     
     <!--S 店铺信息--><!--S 看了又看 -->
-    <!--<div style="position: absolute; z-index: 2; top: -1px; right: -1px;">
+    <div style="position: absolute; z-index: 2; top: -1px; right: -1px;">
     	
       <?php include template('store/info');?>
       <?php if ($output['store_info']['is_own_shop']) { ?>
       
-      <div class="ncs-lal">
+      <div class="ncs-lal" style="display: none;">
         <div class="title">看了又看</div>
         <div class="content">
           <ul>
@@ -384,7 +384,7 @@
       
       
     </div>
-    <?php } ?>-->
+    <?php } ?>
     	<!--E 看了又看 -- > 
     <!--E 店铺信息 --> 
     
