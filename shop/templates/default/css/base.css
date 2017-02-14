@@ -318,7 +318,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .public-top-layout .topbar:before{content: '';background:url(../images/toplogo.png) no-repeat;width: 235px;height: 57px;display:none;position: absolute;z-index: 9; }
 .public-top-layout .user-entry { width: auto; height: 20px; float: right; padding: 5px 0;}
 .public-top-layout .user-entry a { color: #000;}
-.public-top-layout .user-entry span{margin:0 4px;}
+.public-top-layout .user-entry span{margin:0 4px;line-height: 24px;}
 .public-top-layout .user-entry .other { margin:0 0 0 5px }
 .public-top-layout .user-entry .other a { line-height:22px; color:#999; display:inline-block }
 .public-top-layout .user-entry .other a i { background:url(../images/toplogin.png) no-repeat; vertical-align:middle; display:inline-block; width:20px; height:20px; margin-right:2px }
