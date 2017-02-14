@@ -362,11 +362,12 @@
       <?php } ?>
       <!-- End --> </div>
     
-    <!--S 店铺信息-->
-    <div style="position: absolute; z-index: 2; top: -1px; right: -1px;">
+    <!--S 店铺信息--><!--S 看了又看 -->
+    <!--<div style="position: absolute; z-index: 2; top: -1px; right: -1px;">
+    	
       <?php include template('store/info');?>
       <?php if ($output['store_info']['is_own_shop']) { ?>
-      <!--S 看了又看 -->
+      
       <div class="ncs-lal">
         <div class="title">看了又看</div>
         <div class="content">
@@ -380,11 +381,13 @@
           </ul>
         </div>
       </div>
-      <!--E 看了又看 -- > 
       
-    </div>
+      
+    </div>-->
     <?php } ?>
+    	<!--E 看了又看 -- > 
     <!--E 店铺信息 --> 
+    
   </div>
   <div class="clear"></div>
 </div>

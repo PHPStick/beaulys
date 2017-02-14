@@ -82,7 +82,7 @@ padding: 1px; border: 1px solid #EEE; overflow: hidden; }
 /* 商品名称 */
 
 /* product_read */
-.ncs-goods-summary { background-color: #FFF; float: right; width: 622px; min-height: 460px; margin-right: 208px; border-right: solid 1px #EEE; border-left: solid 1px #EEE; }
+.ncs-goods-summary { background-color: #FFF; float: right; width: 622px; min-height: 460px; border-right: solid 1px #EEE; border-left: solid 1px #EEE; }
 .ncs-goods-summary .name { padding: 15px 20px; }
 .ncs-goods-summary .name h1, .ncs-goods-summary .name strong { font: 700 16px/21px "Microsoft Yahei"; color: #333; text-overflow: ellipsis; white-space: nowrap; display: block; overflow: hidden; }
 .ncs-goods-summary .name strong { font-weight: normal; font-size: 12px; line-height: 17px; color: #777; white-space: normal; margin-top: 5px; }
