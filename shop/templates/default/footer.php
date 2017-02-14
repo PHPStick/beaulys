@@ -1,7 +1,7 @@
 <?php defined('InShopNC') or exit('Access Invalid!'); ?> 
 <?php //echo getChat($layout); ?>
 	<script>
-	window.cssjsheader='http://127.0.0.1/beaulys/';
+	window.cssjsheader='/';
 	window.versionsNum="?v01";
 	//
 var publicjscss = {

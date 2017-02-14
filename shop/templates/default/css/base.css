@@ -482,7 +482,7 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 .nc-appbar-tabs .user-info dl { display: block; width: 140px; float: left; margin: 10px 0 0 10px;}
 .nc-appbar-tabs .user-info dt { font: 600 14px/20px "microsoft yahei"; margin-bottom: 6px;}
 .nc-appbar-tabs .user-info dd { line-height: 22px;}
-#vToolbar .content-box { background-color: #F5F5F5; width: 240px; height: 100%; border-left: solid 1px #7C8994; position: absolute; z-index: 0; top: 0; right: -250px; bottom: 0; box-shadow: -4px 0 2px rgba(0,0,0,0.25);}
+#vToolbar .content-box { background-color: #F5F5F5; width: 240px; height: 100%; border-left: solid 1px #7C8994; position: absolute; z-index: 0; top: 0; right: -250px; bottom: 0; box-shadow: -2px 0 2px rgba(0,0,0,0.25);}
 #vToolbar .content-box .top { height: 24px; padding: 9px 7px; border-bottom: dotted 1px #CCC; margin-bottom: 10px;}
 #vToolbar .content-box .top h3 { font: 16px/24px "microsoft yahei"; color: #333; display: inline-block; }
 #vToolbar .content-box .top a.close { background: url(../images/toolbar.png) no-repeat -100px -120px; width: 16px; height: 16px; margin-top: 4px; float: right;}

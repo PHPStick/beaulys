@@ -1,5 +1,5 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?> 
-<div class="nch-module nch-module-style01">
+<div class="nch-module nch-module-style01" style="display: none;">
   <div class="title">
     <h3>热门推荐</h3>
   </div>

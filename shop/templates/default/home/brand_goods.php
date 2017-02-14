@@ -62,18 +62,18 @@ var PURL = [<?php echo $output['purl'];?>];
             <li <?php if($_GET['key'] == '3'){?>class="selected"<?php }?>><a href="<?php echo ($_GET['order'] == '2' && $_GET['key'] == '3') ? replaceParam(array('key' => '3', 'order' => '1')):replaceParam(array('key' => '3', 'order' => '2')); ?>" <?php if($_GET['key'] == '3'){?>class="<?php echo $_GET['order'] == 1 ? 'asc' : 'desc';?>"<?php }?> title="<?php echo ($_GET['order'] == 'desc' && $_GET['key'] == '3')?$lang['brand_index_price_asc']:$lang['brand_index_price_desc']; ?>"><?php echo $lang['brand_index_price'];?><i></i></a></li>
           </ul>
         </div>
-        <div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['type'] == 1) { echo dropParam(array('type'));} else { echo replaceParam(array('type' => '1'));}?>" <?php if ($_GET['type'] == 1) {?>class="selected"<?php }?>><i></i>平台自营</a></span></div>
+        <!--<div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['type'] == 1) { echo dropParam(array('type'));} else { echo replaceParam(array('type' => '1'));}?>" <?php if ($_GET['type'] == 1) {?>class="selected"<?php }?>><i></i>平台自营</a></span></div>
         <div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['gift'] == 1) { echo dropParam(array('gift'));} else { echo replaceParam(array('gift' => '1'));}?>" <?php if ($_GET['gift'] == 1) {?>class="selected"<?php }?>><i></i>赠品</a></span></div>
         <div class="nch-sortbar-location">商品所在地：
           <div class="select-layer">
-            <div class="holder"><em nc_type="area_name"><?php echo $lang['brand_index_area']; ?><!-- 所在地 --></em></div>
-            <div class="selected"><a nc_type="area_name"><?php echo $lang['brand_index_area']; ?><!-- 所在地 --></a></div>
+            <div class="holder"><em nc_type="area_name"><?php echo $lang['brand_index_area']; ?></em></div>
+            <div class="selected"><a nc_type="area_name"><?php echo $lang['brand_index_area']; ?></a></div>
             <i class="direction"></i>
             <ul class="options">
               <?php require(BASE_TPL_PATH.'/home/goods_class_area.php');?>
             </ul>
           </div>
-        </div>
+        </div>-->
         <div class="pagination"> <?php echo $output['show_page1']; ?> </div>
       </nav>
 

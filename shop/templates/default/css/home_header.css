@@ -14,7 +14,7 @@
 .public-head-layout .site-ad { width: 120px; height: 70px; float: left; margin: 10px 10px auto 0;}
 .public-head-layout .site-ad img { max-width: 120px; max-height: 70px;}
 /* 头部搜索 */
-.search-form { background-color:#e61742; height: 36px; padding: 2px;display: inline;border-bottom: 1px solid #000;}
+.search-form {  height: 36px; padding: 2px;display: inline;border-bottom: 1px solid #000;}
 .search-form .input-text{border: none;background-color: transparent;}
 .search-form .input-submit{border: none;background-color: transparent;}
 #search ul.tab{position: absolute;width: 60px;height: 36px;line-height: 36px;margin: 0 2px 0 0;font-size: 16px;font-family: "Microsoft YaHei";background: #FFF;border: 2px solid #e61742; border-right: none;text-align: center;}

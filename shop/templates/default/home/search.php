@@ -176,18 +176,18 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
             <li><div><input id="priceMin" title="最低价" value="<?php echo $_GET['priceMin'] ?>" maxlength="6" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" class="input-txt"><em>-</em><input id="priceMax" title="最高价" value="<?php echo $_GET['priceMax'] ?>" maxlength="6" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" class="input-txt"><a id="priceBtn" class="priceBtn">确定</a></div></li>
           </ul>
         </div>
-        <div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['type'] == 1) { echo dropParam(array('type'));} else { echo replaceParam(array('type' => '1'));}?>" <?php if ($_GET['type'] == 1) {?>class="selected"<?php }?>><i></i>平台自营</a></span></div>
+        <!--<div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['type'] == 1) { echo dropParam(array('type'));} else { echo replaceParam(array('type' => '1'));}?>" <?php if ($_GET['type'] == 1) {?>class="selected"<?php }?>><i></i>平台自营</a></span></div>
         <div class="nch-sortbar-owner"><span><a href="<?php if ($_GET['gift'] == 1) { echo dropParam(array('gift'));} else { echo replaceParam(array('gift' => '1'));}?>" <?php if ($_GET['gift'] == 1) {?>class="selected"<?php }?>><i></i>赠品</a></span></div>
         <div class="nch-sortbar-location">商品所在地：
           <div class="select-layer">
-            <div class="holder"><em nc_type="area_name"><?php echo $lang['goods_class_index_area']; ?><!-- 所在地 --></em></div>
-            <div class="selected"><a nc_type="area_name"><?php echo $lang['goods_class_index_area']; ?><!-- 所在地 --></a></div>
+            <div class="holder"><em nc_type="area_name"><?php echo $lang['goods_class_index_area']; ?></em></div>
+            <div class="selected"><a nc_type="area_name"><?php echo $lang['goods_class_index_area']; ?></a></div>
             <i class="direction"></i>
             <ul class="options">
               <?php require(BASE_TPL_PATH.'/home/goods_class_area.php');?>
             </ul>
           </div>
-        </div>
+        </div>-->
       </nav>
       <!-- 商品列表循环  -->
 
