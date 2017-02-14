@@ -1,7 +1,3 @@
-.public-top-layout .topbar {
-	height: 40px;
-}
-
 .public-top-layout:before {
 	background-image: none;
 	content: 'www.beaulys.com';
