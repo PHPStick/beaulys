@@ -12,7 +12,7 @@ a:hover { color: #C00; }
 .backToTop { font-size: 12px; line-height: 1.2; color: #fff; background-color: #000; text-align: center; display: none; width: 18px; padding: 5px 0; position: fixed; _position: absolute; right: 10px; bottom: 100px; _bottom: "auto"; cursor: pointer; opacity: .6; filter: Alpha(opacity=60);}
 
 
-.content { width: 1200px; margin: 10px auto 0; }
+.content { width: 980px; margin: 10px auto 0; }
 .content .left { width: 208px; float: left; }
 .content .right { width: 980px; float: right; }
 .content .left2 { width: 980px; float: left; }
@@ -77,7 +77,7 @@ a:hover { color: #C00; }
 /*==============================*/
 /* 头部区域 */
 /*==============================*/
-#topHeader { width: 1200px; height: 120px; margin: 0 auto; position: relative; z-index: 99;}
+#topHeader { width: 980px; height: 120px; margin: 0 auto; position: relative; z-index: 99;}
 #topHeader .site-logo { position: absolute; top: 30px; left: 0px;}
 /* 头部搜索Tab切换样式 */
 #search .form { background:#FF4400; height: 39px; padding: 3px 3px 1px 3px; position: absolute; z-index: 1; top: 31px; left: 0px; }
@@ -92,7 +92,7 @@ a:hover { color: #C00; }
 #search div.tag h4 a:hover { color: #333; text-decoration: underline;}
 		
 /* 主导航条样式 */
-#navBar { width: 1200px; height: 40px; padding: 0; margin: 0 auto; border-radius: 4px 4px 0 0;}
+#navBar { width: 980px; height: 40px; padding: 0; margin: 0 auto; border-radius: 4px 4px 0 0;}
 	#navBar ul.nc-nav-menu { width: 1040px; height: 38px; overflow: hidden; margin-left:160px; border-bottom:2px solid #FF4400}
 		#navBar ul.nc-nav-menu li { float: left;}
 		#navBar ul.nc-nav-menu li.link a , #navBar ul li.link a span , #navBar ul li.current a , #navBar ul li.current a span  { float: left; position:relative; cursor: pointer;}
@@ -133,7 +133,7 @@ a:hover { color: #C00; }
 .cat-menu dd a { font-size: 12px; line-height: 20px; display: block; width: 80px; height: 20px; float: left; padding: 1px 0; margin: 0; overflow: hidden;}
 
 
-.keyword { color: #7B8188; line-height: 30px; background-color: #FFF; width: 1200px; height: 26px;  margin: 0 auto; border-bottom: 1px solid #FFF; position: relative; z-index: 1;}
+.keyword { color: #7B8188; line-height: 30px; background-color: #FFF; width: 980px; height: 26px;  margin: 0 auto; border-bottom: 1px solid #FFF; position: relative; z-index: 1;}
 .keyword h4 { font-size: 12px; font-weight: normal; background: url(../images/keyword.gif) no-repeat 5px -101px; display:inline; padding-left: 28px;}
 .keyword span { background: url(../images/keyword.gif) no-repeat 0px -125px; display:inline; width: 6px; height: 26px; margin-left:6px;}
 .keyword a { color: #434A53; text-decoration: none; }
@@ -343,7 +343,7 @@ a:hover { color: #C00; }
 .selectbox .btn {background: url(../images/btn.gif) no-repeat 0px -575px; width: 44px; height: 20px; padding: 0px; line-height: 18px;
 	 text-align: center; margin: 0; border: 0;
 }
-#sortSelect { background-position: 0px -1200px; width: 132px; cursor:pointer;}
+#sortSelect { background-position: 0px -980px; width: 132px; cursor:pointer;}
 #sortOption { background-color: #FFF; width: 130px; float: left; clear: both;}
 #sortOption ul { width: 100%; float: left;}
 #sortOption ul li a { color: #555; line-height: 20px; background: url(../images/ico.gif) no-repeat 100% -380px; display: inline; width: 88px; height: 20px; float: left; clear: left; padding: 2px 18px 2px 24px; border-bottom: 1px dotted #E6E6E6;}
@@ -677,7 +677,7 @@ form label.validate_right { padding-left:20px; background:transparent url(../ima
 .pagination li a:hover span, .pagination li a:active span{ color: #DB7C1E; background-color: #FFEFCE; border-color: #DB7C1E; cursor:pointer;}
 .pagination li span.currentpage{ color:#FFF; font-weight: bold;  background-color: #FEA900; border-color: #F57202;}
 
-#banner_box { width: 1200px; height: 330px; padding: 0px; position: relative;}
+#banner_box { width: 980px; height: 330px; padding: 0px; position: relative;}
 #banner_box .info_box { font-size: 12px; line-height: 24px; color: #666; background: url(../images/sale_banner_bg.png) no-repeat 0 0; width: 184px; height: 214px; padding: 20px 8px; 8px 8px; position: absolute; z-index: 99; overflow: hidden; top: 40px; right: 60px;}
 #banner_box .pic { top: 10px; right: 10px; width: 1180px; height: 320px; position: absolute; z-index: 1;}
 #banner_box .zs { background: url(../images/sale_banner_zs.png) no-repeat 0px 0px; width: 160px; height: 160px; position: absolute; z-index: 100; top: 0px; right: 0px;}

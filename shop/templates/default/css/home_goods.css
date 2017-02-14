@@ -373,7 +373,7 @@ background-color: #FFF; border: solid #DDD; border-width: 0 1px 1px; padding:10p
 .default img, .top-template img, .bottom-template img { vertical-align: top; }
 #main-nav { width: auto; }
 .ncs-goods-layout { width: 100%; margin-bottom: 10px; position: relative; z-index: 1; overflow: hidden; }
-.sticky #main-nav { width: 1200px; position:fixed; _position:relative; top:0; z-index: 999; }
+.sticky #main-nav { width: 980px; position:fixed; _position:relative; top:0; z-index: 999; }
 .sticky #main-nav ul { margin:0 auto; }
 .switch-bar { background: transparent url(../images/shop/switch_bar.png) no-repeat -15px 0; width:13px; height: 237px; position:absolute; z-index:999; top:200px; left: 0px; _block:none/*if IE6*/; }
 .switch-bar a { display:block; width: 13px; height: 42px; margin-top: 97px; cursor: pointer; }

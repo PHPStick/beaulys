@@ -7,14 +7,14 @@
 /* Retrofit Date:	Sep-01-2012		*/
 /* ================================ */
 
-body { background-color: #FEFEFE; min-width: 1200px;}
+body { background-color: #FEFEFE; min-width: 980px;}
 
 
 /* 返回首页顶部控制 */
 .backToTop { font-size: 12px; z-index: 99; line-height: 1.2; color: #fff; background-color: #000; text-align: center; display: none; width: 18px; padding: 5px 0; position: fixed; _position: absolute; right: 10px; bottom: 100px; _bottom: "auto"; cursor: pointer; opacity: .6; filter: Alpha(opacity=60);}
 
 
-.nch-container { width: 1200px; margin: 0 auto;}
+.nch-container { width: 980px; margin: 0 auto;}
 .nch-container .left { width: 208px; float: left; }
 .nch-container .right { width: 980px; float: right; }
 .nch-container .left2 { width: 780px; float: left; }
@@ -466,7 +466,7 @@ form label.validate_right { padding-left:20px; background:transparent url(../ima
 
 
 
-.sticky #main-nav { background-color: #F7F7F7; width: 1200px; margin-left: -600px; border-bottom: solid 1px #DDD; position: fixed; _position: relative; top: 0; left: 50%; z-index:999; box-shadow: 0 2px 2px rgba(0,0,0,0.2);}
+.sticky #main-nav { background-color: #F7F7F7; width: 980px; margin-left: -600px; border-bottom: solid 1px #DDD; position: fixed; _position: relative; top: 0; left: 50%; z-index:999; box-shadow: 0 2px 2px rgba(0,0,0,0.2);}
 .sticky #main-nav ul { margin:0 auto;}
 .sticky .nch-all-category { display: inline-block; *display: inline; *zoom: 1;}
 .sticky .gotop a { background: url(../images/nc_sortbar.gif) no-repeat 0px -150px; display:block; width: 32px; height: 40px; position: absolute; top:-1px; right:-32px; box-shadow: 0 2px 2px rgba(0,0,0,0.2);}
@@ -496,7 +496,7 @@ form label.validate_right { padding-left:20px; background:transparent url(../ima
 .nch-all-menu .tab-bar li a:hover { color: #e61742;}
 .nch-all-menu .tab-bar li.current a,
 .nch-all-menu .tab-bar li.current a:hover { font-weight: 600; text-decoration: none; color: #FFF; background-color: #e61742; border-color: #e61742; cursor: default;}
-.nch-category-all { width: 1200px; margin-top: 10px; overflow: hidden;}
+.nch-category-all { width: 980px; margin-top: 10px; overflow: hidden;}
 .nch-category-all ul { font-size: 0; *word-spacing:-1px/*IE6、7*/; width: 1220px; margin-left: -20px;}
 .nch-category-all li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; width: 588px; padding: 0; margin: 0 0 15px 20px; border: solid 1px #E6E6E6; overflow: hidden;}
 .nch-category-all li .title { font: 600 14px/20px "microsoft yahei"; background-color: #F5F5F5; display: block; height: 20px; padding: 5px 10px; border-bottom: solid 1px #E6E6E6;}

@@ -50,7 +50,7 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 /* ============================== */
 
 .ncs-header {width: 100%;padding: 0; position: relative; z-index: 2;}
-.ncs-header-container { width: 1200px; margin: 0 auto; position: relative; z-index: 1;}
+.ncs-header-container { width: 980px; margin: 0 auto; position: relative; z-index: 1;}
 .ncs-store-info { font-size: 0; *word-spacing:-1px/*IE6、7*/; background: url(../images/shop/ncs_store_top.png) no-repeat top center; text-align: right; height: 30px; padding: 10px 10px 4px 10px; position: absolute; z-index: 1; top: 0; right: 0;}
 .ncs-store-info .basic,
 .ncs-store-info .service { font-size: 12px; height: 30px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline; *zoom: 1; position: relative; z-index: 1; }
@@ -80,13 +80,13 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 
 
 /* 导航区域布局控制 */
-.ncsl-nav { width: 1200px; margin: 0 auto; } 
+.ncsl-nav { width: 980px; margin: 0 auto; } 
 /* 导航上部图片控制 */
-.ncsl-nav .banner a.img { width: 1200px; display: block; }
-.ncs-default-banner { display: block; width: 1200px; height: 240px;}
+.ncsl-nav .banner a.img { width: 980px; display: block; }
+.ncs-default-banner { display: block; width: 980px; height: 240px;}
 /* 店铺导航 */
-.ncs-nav { background-color: #F87622; width: 1200px;overflow: hidden;}
-.ncs-nav ul { white-space: nowrap; display: block; width: 1200px; height: 38px; margin:0 auto; overflow: hidden;}
+.ncs-nav { background-color: #F87622; width: 980px;overflow: hidden;}
+.ncs-nav ul { white-space: nowrap; display: block; width: 980px; height: 38px; margin:0 auto; overflow: hidden;}
 .ncs-nav li { float: left; }
 .ncs-nav li a { height: 38px; float: left;}
 .ncs-nav li a span { font-size: 14px; font-weight: 600; line-height: 20px; text-overflow: ellipsis; white-space: nowrap; max-width:160px; color: #FFF; float: left; height: 20px; padding: 9px 15px; margin-left: 4px; overflow:hidden; cursor:pointer;}

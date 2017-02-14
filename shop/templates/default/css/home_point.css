@@ -49,7 +49,7 @@ select option { line-height: 20px; height: 20px; padding: 4px;}
 .pagination li a:hover { text-decoration: none;}
 .pagination li span.currentpage { color: #AAA; font-weight: bold; background-color: #FAFAFA; border-color: #E6E6E6; position: relative; z-index: 2;}
 
-.ncp-container { width: 1200px; margin: 0 auto 10px auto;}
+.ncp-container { width: 980px; margin: 0 auto 10px auto;}
 .ncp-base-layout { border: solid 1px#e61742; overflow: hidden;}
 .ncp-member-left { background-color: #FFF; width: 297px; float: left; border-right: solid 1px #EEE;}
 .ncp-member-right { width: 900px; float:right;}

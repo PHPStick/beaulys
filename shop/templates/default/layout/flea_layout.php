@@ -40,7 +40,7 @@ $(function(){
 <!--
 body { font-size:12px;}
 ul,li { list-style:none; padding:0; margin:0;}
-.wrapper { width:1200px;}
+.wrapper { width:980px;}
 -->
 </style>
 </head>

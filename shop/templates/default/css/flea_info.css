@@ -135,7 +135,7 @@ body .fn-hide {
 	float:right;
 }
 
-.content{ width:1200px; margin:10px auto 0;}
+.content{ width:980px; margin:10px auto 0;}
 
 /*图片等比例缩放*/
 	.thumb { display:table-cell; vertical-align:middle; text-align:center;}
@@ -157,8 +157,8 @@ body .fn-hide {
 /*==============================*/
 .content_780{ width:980px;}
 .content_208{ width:208px;}
-.flea_info_main{ width:1200px; overflow:hidden; margin-top:12px;}
-#flea_info_slider{width:1200px; height:88px; border-bottom:2px solid #FD7D00; position:relative;}
+.flea_info_main{ width:980px; overflow:hidden; margin-top:12px;}
+#flea_info_slider{width:980px; height:88px; border-bottom:2px solid #FD7D00; position:relative;}
 	#slider li.sell_two{ 
 		/* 
 			define width and height of list item (slide)
@@ -313,7 +313,7 @@ body .fn-hide {
     float: left;
     margin: 20px auto 0;
     padding: 0;
-    width: 1200px;
+    width: 980px;
 }
 #Tab1 .message_text {
     width: 1030px;
@@ -400,7 +400,7 @@ body .fn-hide {
     background: none repeat scroll 0 0 #F2F5F7;
     float: left;
     padding-bottom: 10px;
-    width: 1200px;
+    width: 980px;
 }
 .comment-line {
     border-bottom: 1px solid #D1D7DC;

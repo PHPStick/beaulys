@@ -5,7 +5,7 @@
 /* Copyright:		by haoid.cn
 /* ================================ */
 
-.content { width: 1200px; margin: 10px auto 0; }
+.content { width: 980px; margin: 10px auto 0; }
 .content .left { width: 208px; float: left; }
 .content .right { width: 980px; float: right; }
 .content .left2 { width: 980px; float: left; }
@@ -188,7 +188,7 @@ display: table-cell; position:relative; z-index: 1; }
 .selectbox .option { background-color: #FFF; border: 1px solid #A5A5A5; position: absolute; top: 19px; left: 0px; display: none; z-index: 9999; }
 .selectbox .text { width: 40px; height: 18px; margin: 0px; padding: 0px; background:#FFF; }
 .selectbox .btn { background: url(../images/btn.gif) no-repeat 0px -575px; width: 44px; height: 20px; padding: 0px; line-height: 18px; text-align: center; margin: 0; border: 0; }
-#sortSelect { background-position: 0px -1200px; width: 132px; cursor:pointer; }
+#sortSelect { background-position: 0px -980px; width: 132px; cursor:pointer; }
 #sortOption { background-color: #FFF; width: 130px; float: left; clear: both; }
 #sortOption ul { width: 100%; float: left; }
 #sortOption ul li a { color: #555; line-height: 20px; background: url(../images/ico.gif) no-repeat 100% -380px; display: inline; width: 88px; height: 20px; float: left; clear: left; padding: 2px 18px 2px 24px; border-bottom: 1px dotted #E6E6E6; }
@@ -503,7 +503,7 @@ form label.validate_right { padding-left:20px; background:transparent url(../ima
 .pagination li a span, .pagination li a:visited span { color: #6C92AD; text-decoration: none; border-color: #AEB9B9; cursor:pointer; }
 .pagination li a:hover span, .pagination li a:active span { color: #DB7C1E; background-color: #FFEFCE; border-color: #DB7C1E; cursor:pointer; }
 .pagination li span.currentpage { color:#FFF; font-weight: bold; background-color: #FEA900; border-color: #F57202; }
-#banner_box { width: 1200px; height: 330px; padding: 0px; position: relative; }
+#banner_box { width: 980px; height: 330px; padding: 0px; position: relative; }
 #banner_box .info_box { font-size: 12px; line-height: 24px; color: #666; background: url(../images/sale_banner_bg.png) no-repeat 0 0; width: 184px; height: 214px; padding: 20px 8px; 8px 8px;
 position: absolute; z-index: 99; overflow: hidden; top: 40px; right: 60px; }
 #banner_box .pic { top: 10px; right: 10px; width: 1180px; height: 320px; position: absolute; z-index: 1; }

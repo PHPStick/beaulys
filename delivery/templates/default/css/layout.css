@@ -10,7 +10,7 @@ ul, ol { list-style: none outside none;}
 fieldset, img { border: medium none; vertical-align: middle;}
 caption, th {  text-align: left;}
 table { border-collapse: collapse; border-spacing: 0;}
-body { font: 12px/20px "microsoft yahei", Arial,Verdana,"宋体","Lucida Grande","Lucida Sans Unicode",Helvetica,sans-serif; color: #666; background: #FFF none repeat scroll 0 0; min-width: 1200px;}
+body { font: 12px/20px "microsoft yahei", Arial,Verdana,"宋体","Lucida Grande","Lucida Sans Unicode",Helvetica,sans-serif; color: #666; background: #FFF none repeat scroll 0 0; min-width: 980px;}
 input, select, textarea { font: 12px/20px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
 i, cite, em { font-style: normal;}
 input,button,select,textarea{ outline:none}

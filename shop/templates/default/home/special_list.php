@@ -3,7 +3,7 @@
 .no-content { font: normal 16px/20px Arial, "microsoft yahei"; color: #999999; text-align: center; padding: 150px 0; }
 /*专题活动列表*/
 .special-list { }
-.special-list li { clear: both; width: 1200px; margin: 10px 0 0 0; overflow: hidden; }
+.special-list li { clear: both; width: 980px; margin: 10px 0 0 0; overflow: hidden; }
 .special-list .special-title { font-size: 16px; font-weight: 600; line-height: 24px; padding: 0 0 6px 12px; }
 .special-list .special-cover { width: 1180px; height: 245px; padding: 9px; border: solid 1px #E7E7E7 }
 .special-list .special-cover img { width: 1180px; height: 245px; }
