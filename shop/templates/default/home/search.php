@@ -70,7 +70,7 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
 
   </div>
   <div class="right">
-    <div id="gc_goods_recommend_div" style="width:980px;"></div>
+    <div id="gc_goods_recommend_div" style="width:750px;"></div>
     <?php if(!isset($output['goods_class_array']['child']) && empty($output['goods_class_array']['child']) && !empty($output['goods_class_array'])){?>
     <?php $dl=1;  //dl标记?>
     <?php if((!empty($output['brand_array']) && is_array($output['brand_array'])) || (!empty($output['attr_array']) && is_array($output['attr_array']))){?>
