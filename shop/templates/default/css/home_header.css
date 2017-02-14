@@ -93,7 +93,7 @@
 .public-nav-layout { width: 100%; height: 36px; margin: 0 auto; position: relative; z-index: 99; zoom: 1;}
 .public-nav-layout .div { margin: 0; padding: 0; _zoom: 1;}
 /*站点导航菜单*/
-.public-nav-layout .site-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; white-space: nowrap; max-width: 988px; float: left; overflow: hidden;}
+.public-nav-layout .site-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; white-space: nowrap;width: 980px; float: left; overflow: hidden;border-bottom: 1px solid #ccc;}
 .public-nav-layout .site-menu li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; *zoom: 1;}
 .public-nav-layout .site-menu li a {  font-size: 14px; font-weight: normal; line-height: 20px; color: #000; height: 20px; padding: 8px 18px; display: inline-block; *display:inline/*IE6、7*/; zoom:1;}
 .public-nav-layout .site-menu li a:hover { text-decoration: none; color: #db5d2c;}
