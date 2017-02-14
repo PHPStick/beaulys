@@ -172,58 +172,7 @@ $('#keyword').focus(function() {
     </div>
     
     
-    <div class="head-user-menu">
-      <!--<dl class="my-mall">
-        <dt><span class="ico"></span>我的商城<i class="arrow"></i></dt>
-        <dd>
-          <div class="sub-title">
-            <h4><?php echo $_SESSION['member_name'];?>
-            <?php if ($output['member_info']['level_name']){ ?>
-            <div class="nc-grade-mini" style="cursor:pointer;" onClick="javascript:go('<?php echo urlShop('pointgrade','index');?>');"><?php echo $output['member_info']['level_name'];?></div>
-            <?php } ?>            
-            </h4>
-            <a href="<?php echo urlShop('member', 'home');?>" class="arrow">我的用户中心<i></i></a></div>
-          <div class="user-centent-menu">
-            <ul>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_message&op=message">站内消息(<span><?php echo $output['message_num']>0 ? $output['message_num']:'0';?></span>)</a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order" class="arrow">我的订单<i></i></a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_consult&op=my_consult">咨询回复(<span id="member_consult">0</span>)</a></li>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_favorites&op=fglist" class="arrow">我的收藏<i></i></a></li>
-              <?php if (C('voucher_allow') == 1){?>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_voucher">代金券(<span id="member_voucher">0</span>)</a></li>
-              <?php } ?>
-              <?php if (C('points_isuse') == 1){ ?>
-              <li><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_points" class="arrow">我的积分<i></i></a></li>
-              <?php } ?>
-            </ul>
-          </div>
-          <div class="browse-history">
-            <div class="part-title">
-              <h4>最近浏览的商品</h4>
-              <span style="float:right;"><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_goodsbrowse&op=list">全部浏览历史</a></span>
-            </div>
-            <ul>
-              <li class="no-goods"><img class="loading" src="<?php echo SHOP_TEMPLATES_URL;?>/images/loading.gif" /></li>
-            </ul>
-          </div>
-        </dd>
-      </dl>-->
-      <dl class="my-cart">
-        <?php if ($output['cart_goods_num'] > 0) { ?>
-        <div class="addcart-goods-num"><?php echo $output['cart_goods_num'];?></div>
-        <?php } ?>
-        <dt><span class="ico"></span>我的购物车<!--<i class="arrow"></i>--></dt>
-        <dd>
-          <div class="sub-title">
-            <h4>最新加入的商品</h4>
-          </div>
-          <div class="incart-goods-box">
-            <div class="incart-goods"> <img class="loading" src="<?php echo SHOP_TEMPLATES_URL;?>/images/loading.gif" /> </div>
-          </div>
-          <div class="checkout"> <span class="total-price">共<i><?php echo $output['cart_goods_num'];?></i><?php echo $lang['nc_kindof_goods'];?></span><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=cart" class="btn-cart">结算购物车中的商品</a> </div>
-        </dd>
-      </dl>
-    </div>
+    
   </header>
 </div>
 <!-- PublicHeadLayout End -->

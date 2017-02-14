@@ -1,4 +1,7 @@
 $(function(){
 	//购物车
-	$('.gouwuche').append($('.head-user-menu').clone(true));
+//	$('.head-user-menu').addClass('removethis')
+//	$('.gouwuche').append($('.head-user-menu').clone(true));
+//	$('.gouwuche .head-user-menu').removeClass('removethis');
+//	$('.removethis').remove()
 })

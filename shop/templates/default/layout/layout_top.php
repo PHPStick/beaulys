@@ -132,7 +132,25 @@
       </span>
       <?php } ?>
       <?php }?>
-      	<span class="gouwuche"></span>|
+      	<span class="gouwuche">
+      		<div class="head-user-menu">
+      <dl class="my-cart">
+        <?php if ($output['cart_goods_num'] > 0) { ?>
+        <div class="addcart-goods-num"><?php echo $output['cart_goods_num'];?></div>
+        <?php } ?>
+        <dt><span class="ico"></span>我的购物车<!--<i class="arrow"></i>--></dt>
+        <dd>
+          <div class="sub-title">
+            <h4>最新加入的商品</h4>
+          </div>
+          <div class="incart-goods-box">
+            <div class="incart-goods"> <img class="loading" src="<?php echo SHOP_TEMPLATES_URL;?>/images/loading.gif" /> </div>
+          </div>
+          <div class="checkout"> <span class="total-price">共<i><?php echo $output['cart_goods_num'];?></i><?php echo $lang['nc_kindof_goods'];?></span><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=cart" class="btn-cart">结算购物车中的商品</a> </div>
+        </dd>
+      </dl>
+    </div>
+      	</span>|
       	<span class="sousuo"></span>
     </div>
     <div class="quick-menu">
