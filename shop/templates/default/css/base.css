@@ -313,11 +313,11 @@ a.ncbtn-mini i, a.ncbtn i { font-size: 14px !important; vertical-align: middle; 
 
 /* 公用顶部区域
 -------------------------------------- */
-.public-top-layout { font-family: Arial, "宋体"; line-height: 20px; color: #777; background-color: #fff; border-bottom: solid 1px #F0F0F0;}
+.public-top-layout { font-family: Arial, "宋体"; line-height: 20px; color: #000; background-color: #fff; }
 .public-top-layout .topbar { height: 30px;}
 .public-top-layout .topbar:before{content: '';background:url(../images/toplogo.png) no-repeat;width: 235px;height: 57px;display:none;position: absolute;z-index: 9; }
 .public-top-layout .user-entry { width: auto; height: 20px; float: right; padding: 5px 0;}
-.public-top-layout .user-entry a { color: #777;}
+.public-top-layout .user-entry a { color: #000;}
 .public-top-layout .user-entry span{margin:0 4px;}
 .public-top-layout .user-entry .other { margin:0 0 0 5px }
 .public-top-layout .user-entry .other a { line-height:22px; color:#999; display:inline-block }

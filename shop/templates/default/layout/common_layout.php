@@ -212,7 +212,7 @@ $('#keyword').focus(function() {
         <?php if ($output['cart_goods_num'] > 0) { ?>
         <div class="addcart-goods-num"><?php echo $output['cart_goods_num'];?></div>
         <?php } ?>
-        <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+        <dt><span class="ico"></span>我的购物车<!--<i class="arrow"></i>--></dt>
         <dd>
           <div class="sub-title">
             <h4>最新加入的商品</h4>

@@ -37,7 +37,7 @@
 .head-user-menu dl.my-mall { width: 108px;}
 .head-user-menu dl.my-cart { width: 124px;}
 .head-user-menu dl.hover { z-index: 101;}
-.head-user-menu dl dt { line-height: 20px; color: #555; background-color: #FAFAFA; height: 20px; padding: 10px; border: solid 1px #F0F0F0; position: absolute; z-index: 2; top: 0; right: 0; cursor: pointer;}
+.head-user-menu dl dt { line-height: 24px; color: #555; background-color: #FAFAFA; height: 20px; padding:0px; border: solid 1px #F0F0F0; position: absolute; z-index: 2; top: 0; right: 0; cursor: pointer;}
 .head-user-menu dl.my-mall dt { width: 90px;}
 .head-user-menu dl.my-cart dt { width: 106px;}
 .head-user-menu dl.hover dt { background-color: #FFF; border-width: 1px; border-color: #F0F0F0 #F0F0F0 #FFF #F0F0F0;}
