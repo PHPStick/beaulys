@@ -22,6 +22,7 @@
 	};
 	var js = {
 		0: [
+			'styles/js/jquery1.11.0.min.js',
 			'styles/js/mui.js',
 			'styles/js/public.js'
 		],
