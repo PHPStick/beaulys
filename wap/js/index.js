@@ -1,19 +1,7 @@
 $(function() {
 
     var headerClone = $('#header').clone();
-    $(window).scroll(function(){
-        if ($(window).scrollTop() <= $('#main-container1').height()) {
-            headerClone = $('#header').clone();
-            $('#header').remove();
-            headerClone.addClass('transparent').removeClass('');
-            headerClone.prependTo('.nctouch-home-top');
-        } else {
-            headerClone = $('#header').clone();
-            $('#header').remove();
-            headerClone.addClass('').removeClass('transparent');
-            headerClone.prependTo('body');
-        }
-    });
+    
     $.ajax({
         url: ApiUrl + "/index.php?act=index",
         type: 'get',
