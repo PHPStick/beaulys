@@ -171,7 +171,9 @@ header.fixed{position: fixed;}
     position: absolute;
     top: 0px;
     right: 0px;
-    z-index: 99;}
+    z-index: 99;-moz-transform:scale(0.7,0.7); 
+ -webkit-transform:scale(0.7,0.7); 
+ -o-transform:scale(0.7,0.7); }
 .nctouch-nav-menu ul { display: block; clear: both; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#F2555555', endColorstr='#F2555555');
 background: rgba(85,85,85,0.95); border-radius: 0rem; }
 .nctouch-nav-menu li { position: relative; z-index: 1; border-bottom: solid 0.1rem #444; }
@@ -379,8 +381,8 @@ to {  width: 100%;}
 .fix-block-r a { display: block; width: 1.95rem; height: 1.95rem; background: rgba(255,255,255,0.85); border-radius: 100%; border: solid 0.05rem #EEE;  }
 .fix-block-r a i { width: 100%; height: 100%; display: block; background-position: 50% 50%; background-repeat: no-repeat; background-size: 60%; opacity: 0.5;}
 .fix-block-r a.gotop-btn { margin-top: 0.25rem;}
-.fix-block-r a.gotop-btn i { background-image: url(../images/gotop_w.png);}
-.fix-block-r a.browse-btn i { background-image: url(../images/goods_wrowse_w.png);}
+.fix-block-r a.gotop-btn i { background-image: url(../images/gotop_b.png);}
+.fix-block-r a.browse-btn i { background-image: url(../images/goods_browse_b.png);}
 
 /*页面整体下拉缓冲*/
 .scroller-body { top: 0; bottom: 60px; right: 0; left: 0; position: absolute; z-index: auto; }
