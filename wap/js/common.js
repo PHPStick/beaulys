@@ -240,6 +240,10 @@ $(function() {
             $(".nctouch-nav-layout").addClass("show")
         }
     });
+    $("#header").on("click", ".arrow",
+    function() {
+        $(".nctouch-nav-layout").removeClass("show")
+    });
     $("#header").on("click", ".nctouch-nav-layout",
     function() {
         $(".nctouch-nav-layout").removeClass("show")

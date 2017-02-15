@@ -164,10 +164,17 @@ header.fixed{position: fixed;}
 /*头部下拉菜单*/
 .nctouch-nav-layout { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: transparent; z-index: 29;}
 .nctouch-nav-menu { display: block; position: absolute; top:0px; right: 0px; width:10rem;z-index: 19; }
-.nctouch-nav-menu .arrow { display: block;  }
+.nctouch-nav-menu .arrow {        background: url("../images/icons-sprite.png") no-repeat -205px 0;
+    width: 42px;
+    height: 45px;
+    margin-top: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 99;}
 .nctouch-nav-menu ul { display: block; clear: both; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#F2555555', endColorstr='#F2555555');
 background: rgba(85,85,85,0.95); border-radius: 0rem; }
-.nctouch-nav-menu li { position: relative; z-index: 1; border-bottom: solid 0.1rem #000; }
+.nctouch-nav-menu li { position: relative; z-index: 1; border-bottom: solid 0.1rem #444; }
 .nctouch-nav-menu li:last-child { border-bottom: none 0; }
 .nctouch-nav-menu li a { display: block; height: 0.9rem; padding: 0.7rem; font-size: 0.7rem; line-height: 1.2rem; color: #FFF; }
 .nctouch-nav-menu li a i { display: inline-block;display: none; width: 0.72rem; height: 0.72rem; vertical-align: middle; margin-right: 0.3rem; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat; }
@@ -178,6 +185,7 @@ background: rgba(85,85,85,0.95); border-radius: 0rem; }
 .nctouch-nav-menu li a i.categroy { background-image: url(../images/categroy_w.png);}
 .nctouch-nav-menu li a i.member { background-image: url(../images/member_w.png);}
 .nctouch-nav-menu li sup { display: none; position: absolute; z-index: 1; top: 0.5rem; right: 0.5rem; width: 0.36rem; height: 0.36rem; background-color: #333; border-radius: 100%; }
+
 /*头部透明*/
 .transparent { background-color: transparent; border-bottom: none; }
 .transparent .header-l a i.set { background-image: url(../images/set_w.png); background-position: 50% 50%; background-repeat: no-repeat; background-size: 100%; opacity: 1; }
