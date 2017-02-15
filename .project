@@ -6,11 +6,6 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
 			<name>com.aptana.ide.core.unifiedBuilder</name>
 			<arguments>
 			</arguments>
@@ -18,21 +13,5 @@
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
-		<nature>com.aptana.editor.php.phpNature</nature>
 	</natures>
-	<filteredResources>
-		<filter>
-<<<<<<< HEAD
-			<id>1486988851846</id>
-=======
-			<id>1487062918749</id>
->>>>>>> 386ee85604684e48de4ea4c96b4af6c54e0502d1
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-	</filteredResources>
 </projectDescription>
