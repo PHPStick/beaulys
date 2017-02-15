@@ -1,29 +1,31 @@
 <!doctype html>
 <html>
-<head>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-touch-fullscreen" content="yes">
-<meta name="format-detection" content="telephone=no">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
-<meta name="msapplication-tap-highlight" content="no">
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
-<title>首页</title>
-<link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
-<link rel="stylesheet" type="text/css" href="css/base.css">
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<script type="text/javascript" src="styles/config.js"></script>
-</head>
-</head>
-<body>
-	<div class="mui-off-canvas-wrap " id='offCanvasWrapper'>
-	<aside class="mui-off-canvas-right " id='offCanvasSide'>
-	      <div class="mui-scroll-wrapper">
-	        <div class="mui-scroll">
-	        <div class="title" style="margin-bottom: 25px;">菜单栏</div>
+
+	<head>
+
+		<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-touch-fullscreen" content="yes">
+			<meta name="format-detection" content="telephone=no">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<meta name="format-detection" content="telephone=no">
+			<meta name="msapplication-tap-highlight" content="no">
+			<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
+			<title>首页</title>
+			<link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+			<link rel="stylesheet" type="text/css" href="css/base.css">
+			<link rel="stylesheet" type="text/css" href="css/index.css">
+			<script type="text/javascript" src="styles/config.js"></script>
+		</head>
+	</head>
+
+	<body>
+			<aside class="mui-off-canvas-right " id='offCanvasSide'>
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="title" style="margin-bottom: 25px;">菜单栏</div>
 						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
 							<li class="mui-table-view-cell">
 								<a class="mui-navigate-right" href="tmpl/member/member.html">
@@ -52,216 +54,246 @@
 							</li>
 
 						</ul>
-	        </div>
-	      </div>
-	    </aside>
-	<!-- 主页面标题 -->
-
-	<div class="mui-inner-wrap" style="    overflow: auto;">
-		<div class="mui-off-canvas-backdrop"></div>
-		<header id="header" class="mui-bar mui-bar-nav">
-			<h1 class="mui-title left-logo">Beaulys</h1>
-			<div id='header-nav' class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" style="padding: 10px 5px;"></div>
-			<div class="nctouch-nav-layout">
-			    <div class="nctouch-nav-menu"> <span class="arrow"></span>
-			      <ul>
-			        <li><a href="../../index.html"><i class="home"></i>首页</a></li>
-			        <li><a href="../search.html"><i class="search"></i>搜索</a></li>
-			         <li><a href="../product_first_categroy.html"><i class="categroy"></i>分类</a></li>
-			        <li><a href="javascript:void(0);"><i class="message"></i>消息<sup></sup></a></li>
-			        <li><a href="../cart_list.html"><i class="cart"></i>购物车<sup></sup></a></li>
-			        <li><a href="../member/member.html"><i class="member"></i>我的商城</a></li>
-			      </ul>
-			    </div>
-			  </div>
-			<a href="tmpl/cart_list.html" class="header-icon shop"></a>
-			<a href="tmpl/search.html" class="mui-icon mui-action-menu mui-icon-search mui-pull-right"></a>
-		</header>
-		<div  id="offCanvasContentScroll" class="" style="margin-top: 44px;">
-			<div class="">
-				<div class="headerNav_list">
-					<ul>
-						<li><a href="tmpl/product_first_categroy.html">品牌</a></li>
-						<li><a href="tmpl/product_list.html">商品列表</a></li>
-					</ul>
+					</div>
 				</div>
-					<div class="mb-header-box">更多优惠商品，尽在本站</div>
-				<!--模块-->
-				<div class="adv_list" id="main-container1"></div>
-				<div class="nctouch-home-layout" id="main-container2"></div>
-				<div class="fix-block-r">
-					<a href="javascript:void(0);" class="gotop-btn gotop hide" id="goTopBtn"><i></i></a>
+			</aside>
+			<!-- 主页面标题 -->
+
+			<div class="mui-inner-wrap" style="    overflow: auto;">
+				<div class="mui-off-canvas-backdrop"></div>
+				<header id="header" class="mui-bar mui-bar-nav">
+					<h1 class="mui-title left-logo">Beaulys</h1>
+					<div id='header-nav' class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" style="padding: 10px 5px;"></div>
+					<div class="nctouch-nav-layout">
+						<div class="nctouch-nav-menu"> <span class="arrow"></span>
+							<ul>
+								<li>
+									<a href="/index.html"><i class="home"></i>首页</a>
+								</li>
+								<li>
+									<a href="/tmpl/search.html"><i class="search"></i>搜索</a>
+								</li>
+								<li>
+									<a href="/tmpl/product_first_categroy.html"><i class="categroy"></i>分类</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);"><i class="message"></i>消息<sup></sup></a>
+								</li>
+								<li>
+									<a href="/tmpl/cart_list.html"><i class="cart"></i>购物车<sup></sup></a>
+								</li>
+								<li>
+									<a href="/tmpl/member/member.html"><i class="member"></i>我的商城</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a href="tmpl/cart_list.html" class="header-icon shop"></a>
+					<a href="tmpl/search.html" class="mui-icon mui-action-menu mui-icon-search mui-pull-right"></a>
+				</header>
+				<div id="offCanvasContentScroll" class="" style="margin-top: 44px;">
+					<div class="">
+						<div class="headerNav_list">
+							<ul>
+								<li>
+									<a href="tmpl/product_first_categroy.html">品牌</a>
+								</li>
+								<li>
+									<a href="tmpl/product_list.html">商品列表</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mb-header-box">更多优惠商品，尽在本站</div>
+						<!--模块-->
+						<div class="adv_list" id="main-container1"></div>
+						<div class="nctouch-home-layout" id="main-container2"></div>
+						<div class="fix-block-r">
+							<a href="javascript:void(0);" class="gotop-btn gotop hide" id="goTopBtn"><i></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 
-
-</div>
-<script type="text/html" id="adv_list">
-	<div class="mui-slider">
-	  <div class="mui-slider-group mui-slider-loop">
-	  	<% for (var i in item) { %>
-				<div class="mui-slider-item">
-					<a href="<%= item[i].url %>">
-						<img src= "<%= item[i].image %>" alt="">
+	
+		<script type="text/html" id="adv_list">
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<% for (var i in item) { %>
+					<div class="mui-slider-item">
+						<a href="<%= item[i].url %>">
+							<img src="<%= item[i].image %>" alt="">
+						</a>
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</script>
+		<script type="text/html" id="home1">
+			<div class="nctouch-home-block">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<div class="item-pic">
+					<a href="<%= url %>">
+						<img src="<%= image %>" alt="">
 					</a>
 				</div>
-			<% } %>
-	  </div>
-	</div>
-</script> 
-<script type="text/html" id="home1">
-	<div class="nctouch-home-block">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<div class="item-pic">
-			<a href="<%= url %>">
-				<img src="<%= image %>" alt="">
-			</a>
-		</div>
-	</div>
-</script> 
-<script type="text/html" id="home2">
-	<div class="nctouch-home-block">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="item-pic-l1-r2">
-			<li>
-				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
-			</li>
-			<li>
-				<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
-			</li>
-			<li>
-				<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
-			</li>
-		</ul>
-	</div>
-</script> 
-<script type="text/html" id="home3">
-	<div class="nctouch-home-block">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="item-pic-list">
-		<% for (var i in item) { %>
-			<li>
-				<a href="<%= item[i].url %>"><img src="<%= item[i].image %>" alt=""></a>
-			</li>
-		<% } %>
-		</ul>
-	</div>
-</script> 
-<script type="text/html" id="home4">
-	<div class="nctouch-home-block">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="item-pic-l2-r1">
-			<li>
-				<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
-			</li>
-			<li>
-				<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
-			</li>
-			<li>
-				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
-			</li>
-		</ul>
-	</div>
-</script> 
-<script type="text/html" id="goods">
-	<div class="nctouch-home-block item-goods">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="goods-list">
-		<% for (var i in item) { %>
-			<li>
-				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
-					<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
-					<dl class="goods-info">
-						<dt class="goods-name"><%= item[i].goods_name %></dt>
-						<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em></dd>
-					</dl>
-				</a>
-			</li>
-		<% } %>
-		</ul>
-	</div>
-</script>
-<script type="text/html" id="goods1">
-	<div class="nctouch-home-block item-goods">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="goods-list">
-		<% for (var i in item) { %>
-			<li>
-			<i><div>打折</div></i>
-			<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
-			<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
-					<dl class="goods-info">
-						<dt class="goods-name"><%= item[i].goods_name %></dt>
-						<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em><i class="list-price">￥<%= item[i].goods_price %></i></dd>
-					</dl>
-			</a>
-				</li>
-			
-		<% } %>
-		</ul>
-	</div>
-</script>
-<script type="text/html" id="goods2">
-	<div class="nctouch-home-block item-goods">
-	<% if (title) { %>
-		<div class="tit-bar"><%= title %></div>
-	<% } %>
-		<ul class="goods-list">
-		<% for (var i in item) { %>
-			<li>
-			<i><div>抢购</div></i>
-			<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
-			<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
-					<dl class="goods-info">
-						<dt class="goods-name"><%= item[i].goods_name %></dt>
-						<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em><i class="list-price">￥<%= item[i].goods_price %></i></dd>
-					</dl>
-			</a>
-				</li>
-			
-		<% } %>
-		</ul>
-	</div>
-</script> 
+			</div>
+		</script>
+		<script type="text/html" id="home2">
+			<div class="nctouch-home-block">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="item-pic-l1-r2">
+					<li>
+						<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+					</li>
+					<li>
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</li>
+					<li>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="home3">
+			<div class="nctouch-home-block">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="item-pic-list">
+					<% for (var i in item) { %>
+					<li>
+						<a href="<%= item[i].url %>"><img src="<%= item[i].image %>" alt=""></a>
+					</li>
+					<% } %>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="home4">
+			<div class="nctouch-home-block">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="item-pic-l2-r1">
+					<li>
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</li>
+					<li>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</li>
+					<li>
+						<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="goods">
+			<div class="nctouch-home-block item-goods">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="goods-list">
+					<% for (var i in item) { %>
+					<li>
+						<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+							<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+							<dl class="goods-info">
+								<dt class="goods-name"><%= item[i].goods_name %></dt>
+								<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em></dd>
+							</dl>
+						</a>
+					</li>
+					<% } %>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="goods1">
+			<div class="nctouch-home-block item-goods">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="goods-list">
+					<% for (var i in item) { %>
+					<li>
+						<i><div>打折</div></i>
+						<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+							<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+							<dl class="goods-info">
+								<dt class="goods-name"><%= item[i].goods_name %></dt>
+								<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em><i class="list-price">￥<%= item[i].goods_price %></i></dd>
+							</dl>
+						</a>
+					</li>
 
-<script type="text/javascript" src="js/config.js"></script> 
-<script type="text/javascript" src="js/zepto.min.js"></script> 
-<script type="text/javascript" src="js/template.js"></script> 
-<script type="text/javascript" src="js/common.js"></script> 
-<script type="text/javascript" src="js/swipe.js"></script> 
-<script type="text/javascript" src="js/index.js"></script> 
-<script type="text/javascript" src="js/tmpl/footer.js"></script>
-<script type="text/javascript" src="js/addtohomescreen.js"></script>
-<script>
-	$(function(){
-		setTimeout(function(){
-			var gallery = mui('.mui-slider');
-			
-			gallery.slider({
-			  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+					<% } %>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="goods2">
+			<div class="nctouch-home-block item-goods">
+				<% if (title) { %>
+				<div class="tit-bar">
+					<%= title %>
+				</div>
+				<% } %>
+				<ul class="goods-list">
+					<% for (var i in item) { %>
+					<li>
+						<i><div>抢购</div></i>
+						<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+							<div class="goods-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+							<dl class="goods-info">
+								<dt class="goods-name"><%= item[i].goods_name %></dt>
+								<dd class="goods-price">￥<em><%= item[i].goods_promotion_price %></em><i class="list-price">￥<%= item[i].goods_price %></i></dd>
+							</dl>
+						</a>
+					</li>
+
+					<% } %>
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/template.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/tmpl/footer.js"></script>
+		<script type="text/javascript" src="js/addtohomescreen.js"></script>
+		<script>
+			$(function() {
+				setTimeout(function() {
+					var gallery = mui('.mui-slider');
+
+					gallery.slider({
+						interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+					});
+
+				}, 1500);
+
+				var nowhost = window.location.host;
+				if(nowhost.indexOf('www.beaulys.com') >= 0) {
+					window.location.href = ('http://m.beaulys.com');
+				}
 			});
-			
-		},1500);
-		
-		var nowhost=window.location.host;
-		if(nowhost.indexOf('www.beaulys.com')>=0){
-			window.location.href=('http://m.beaulys.com');
-		}
-	});
-</script>
-</body>
+		</script>
+	</body>
+
 </html>

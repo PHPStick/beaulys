@@ -167,10 +167,10 @@ header.fixed{position: fixed;}
 .nctouch-nav-menu .arrow { display: block;  }
 .nctouch-nav-menu ul { display: block; clear: both; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#F2555555', endColorstr='#F2555555');
 background: rgba(85,85,85,0.95); border-radius: 0rem; }
-.nctouch-nav-menu li { position: relative; z-index: 1; border-bottom: solid 0.05rem #999; }
+.nctouch-nav-menu li { position: relative; z-index: 1; border-bottom: solid 0.1rem #000; }
 .nctouch-nav-menu li:last-child { border-bottom: none 0; }
-.nctouch-nav-menu li a { display: block; height: 0.9rem; padding: 0.5rem; font-size: 0.6rem; line-height: 0.9rem; color: #FFF; }
-.nctouch-nav-menu li a i { display: inline-block; width: 0.72rem; height: 0.72rem; vertical-align: middle; margin-right: 0.3rem; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat; }
+.nctouch-nav-menu li a { display: block; height: 0.9rem; padding: 0.7rem; font-size: 0.7rem; line-height: 1.2rem; color: #FFF; }
+.nctouch-nav-menu li a i { display: inline-block;display: none; width: 0.72rem; height: 0.72rem; vertical-align: middle; margin-right: 0.3rem; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat; }
 .nctouch-nav-menu li a i.message { background-image: url(../images/message_w.png); }
 .nctouch-nav-menu li a i.cart { background-image: url(../images/cart_w.png);}
 .nctouch-nav-menu li a i.home { background-image: url(../images/home_w.png);}
