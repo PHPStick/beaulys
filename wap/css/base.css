@@ -186,14 +186,14 @@ background: rgba(85,85,85,0.95); border-radius: 0rem; }
 .nctouch-nav-menu li a i.search { background-image: url(../images/search_w.png);}
 .nctouch-nav-menu li a i.categroy { background-image: url(../images/categroy_w.png);}
 .nctouch-nav-menu li a i.member { background-image: url(../images/member_w.png);}
-.nctouch-nav-menu li sup { display: none; position: absolute; z-index: 1; top: 0.5rem; right: 0.5rem; width: 0.36rem; height: 0.36rem; background-color: #333; border-radius: 100%; }
+.nctouch-nav-menu li sup { display: none; position: absolute; z-index: 1; top: 0.5rem; right: 0.5rem; width: 0.36rem; height: 0.36rem; background-color: #ED5564; border-radius: 100%; }
 
 /*头部透明*/
 .transparent { background-color: transparent; border-bottom: none; }
 .transparent .header-l a i.set { background-image: url(../images/set_w.png); background-position: 50% 50%; background-repeat: no-repeat; background-size: 100%; opacity: 1; }
 .transparent .header-title, .transparent .header-nav { display: none; }
 .transparent .header-r a i.more { background-image: url(../images/more_w.png); background-position: 50% 50%; background-repeat: no-repeat; background-size: 100%; opacity: 1; }
-.transparent .header-r a sup { top: -0.05rem; right:  -0.05rem; width: 0.35rem; height: 0.35rem; background-color: #333; border: solid 0.05rem #FFF; border-radius: 100%; }
+.transparent .header-r a sup { top: -0.05rem; right:  -0.05rem; width: 0.35rem; height: 0.35rem; background-color: #ED5564; border: solid 0.05rem #FFF; border-radius: 100%; }
 .transparent .nctouch-nav-menu .arrow { opacity: 0.55; }
 .transparent .nctouch-nav-menu ul { background: rgba(85,85,85,0.55); }
 .transparent .nctouch-nav-menu ul li { border-bottom-color: #CCC; }
